@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:deb40d95d22cd9bd6f335a38f3cb2daeb3b2a9f4fc39f53d10a11aba8ca9c338
-size 606
+using UnityEngine;
+using UnityEngine.PlayerLoop;
+
+public class EnemySpawner : MonoBehaviour
+{
+    [SerializeField] private GameObject _enemyPrefab;
+
+    [SerializeField] private EnemyPath _enemyPath;
+    private Vector3[] path;
+
+    private void Start() {
+        path = _enemyPath.GetPath();
+        InvokeRepeating("SpawnEnemy", 0f, 3f);
+    }
+    
+    private void SpawnEnemy() {
+        Object.Instantiate(_enemyPrefab, this.transform);
+    }
+
+    public void PathCompleted() {
+        Debug.Log("-1 HP");
+    }
+
+    public Vector3[] GetPath() {
+        return path;
+    }
+}
