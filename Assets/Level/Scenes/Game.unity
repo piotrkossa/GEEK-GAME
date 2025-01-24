@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,7 +629,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164858937}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2050317025}
+        m_TargetAssemblyTypeName: TurretSpawner, Assembly-CSharp
+        m_MethodName: TurretChoosen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1164858937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,7 +1297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.09411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1322,10 +1334,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01455b554141c3c43b80ea17d0431f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slots:
+  _slots:
   - {fileID: 1164858936}
-  Icons:
-  - {fileID: 2800000, guid: 09f0092fa226d914d808c26ff3337dbd, type: 3}
+  _sprites:
+  - {fileID: -461896868415383977, guid: 09f0092fa226d914d808c26ff3337dbd, type: 3}
+  _turrets:
+  - {fileID: 7537092032873529876, guid: adc14bfbe274270478a1c6fa2930d44e, type: 3}
 --- !u!1001 &240687148017416093
 PrefabInstance:
   m_ObjectHideFlags: 0
