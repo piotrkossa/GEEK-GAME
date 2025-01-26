@@ -5,6 +5,7 @@ using System;
 
 public class QuestionScript : MonoBehaviour
 {
+    public static QuestionScript Instance { get; private set;  }
     private TextMeshProUGUI textMeshPro;
     private Button AnswerOneBtn;
     private Button AnswerTwoBtn;
@@ -12,30 +13,37 @@ public class QuestionScript : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         textMeshPro = transform.Find("Question").GetComponent<TextMeshProUGUI>();
         AnswerOneBtn = transform.Find("AnswerOneBtn").GetComponent<Button>();
         AnswerTwoBtn = transform.Find("AnswerTwoBtn").GetComponent<Button>();
         AnswerThreeBtn = transform.Find("AnswerThreeBtn").GetComponent<Button>();
-
-        ShowQuestion("Are you sure u hate Juice?", () =>
-        {
-            Debug.Log("One");
-        }, () =>
-        {
-            Debug.Log("Two");
-        }, () =>
-        {
-            Debug.Log("Threee");
-        });
+        Hide(); 
     }
 
     public void ShowQuestion(string questionText, Action oneButton, Action twoButton, Action threeButton)
     {
+        gameObject.SetActive(true);
         textMeshPro.text = questionText;
-        AnswerOneBtn.onClick.AddListener(new UnityEngine.Events.UnityAction(oneButton));
-        AnswerTwoBtn.onClick.AddListener(new UnityEngine.Events.UnityAction(twoButton));
-        AnswerThreeBtn.onClick.AddListener(new UnityEngine.Events.UnityAction(threeButton));
+        AnswerOneBtn.onClick.AddListener(() =>
+        {
+            Hide();
+            oneButton();
+        });
+        AnswerTwoBtn.onClick.AddListener(() =>
+        {
+            Hide();
+            twoButton();
+        });
+        AnswerThreeBtn.onClick.AddListener(() =>
+        {
+            Hide();
+            threeButton();
+        });
+    }
 
-
+    private void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }
