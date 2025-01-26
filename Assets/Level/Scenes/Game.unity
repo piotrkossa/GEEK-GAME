@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 449373678}
   - component: {fileID: 449373677}
   m_Layer: 0
-  m_Name: Nigger ja jebie
+  m_Name: Spawn question
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2692,6 +2692,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74efa532e34805d47b8cd783d2fd5cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oneText: {fileID: 1539671367}
+  twoText: {fileID: 89916719}
+  threeText: {fileID: 185631662}
 --- !u!1001 &240687148017416093
 PrefabInstance:
   m_ObjectHideFlags: 0

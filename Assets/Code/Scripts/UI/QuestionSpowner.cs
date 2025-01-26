@@ -1,21 +1,29 @@
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
+using UnityEngine.InputSystem;
 
 public class Questiontest : MonoBehaviour
 {
+
+    private float timer = 0.0f;
+    private bool answer = false;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+
+        if (timer >= 5)
         {
-            QuestionScript.Instance.ShowQuestion("Do u hate juice?", () =>
+            QuestionScript.Instance.ShowQuestion("Do u hate juice?", "Tak", "Nie", "Nope", () =>
             {
-                Debug.Log("1");
+                answer = true;
             }, () =>
             {
-                Debug.Log("2");
+                answer = false;
             },
             () =>
             {
-                Debug.Log("3");
+                answer = false;
             });
         }
     }
