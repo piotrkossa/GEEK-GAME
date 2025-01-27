@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 7480657281218153726}
   - component: {fileID: 930810862773382490}
   - component: {fileID: 3318465782265013071}
-  - component: {fileID: 6646383562801090562}
+  - component: {fileID: 996691542772727225}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &6646383562801090562
+--- !u!114 &996691542772727225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
