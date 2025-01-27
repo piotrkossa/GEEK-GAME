@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
@@ -45,6 +46,8 @@ public class CameraHandler : MonoBehaviour
             TransitionHandler();
             return;
         }
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         if (Select.IsPressed() && _globalVariables.CurrentLevelView == 0) {
             IsCamClicked();
         }
