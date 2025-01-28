@@ -7,13 +7,11 @@ using System.Collections;
 public class Questiontest : MonoBehaviour
 {
     [SerializeField] private GlobalVariables _globalVariables;
-    public List<Questions> question = new List<Questions> {};
+    [SerializeField] List<Questions> question;
     private int currentIndex = 0;
 
     void Start()
     {
-        Questions quest = new Questions("ktora rasa jest najgorsza", "Czarni", true, "Zydzi", true, "biali", false);
-        question.Add(quest);
         StartCoroutine(ShowQuestionsCoroutine());
     }
 
@@ -21,16 +19,31 @@ public class Questiontest : MonoBehaviour
     {
         while (currentIndex < question.Count)
         {
+            yield return new WaitForSeconds(5f);
             var q = question[currentIndex];
+            bool answered = false;
             QuestionScript.Instance.ShowQuestion(
                 q.questionText,
                 q.answerA,
                 q.answerB,
                 q.answerC,
-                () => OnAnswerChosen(q.isCorrectA),
-                () => OnAnswerChosen(q.isCorrectB),
-                () => OnAnswerChosen(q.isCorrectC)
+                () => { answered = true; OnAnswerChosen(q.isCorrectA); },
+                () => { answered = true; OnAnswerChosen(q.isCorrectB); },
+                () => { answered = true; OnAnswerChosen(q.isCorrectC); }
             );
+
+            float remainingTime = 15f;
+            while (remainingTime > 0f && !answered)
+            {
+                remainingTime -= Time.deltaTime;
+                yield return null;
+            }
+
+            if (!answered)
+            {
+                OnAnswerChosen(false);
+            }
+
             currentIndex++;
             yield return new WaitForSeconds(15f);
         }

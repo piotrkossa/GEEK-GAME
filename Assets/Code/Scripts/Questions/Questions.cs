@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+[System.Serializable]
 public class Questions
 {
     public string questionText;
@@ -10,13 +11,4 @@ public class Questions
     public string answerC;
     public bool isCorrectC;
 
-    public Questions(string QuestionText, string AnswerA, bool IsCorrectA, string AnswerB, bool IsCorrectB, string AnswerC, bool IsCorrectC) {
-        questionText = QuestionText;
-        answerA = AnswerA;
-        isCorrectA = IsCorrectA;
-        answerB = AnswerB;
-        isCorrectB = IsCorrectB;
-        answerC = AnswerC;
-        isCorrectC = IsCorrectC;
-    }
 }
