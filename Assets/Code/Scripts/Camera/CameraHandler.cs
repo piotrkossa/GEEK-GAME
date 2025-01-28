@@ -19,6 +19,8 @@ public class CameraHandler : MonoBehaviour
     public void LeftClick(InputAction.CallbackContext context) {
         if (!context.started) return;
 
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         Transform clickedObject = GetClickedObject();
         if (clickedObject == null) return;
 
