@@ -7,11 +7,13 @@ using System.Collections;
 public class Questiontest : MonoBehaviour
 {
     [SerializeField] private GlobalVariables _globalVariables;
-    public List<Questions> question;
+    public List<Questions> question = new List<Questions> {};
     private int currentIndex = 0;
 
     void Start()
     {
+        Questions quest = new Questions("ktora rasa jest najgorsza", "Czarni", true, "Zydzi", true, "biali", false);
+        question.Add(quest);
         StartCoroutine(ShowQuestionsCoroutine());
     }
 
