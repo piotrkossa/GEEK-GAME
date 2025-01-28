@@ -17,14 +17,19 @@ public class Questiontest : MonoBehaviour
             QuestionScript.Instance.ShowQuestion("Do u hate juice?", "Tak", "Nie", "Nope", () =>
             {
                 answer = true;
+                timer = 0.0f;
             }, () =>
             {
                 answer = false;
+                timer = 0.0f;
             },
             () =>
             {
                 answer = false;
+                timer = 0.0f;
             });
         }
+
+        timer += Time.deltaTime;
     }
 }
