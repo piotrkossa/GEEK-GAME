@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      swiecacy przycisk_0: -1745362757887192334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zebatki_0: 3601076631313562981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

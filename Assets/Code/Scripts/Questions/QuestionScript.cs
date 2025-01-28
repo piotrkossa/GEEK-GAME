@@ -7,6 +7,10 @@ public class QuestionScript : MonoBehaviour
 {
     public static QuestionScript Instance { get; private set;  }
     private TextMeshProUGUI textMeshPro;
+    [SerializeField] TextMeshProUGUI oneText;
+    [SerializeField] TextMeshProUGUI twoText;
+    [SerializeField] TextMeshProUGUI threeText;
+
     private Button AnswerOneBtn;
     private Button AnswerTwoBtn;
     private Button AnswerThreeBtn;
@@ -21,10 +25,13 @@ public class QuestionScript : MonoBehaviour
         Hide(); 
     }
 
-    public void ShowQuestion(string questionText, Action oneButton, Action twoButton, Action threeButton)
+    public void ShowQuestion(string questionText, string asnwerOne, string asnwerTwo, string asnwerThree, Action oneButton, Action twoButton, Action threeButton)
     {
         gameObject.SetActive(true);
         textMeshPro.text = questionText;
+        oneText.text = asnwerOne;
+        twoText.text = asnwerTwo;
+        threeText.text = asnwerThree;
         AnswerOneBtn.onClick.AddListener(() =>
         {
             Hide();

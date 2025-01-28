@@ -4,14 +4,17 @@ using UnityEngine.Events;
 
 public class Stats : MonoBehaviour
 {
-    [SerializeField] private GlobalVariables _globalVariables;
+    private GlobalVariables _globalVariables;
 
     [Header("Stats Objects")]
     [SerializeField] private TextMeshProUGUI _health;
     [SerializeField] private TextMeshProUGUI _money;
 
     private void Awake() {
-        _globalVariables.onUpdated.AddListener(UpdateValues);
+        MainUI _UI = this.transform.parent.GetComponent<MainUI>();
+        _globalVariables = _UI.GetGlobalVariables();
+
+        _globalVariables.onUiUpdated.AddListener(UpdateValues);
     }
 
     private void UpdateValues() {
