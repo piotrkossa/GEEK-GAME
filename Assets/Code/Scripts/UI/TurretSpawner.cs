@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-using Unity.VisualScripting;
 
 public class TurretSpawner : MonoBehaviour
 {
@@ -17,8 +16,8 @@ public class TurretSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> _turrets;
 
 
-    InputAction Accept;
-    InputAction Cancel;
+    private InputAction Accept;
+    private InputAction Cancel;
 
     private bool isPlacing = false;
     private GameObject objectBeingPlaced = null;

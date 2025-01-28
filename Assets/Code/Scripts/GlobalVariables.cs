@@ -6,6 +6,8 @@ public class GlobalVariables : MonoBehaviour
     public int Health {get; private set;}
     public int Money {get; private set;}
 
+    public int CurrentLevelView {get; private set;}
+
     public UnityEvent onUpdated;
 
 
@@ -27,5 +29,9 @@ public class GlobalVariables : MonoBehaviour
         else
             Money += money;
         onUpdated.Invoke();
+    }
+
+    public void UpdateCurrentLevelView(int level) {
+        CurrentLevelView = level;
     }
 }
