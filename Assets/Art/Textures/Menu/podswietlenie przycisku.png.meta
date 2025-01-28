@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      podswietlenie przycisku_0: 4489022593271901620
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

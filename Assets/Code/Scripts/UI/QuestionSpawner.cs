@@ -2,29 +2,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class Questiontest : MonoBehaviour
 {
+    [SerializeField] private GlobalVariables _globalVariables;
+    public List<Questions> question;
+    private int currentIndex = 0;
 
-    private float timer = 0.0f;
-    private bool answer = false;
-    void Update()
+    void Start()
     {
+        StartCoroutine(ShowQuestionsCoroutine());
+    }
 
-
-        if (timer >= 5)
+    IEnumerator ShowQuestionsCoroutine()
+    {
+        while (currentIndex < question.Count)
         {
-            QuestionScript.Instance.ShowQuestion("Do u hate juice?", "Tak", "Nie", "Nope", () =>
-            {
-                answer = true;
-            }, () =>
-            {
-                answer = false;
-            },
-            () =>
-            {
-                answer = false;
-            });
+            var q = question[currentIndex];
+            QuestionScript.Instance.ShowQuestion(
+                q.questionText,
+                q.answerA,
+                q.answerB,
+                q.answerC,
+                () => OnAnswerChosen(q.isCorrectA),
+                () => OnAnswerChosen(q.isCorrectB),
+                () => OnAnswerChosen(q.isCorrectC)
+            );
+            currentIndex++;
+            yield return new WaitForSeconds(15f);
         }
+    }
+
+    private void OnAnswerChosen(bool isCorrect)
+    {
+        if (isCorrect)
+        {
+            _globalVariables.UpdateMoney(100);
+        }
+        else
+        {
+            _globalVariables.UpdateMoney(-100);
+        }
+
     }
 }

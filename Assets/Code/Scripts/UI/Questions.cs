@@ -1,9 +1,13 @@
 using System.Collections.Generic;
 
-class Question
+public class Questions
 {
-    public string text;
-    public string correctAnswer;
-    public string wrongAnswer1;
-    public string wrongAnswer2;
+    public string questionText;
+    public string answerA;
+    public bool isCorrectA;
+    public string answerB;
+    public bool isCorrectB;
+    public string answerC;
+    public bool isCorrectC;
+
 }
