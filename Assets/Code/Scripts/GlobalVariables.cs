@@ -8,8 +8,14 @@ public class GlobalVariables : MonoBehaviour
 
     public int CurrentLevelView {get; private set;}
 
-    public UnityEvent onUpdated;
+    public UnityEvent onUiUpdated;
+    public UnityEvent onViewChanged;
 
+    private void Awake() {
+        UpdateHealth(100);
+        UpdateMoney(100);
+        UpdateCurrentLevelView(0);
+    }
 
     public void UpdateHealth(int health) {
         if (Health + health < 0) {
@@ -18,7 +24,7 @@ public class GlobalVariables : MonoBehaviour
         }
         else
             Health += health;
-        onUpdated.Invoke();
+        onUiUpdated.Invoke();
     }
 
     public void UpdateMoney(int money) {
@@ -28,10 +34,11 @@ public class GlobalVariables : MonoBehaviour
         }
         else
             Money += money;
-        onUpdated.Invoke();
+        onUiUpdated.Invoke();
     }
 
     public void UpdateCurrentLevelView(int level) {
         CurrentLevelView = level;
+        onViewChanged.Invoke();
     }
 }
