@@ -6,50 +6,79 @@ using UnityEngine.UIElements;
 
 public class CameraHandler : MonoBehaviour
 {
-    private Camera _mainCamera;
-    [SerializeField] private GlobalVariables _globalVariables;
-    private CameraTransition _cameraTransition;
+    [SerializeField] GlobalVariables _globalVariables;
 
-    private void Start()
-    {
-        _mainCamera = Camera.main;
-        _cameraTransition = this.gameObject.GetComponent<CameraTransition>();
+    private Vector3 mainCamPos;
+    private float mainCamSize;
+
+    [SerializeField] private Transform[] levelPositions = new Transform [3];
+    private float monitorCamSize = 5.554f;
+
+    private struct TransitionManager {
+        public bool isTransitioning;
+        public Vector3 destinyLocation;
+        public float destinySize;
+        public float speed;
+
+        public TransitionManager(bool iT, Vector3 dL, float dS, float s) {
+            isTransitioning = iT;
+            destinyLocation = dL;
+            destinySize = dS;
+            speed = s;
+        }
     }
 
-    public void LeftClick(InputAction.CallbackContext context) {
-        if (!context.started) return;
+    private TransitionManager transitionManager = new TransitionManager(false, new Vector3(), 0f, 1f);
 
+    private InputAction Select;
+    private InputAction Escape;
+
+    private void Start() {
+        Select = InputSystem.actions.FindAction("LeftClick");
+        Escape = InputSystem.actions.FindAction("Escape");
+
+        mainCamSize = this.GetComponent<Camera>().orthographicSize;
+        mainCamPos = this.transform.position;
+    }
+
+    private void Update() {
+        if (transitionManager.isTransitioning) {
+            TransitionHandler();
+            return;
+        }
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        Transform clickedObject = GetClickedObject();
-        if (clickedObject == null) return;
-
-        switch (clickedObject.tag) {
-            case "Level":
-                int number = int.Parse(clickedObject.name[^1].ToString());
-                SetCam(number);
-                break;
+        if (Select.IsPressed() && _globalVariables.CurrentLevelView == 0) {
+            IsCamClicked();
         }
-    }
-
-    public void Escape(InputAction.CallbackContext context) {
-        if (_globalVariables.CurrentLevelView != 0) {
-            _cameraTransition.ChangeCam(0);
+        else if (Escape.IsPressed() && _globalVariables.CurrentLevelView != 0) {
             _globalVariables.UpdateCurrentLevelView(0);
+            transitionManager = new TransitionManager(true, mainCamPos, mainCamSize, 4);
         }
     }
 
-    private Transform GetClickedObject() {
-        RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Input.mousePosition));
-        if (!rayHit.collider) return null;
+    private void IsCamClicked() {
+        RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+        if (!hit.collider || !hit.transform.CompareTag("Level")) return;
+        int camNumber = 1;
 
-        return rayHit.transform;
+        _globalVariables.UpdateCurrentLevelView(camNumber);
+        ChangeCam(camNumber);
     }
 
-    private void SetCam(int cam) {
-        if (_globalVariables.CurrentLevelView == 0) {
-            _cameraTransition.ChangeCam(cam);
-            _globalVariables.UpdateCurrentLevelView(cam);
+    private void ChangeCam(int cam) {
+        Vector3 lvlPos = levelPositions[cam-1].position;
+        lvlPos.z = -1;
+        transitionManager = new TransitionManager(true, lvlPos, monitorCamSize, 4);
+    }
+
+    private void TransitionHandler() {
+        if (Mathf.Abs(Camera.main.orthographicSize - transitionManager.destinySize) < 0.01f) {
+            transitionManager.isTransitioning = false;
+            return;
         }
+
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, transitionManager.destinyLocation, Time.deltaTime * transitionManager.speed);
+        Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, transitionManager.destinySize, Time.deltaTime * transitionManager.speed);
     }
 }
