@@ -6,19 +6,42 @@ public class UICostumeChanger : MonoBehaviour
 {
     public Image uiImage; // Obiekt UI (Image), który zmienia kostium
     public Sprite[] costumes; // Lista sprite'ów (kostiumów)
+    public Sprite optionsCostume; // Kostium używany w "Options"
     public float changeInterval = 4f; // Czas między zmianami (sekundy)
     public float fadeDuration = 0.5f; // Czas trwania efektu zanikania
 
     private int currentIndex = 0;
+    private bool isOptionsActive = false;
+    private Coroutine costumeRoutine;
 
     void Start()
     {
-        StartCoroutine(ChangeCostume());
+        costumeRoutine = StartCoroutine(ChangeCostume());
+    }
+
+    public void EnterOptions()
+    {
+        isOptionsActive = true;
+        if (costumeRoutine != null)
+        {
+            StopCoroutine(costumeRoutine); // Zatrzymujemy zmianę kostiumów
+        }
+        StartCoroutine(SetOptionsCostume()); // Ustawiamy jeden stały kostium z efektem fade
+    }
+
+    public void ExitOptions()
+    {
+        isOptionsActive = false;
+        if (costumeRoutine != null)
+        {
+            StopCoroutine(costumeRoutine);
+        }
+        StartCoroutine(ResumeCostumeChange()); // Wznawiamy zmiany natychmiast
     }
 
     IEnumerator ChangeCostume()
     {
-        while (true)
+        while (!isOptionsActive)
         {
             yield return new WaitForSeconds(changeInterval);
 
@@ -32,6 +55,34 @@ public class UICostumeChanger : MonoBehaviour
             // Efekt pojawiania się (Fade In)
             yield return StartCoroutine(FadeIn());
         }
+    }
+
+    IEnumerator SetOptionsCostume()
+    {
+        // Efekt zanikania (Fade Out)
+        yield return StartCoroutine(FadeOut());
+
+        // Ustawienie kostiumu dla Options
+        uiImage.sprite = optionsCostume;
+
+        // Efekt pojawiania się (Fade In)
+        yield return StartCoroutine(FadeIn());
+    }
+
+    IEnumerator ResumeCostumeChange()
+    {
+        // Natychmiastowy efekt zanikania
+        yield return StartCoroutine(FadeOut());
+
+        // Zmiana na pierwszy kostium w kolejce
+        currentIndex = 0;
+        uiImage.sprite = costumes[currentIndex];
+
+        // Efekt pojawiania się (Fade In)
+        yield return StartCoroutine(FadeIn());
+
+        // Wznowienie normalnego trybu zmiany
+        costumeRoutine = StartCoroutine(ChangeCostume());
     }
 
     IEnumerator FadeOut()

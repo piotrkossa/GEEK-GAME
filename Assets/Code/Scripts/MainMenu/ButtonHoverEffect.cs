@@ -1,39 +1,52 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems; // Potrzebne do obsługi zdarzeń myszy
+using UnityEngine.EventSystems;
 
-public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public Sprite defaultSprite; // Obrazek domyślny
-    public Sprite hoverSprite;   // Obrazek po najechaniu myszką
+    public Image buttonImage; // Obrazek przycisku (np. ikona)
+    public Sprite normalSprite; // Standardowy wygląd
+    public Sprite hoverSprite; // Wygląd po najechaniu
+    public float moveDistance = 10f; // Przesunięcie przycisku w prawo
+    public float scaleFactor = 1.05f; // Współczynnik powiększenia (np. 1.05 oznacza 5% większy)
 
-    private Image buttonImage;   // Referencja do obrazu przycisku
-    public Vector3 hoverScale = new Vector3(1.2f, 1.2f, 1.2f); // Skala po najechaniu
-    public Vector3 defaultScale = Vector3.one; // Domyślna skala (1,1,1)
+    private Vector2 originalPosition; // Początkowa pozycja
+    private Vector2 originalSize; // Oryginalny rozmiar
 
     void Start()
     {
-        // Pobierz komponent Image z przycisku
-        buttonImage = GetComponent<Image>();
+        if (buttonImage == null)
+            buttonImage = GetComponent<Image>(); // Pobranie Image, jeśli nie przypisano
 
-        // Ustaw domyślny obrazek
-        buttonImage.sprite = defaultSprite;
-        // Ustaw domyślną skalę
-        transform.localScale = defaultScale;
+        originalPosition = buttonImage.rectTransform.anchoredPosition;
+        originalSize = buttonImage.rectTransform.sizeDelta; // Zapamiętaj oryginalny rozmiar
     }
 
-    // Zdarzenie po najechaniu myszką
     public void OnPointerEnter(PointerEventData eventData)
     {
-        buttonImage.sprite = hoverSprite;
-        transform.localScale = hoverScale; // Powiększ przycisk
+        buttonImage.sprite = hoverSprite; // Zmiana na nowy wygląd
+        buttonImage.rectTransform.anchoredPosition += new Vector2(moveDistance, 0); // Przesunięcie w prawo
 
+        // Zwiększenie rozmiaru o "scaleFactor"
+        buttonImage.rectTransform.sizeDelta = originalSize * scaleFactor; // Powiększenie o 5%
     }
 
-    // Zdarzenie po opuszczeniu myszką
     public void OnPointerExit(PointerEventData eventData)
     {
-        buttonImage.sprite = defaultSprite;
-        transform.localScale = defaultScale; // Przywróć domyślną skalę
+        buttonImage.sprite = normalSprite; // Powrót do standardowego wyglądu
+        buttonImage.rectTransform.anchoredPosition = originalPosition; // Powrót na pierwotne miejsce
+
+        // Przywrócenie oryginalnego rozmiaru
+        buttonImage.rectTransform.sizeDelta = originalSize;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        // Przywrócenie oryginalnej pozycji, rozmiaru i sprite'a po kliknięciu
+        buttonImage.rectTransform.anchoredPosition = originalPosition;
+        buttonImage.rectTransform.sizeDelta = originalSize;
+        buttonImage.sprite = normalSprite; // Przywrócenie podstawowego kostiumu
+
+        // Opcjonalnie, możesz dodać inne akcje po kliknięciu, jak przejście do nowej sceny itp.
     }
 }
