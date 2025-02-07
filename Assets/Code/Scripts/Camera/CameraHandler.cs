@@ -27,16 +27,13 @@ public class CameraHandler : MonoBehaviour
         switch (clickedObject.tag) {
             case "Level":
                 int number = int.Parse(clickedObject.name[^1].ToString());
-                SetCam(number);
+                 _cameraTransition.SetCam(number);
                 break;
         }
     }
 
     public void Escape(InputAction.CallbackContext context) {
-        if (_globalVariables.CurrentLevelView != 0) {
-            _cameraTransition.ChangeCam(0);
-            _globalVariables.UpdateCurrentLevelView(0);
-        }
+        _cameraTransition.SetCam(0);
     }
 
     private Transform GetClickedObject() {
@@ -44,12 +41,5 @@ public class CameraHandler : MonoBehaviour
         if (!rayHit.collider) return null;
 
         return rayHit.transform;
-    }
-
-    private void SetCam(int cam) {
-        if (_globalVariables.CurrentLevelView == 0) {
-            _cameraTransition.ChangeCam(cam);
-            _globalVariables.UpdateCurrentLevelView(cam);
-        }
     }
 }

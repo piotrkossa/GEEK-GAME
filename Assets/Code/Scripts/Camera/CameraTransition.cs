@@ -1,10 +1,12 @@
-using System;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.U2D;
+using System.Threading.Tasks;
+
 
 public class CameraTransition : MonoBehaviour
 {
+    [SerializeField] private TransitionManager _transitionManager;
+    [SerializeField] private GlobalVariables _globalVariables;
+
     private Camera thisCam;
 
     private float mainCamSize;
@@ -13,30 +15,7 @@ public class CameraTransition : MonoBehaviour
     [SerializeField] private Transform[] _levels = new Transform [4];
     private Vector3[] monitorLocations = new Vector3[4];
 
-    private struct TransitionManager {
-        public bool IsTransitioning;
-
-        public Vector3 StartingLocation;
-        public float StartingSize;
-
-        public Vector3 DestinyLocation;
-        public float DestinySize;
-
-        public float Step;
-        public float CompletedSteps;
-
-        public TransitionManager(bool isTransitioning, Vector3 startingLocation, float startingSize, Vector3 destinyLocation, float destinySize, float step) {
-            IsTransitioning = isTransitioning;
-            StartingLocation = startingLocation;
-            StartingSize = startingSize;
-            DestinyLocation = destinyLocation;
-            DestinySize = destinySize;
-            Step = step;
-            CompletedSteps = 0f;
-        }
-    }
-
-    TransitionManager transitionManager = new TransitionManager(false, new Vector3(), 0f, new Vector3(), 0f, 0f);
+    private bool isTransitioning = false;
 
 
     private void Awake() {
@@ -50,26 +29,10 @@ public class CameraTransition : MonoBehaviour
         }
     }
 
-    private void LateUpdate() {
-        if (transitionManager.IsTransitioning) {
-            SmoothLerp();
-        }
-    }
 
-    private void SmoothLerp() {
-        float currentStep = transitionManager.Step * Time.deltaTime;
-        transitionManager.CompletedSteps += currentStep;
+    private async void ChangeCam(int cam) {
+        isTransitioning = true;
 
-        float bezierPoint = QuadraticBezierCurve(transitionManager.CompletedSteps);
-        this.transform.position = Vector3.Lerp(transitionManager.StartingLocation, transitionManager.DestinyLocation, bezierPoint);
-        thisCam.orthographicSize = Mathf.Lerp(transitionManager.StartingSize, transitionManager.DestinySize, bezierPoint);
-
-        if (transitionManager.CompletedSteps >= 1f) {
-            transitionManager.IsTransitioning = false;
-        }
-    }
-
-    public void ChangeCam(int cam) {
         float size;
         if (cam != 0) {
             size = monitorCamSize;
@@ -78,15 +41,21 @@ public class CameraTransition : MonoBehaviour
             size = mainCamSize;
         }
 
-        transitionManager = new TransitionManager(true, this.transform.position, thisCam.orthographicSize, monitorLocations[cam], size, 1f);
+        Task[] tasks = new Task [2];
+        tasks[0] = _transitionManager.CameraSizeTransition(thisCam, thisCam.orthographicSize, size, 1f, 0.55f, 1f);
+        tasks[1] = _transitionManager.VectorTransition(this.transform, this.transform.position, monitorLocations[cam], 1f, 0.55f, 1f);
+        await Task.WhenAll(tasks);
+
+        isTransitioning = false;
     }
 
-    private float QuadraticBezierCurve(float t) {
-        float y1 = 0.55f;
-        float y2 = 1f;
+    public void SetCam(int cam) {
+        if (isTransitioning)
+            return;
 
-        float y = 3f * Mathf.Pow((1-t), 2) * t * y1 + 3 * (1-t) * Mathf.Pow(t, 2) * y2 + Mathf.Pow(t, 3);
-
-        return y;
+        if (_globalVariables.CurrentLevelView != cam) {
+            ChangeCam(cam);
+            _globalVariables.UpdateCurrentLevelView(cam);
+        }
     }
 }
