@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 63677246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.27133, y: 0.19070104, z: -1}
+  m_LocalPosition: {x: -3.2940261, y: 0.18810606, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -198,7 +198,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.406364
+  orthographic size: 16.384548
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -545,6 +545,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _globalVariables: {fileID: 1004929443}
+  _transitionManager: {fileID: 670550332}
+--- !u!225 &292463056
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292463046}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &301758709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1124,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: 18e38a713e8371b4e966bf351cac90f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1397,6 +1410,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4413981771838291860, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 292463051}
+    - targetCorrespondingSourceObject: {fileID: 4413981771838291860, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 292463056}
   m_SourcePrefab: {fileID: 100100000, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
 --- !u!1001 &1425793540
 PrefabInstance:

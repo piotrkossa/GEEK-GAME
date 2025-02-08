@@ -14,7 +14,7 @@ public class GlobalVariables : MonoBehaviour
     private void Start() {
         UpdateHealth(100);
         UpdateMoney(100);
-        UpdateCurrentLevelView(0);
+        CurrentLevelView = 0;
     }
 
     public void UpdateHealth(int health) {
