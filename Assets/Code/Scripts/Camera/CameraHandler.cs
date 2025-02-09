@@ -14,14 +14,13 @@ public class CameraHandler : MonoBehaviour
     {
         _mainCamera = Camera.main;
         _cameraTransition = this.gameObject.GetComponent<CameraTransition>();
+
+        InputManager.Instance.OnLeftMouse.AddListener(LeftClick);
+        InputManager.Instance.OnEsc.AddListener(Escape);
     }
 
-    public void LeftClick(InputAction.CallbackContext context) {
-        if (!context.started) return;
-
-        if (EventSystem.current.IsPointerOverGameObject()) return;
-
-        Transform clickedObject = GetClickedObject();
+    private void LeftClick() {
+        Transform clickedObject = InputManager.Instance.GetClickedObject();
         if (clickedObject == null) return;
 
         switch (clickedObject.tag) {
@@ -32,14 +31,7 @@ public class CameraHandler : MonoBehaviour
         }
     }
 
-    public void Escape(InputAction.CallbackContext context) {
+    private void Escape() {
         _cameraTransition.SetCam(0);
-    }
-
-    private Transform GetClickedObject() {
-        RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Input.mousePosition));
-        if (!rayHit.collider) return null;
-
-        return rayHit.transform;
     }
 }

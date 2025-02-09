@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 63677249}
   - component: {fileID: 63677248}
   - component: {fileID: 63677250}
-  - component: {fileID: 63677251}
   - component: {fileID: 63677252}
   m_Layer: 0
   m_Name: Camera
@@ -149,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 63677246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2940261, y: 0.18810606, z: -1}
+  m_LocalPosition: {x: -3.2941241, y: 0.18809485, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -198,7 +197,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.384548
+  orthographic size: 16.384455
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -227,76 +226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _globalVariables: {fileID: 1004929443}
---- !u!114 &63677251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63677246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 43517b6ef049cdc4e90148f5a33b11a7, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f856f8a4-7db0-4fc6-8698-15f1595e31be
-    m_ActionName: 'UI/Accept[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 52c9a043-ae00-4140-a348-d77a24b3c141
-    m_ActionName: 'UI/Cancel[/Mouse/rightButton]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 63677250}
-        m_TargetAssemblyTypeName: CameraHandler, Assembly-CSharp
-        m_MethodName: LeftClick
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: cada07fd-55b7-43bc-a332-0c29bc43807b
-    m_ActionName: 'Game/LeftClick[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 63677250}
-        m_TargetAssemblyTypeName: CameraHandler, Assembly-CSharp
-        m_MethodName: Escape
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: f416a4eb-9000-4f65-ad27-19c4bc2ab9ba
-    m_ActionName: 'Game/Escape[/Keyboard/escape]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: UI
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &63677252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1787,98 @@ MonoBehaviour:
   _globalVariables: {fileID: 1004929443}
   _healthBar: {fileID: 858919907}
   _money: {fileID: 123281434}
+--- !u!1 &1817474000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1817474003}
+  - component: {fileID: 1817474002}
+  - component: {fileID: 1817474001}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1817474001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817474000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 43517b6ef049cdc4e90148f5a33b11a7, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cada07fd-55b7-43bc-a332-0c29bc43807b
+    m_ActionName: 'Game/LeftClick[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f416a4eb-9000-4f65-ad27-19c4bc2ab9ba
+    m_ActionName: 'Game/Escape[/Keyboard/escape]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Game
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1817474002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817474000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fd5c7034f47ec44a991ee2a2a51e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnLeftMouse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRightMouse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEsc:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1817474003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817474000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.822484, y: 1.0452946, z: -0.0059410334}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1918307239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2277,3 +2298,4 @@ SceneRoots:
   - {fileID: 1765058781}
   - {fileID: 870527558}
   - {fileID: 670550333}
+  - {fileID: 1817474003}

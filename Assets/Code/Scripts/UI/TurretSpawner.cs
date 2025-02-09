@@ -21,16 +21,15 @@ public class TurretSpawner : MonoBehaviour
     private Vector2 boxSize = new Vector2(1.15f, 1.15f);
     [SerializeField] private SpriteRenderer _placementIndicator;
 
-    private InputAction Accept;
-    private InputAction Cancel;
 
     private bool isPlacing = false;
     private GameObject objectBeingPlaced = null;
 
     private void Start()
     {
-        Accept = InputSystem.actions.FindAction("Accept");
-        Cancel = InputSystem.actions.FindAction("Cancel");
+        InputManager.Instance.OnLeftMouse.AddListener(Accept);
+        InputManager.Instance.OnRightMouse.AddListener(Escape);
+        InputManager.Instance.OnEsc.AddListener(Escape);
 
         foreach (Button slot in _slots)
         {
@@ -39,11 +38,13 @@ public class TurretSpawner : MonoBehaviour
         _icons[0].sprite = _sprites[0];
     }
 
+    private Vector3 mouseWorldPos;
+
     private void Update()
     {
         if (isPlacing)
         {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouseWorldPos.z = 0;
 
             if (objectBeingPlaced != null)
@@ -59,36 +60,39 @@ public class TurretSpawner : MonoBehaviour
                 _placementIndicator.color = (hit != null) ? Color.red : Color.green;
 
             }
-
-            if (Accept.WasPressedThisFrame())
-            {
-                Collider2D hit = Physics2D.OverlapBox(mouseWorldPos, boxSize, 0, _placementBlockMask);
-                if (hit == null)
-                {
-                    isPlacing = false;
-                    Destroy(objectBeingPlaced);
-                    if (_placementIndicator != null)
-                        _placementIndicator.gameObject.SetActive(false);
-
-                    Instantiate(_turrets[0]).transform.position = mouseWorldPos;
-                }
-                else
-                {
-                    Debug.Log("Nie mo¿esz postawiæ dzia³ki w tym miejscu!");
-                    isPlacing = false;
-                    Destroy(objectBeingPlaced);
-                    if (_placementIndicator != null)
-                        _placementIndicator.gameObject.SetActive(false);
-                }
-            }
-            else if (Cancel.WasPressedThisFrame())
-            {
-                isPlacing = false;
-                Destroy(objectBeingPlaced);
-                if (_placementIndicator != null)
-                    _placementIndicator.gameObject.SetActive(false);
-            }
         }
+    }
+
+    private void Accept() {
+        if (!isPlacing) return;
+
+        Collider2D hit = Physics2D.OverlapBox(mouseWorldPos, boxSize, 0, _placementBlockMask);
+        if (hit == null)
+        {
+            isPlacing = false;
+            Destroy(objectBeingPlaced);
+            if (_placementIndicator != null)
+                _placementIndicator.gameObject.SetActive(false);
+
+            Instantiate(_turrets[0]).transform.position = mouseWorldPos;
+        }
+        else
+        {
+            Debug.Log("Nie moï¿½esz postawiï¿½ dziaï¿½ki w tym miejscu!");
+            isPlacing = false;
+            Destroy(objectBeingPlaced);
+            if (_placementIndicator != null)
+                _placementIndicator.gameObject.SetActive(false);
+        }
+    }
+
+    private void Escape() {
+        if (!isPlacing) return;
+
+        isPlacing = false;
+        Destroy(objectBeingPlaced);
+        if (_placementIndicator != null)
+            _placementIndicator.gameObject.SetActive(false);
     }
 
     public void TurretChoosen(int slot)

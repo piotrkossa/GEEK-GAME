@@ -2,54 +2,6 @@
     "name": "InputControl",
     "maps": [
         {
-            "name": "UI",
-            "id": "9a0d042e-4299-49a8-b5e5-089bc94d6544",
-            "actions": [
-                {
-                    "name": "Accept",
-                    "type": "Button",
-                    "id": "f856f8a4-7db0-4fc6-8698-15f1595e31be",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Cancel",
-                    "type": "Button",
-                    "id": "52c9a043-ae00-4140-a348-d77a24b3c141",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "c3da453d-f3b4-4b2e-96d4-bf2f42160e0e",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Accept",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "727cf496-5c63-4d53-8588-7be930a424c9",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
             "name": "Game",
             "id": "3517a25b-a07a-4346-95c4-d88dbc7b5264",
             "actions": [
@@ -66,6 +18,15 @@
                     "name": "Escape",
                     "type": "Button",
                     "id": "f416a4eb-9000-4f65-ad27-19c4bc2ab9ba",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightClick",
+                    "type": "Button",
+                    "id": "b56a4412-4a1a-4a5f-a28e-5ef0139f03ec",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -92,6 +53,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Escape",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9a5505f-9ff5-41d8-a03d-bb93e4b9cb9a",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
