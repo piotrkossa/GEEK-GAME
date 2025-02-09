@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MainUI : MonoBehaviour
+public class UI : MonoBehaviour
 {
     [SerializeField] GlobalVariables _globalVariables;
     [SerializeField] private TransitionManager _transitionManager;
