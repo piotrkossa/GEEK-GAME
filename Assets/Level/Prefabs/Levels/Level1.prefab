@@ -283,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2353376943569874356}
   - component: {fileID: 2671890554806812411}
+  - component: {fileID: 8497556228390623937}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Level
@@ -354,6 +355,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 16, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &8497556228390623937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9181796338019554878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3574f54dfba6b374a8a1cdddff21c7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemySpawner: {fileID: 673042210863335088}
+  _level2: {fileID: 0}
+  enemySpawnDelay: 3
 --- !u!1001 &632083772744637853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -419,6 +435,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435a754c9b99bd549a929643605815cb, type: 3}
+--- !u!114 &673042210863335088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 113360218173332269, guid: 435a754c9b99bd549a929643605815cb, type: 3}
+  m_PrefabInstance: {fileID: 632083772744637853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6562ed96fef1d4299a293d2c8563e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2046112428624753322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1486430586037546807, guid: 435a754c9b99bd549a929643605815cb, type: 3}

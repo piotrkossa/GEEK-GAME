@@ -1,24 +1,26 @@
 using UnityEngine;
-using UnityEngine.PlayerLoop;
+using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyPrefab;
 
     [SerializeField] private EnemyPath _enemyPath;
+
+    public UnityEvent OnEnemyDone;
+
     private Vector3[] path;
 
     private void Start() {
         path = _enemyPath.GetPath();
-        InvokeRepeating("SpawnEnemy", 0f, 3f);
     }
     
-    private void SpawnEnemy() {
+    public void SpawnEnemy() {
         Object.Instantiate(_enemyPrefab, this.transform);
     }
 
     public void PathCompleted() {
-        Debug.Log("-1 HP");
+        OnEnemyDone.Invoke();
     }
 
     public Vector3[] GetPath() {

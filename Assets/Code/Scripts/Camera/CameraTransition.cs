@@ -32,7 +32,8 @@ public class CameraTransition : MonoBehaviour
 
     private async void ChangeCam(int cam) {
         isTransitioning = true;
-
+        InputManager.Instance.BlockAllInput();
+        
         float size;
         if (cam != 0) {
             size = monitorCamSize;
@@ -40,13 +41,13 @@ public class CameraTransition : MonoBehaviour
         else {
             size = mainCamSize;
         }
-
         Task[] tasks = new Task [2];
         tasks[0] = _transitionManager.CameraSizeTransition(thisCam, thisCam.orthographicSize, size, 1f, 0.55f, 1f);
         tasks[1] = _transitionManager.VectorTransition(this.transform, this.transform.position, monitorLocations[cam], 1f, 0.55f, 1f);
         await Task.WhenAll(tasks);
 
         isTransitioning = false;
+        InputManager.Instance.UnlockAllInput();
     }
 
     public void SetCam(int cam) {
