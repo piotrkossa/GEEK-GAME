@@ -22,6 +22,7 @@ public class Questiontest : MonoBehaviour
             yield return new WaitForSeconds(5f);
             var q = question[currentIndex];
             bool answered = false;
+            InputManager.Instance.BlockAllInput();
             QuestionScript.Instance.ShowQuestion(
                 q.questionText,
                 q.answerA,
@@ -45,6 +46,7 @@ public class Questiontest : MonoBehaviour
             }
 
             currentIndex++;
+            InputManager.Instance.UnlockAllInput();
             yield return new WaitForSeconds(15f);
         }
     }

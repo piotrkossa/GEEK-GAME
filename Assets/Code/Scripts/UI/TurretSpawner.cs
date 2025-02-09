@@ -42,25 +42,21 @@ public class TurretSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (isPlacing)
-        {
-            mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorldPos.z = 0;
+        if (!isPlacing) return;
 
-            if (objectBeingPlaced != null)
-                objectBeingPlaced.transform.position = Input.mousePosition;
-
-            if (_placementIndicator != null)
-            {
-                _placementIndicator.gameObject.SetActive(true);
-                _placementIndicator.transform.position = mouseWorldPos;
-
-                Collider2D hit = Physics2D.OverlapBox(mouseWorldPos, boxSize, 0, _placementBlockMask);
-
-                _placementIndicator.color = (hit != null) ? Color.red : Color.green;
-
-            }
+        if (InputManager.Instance.isInputBlocked) {
+            Escape();
+            return;
         }
+
+        mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0;
+
+        objectBeingPlaced.transform.position = Input.mousePosition;
+
+        _placementIndicator.transform.position = mouseWorldPos;
+        Collider2D hit = Physics2D.OverlapBox(mouseWorldPos, boxSize, 0, _placementBlockMask);
+        _placementIndicator.color = (hit != null) ? Color.red : Color.green;
     }
 
     private void Accept() {
@@ -71,8 +67,8 @@ public class TurretSpawner : MonoBehaviour
         {
             isPlacing = false;
             Destroy(objectBeingPlaced);
-            if (_placementIndicator != null)
-                _placementIndicator.gameObject.SetActive(false);
+            
+            _placementIndicator.gameObject.SetActive(false);
 
             Instantiate(_turrets[0]).transform.position = mouseWorldPos;
         }
@@ -81,8 +77,8 @@ public class TurretSpawner : MonoBehaviour
             Debug.Log("Nie mo�esz postawi� dzia�ki w tym miejscu!");
             isPlacing = false;
             Destroy(objectBeingPlaced);
-            if (_placementIndicator != null)
-                _placementIndicator.gameObject.SetActive(false);
+
+            _placementIndicator.gameObject.SetActive(false);
         }
     }
 
@@ -91,14 +87,17 @@ public class TurretSpawner : MonoBehaviour
 
         isPlacing = false;
         Destroy(objectBeingPlaced);
-        if (_placementIndicator != null)
-            _placementIndicator.gameObject.SetActive(false);
+
+        _placementIndicator.gameObject.SetActive(false);
     }
 
     public void TurretChoosen(int slot)
     {
         objectBeingPlaced = Instantiate(_icons[slot].gameObject, _icons[slot].transform.parent);
         objectBeingPlaced.GetComponent<Image>().sprite = _icons[slot].sprite;
+
+        _placementIndicator.gameObject.SetActive(true);
+
         isPlacing = true;
     }
 }

@@ -10,13 +10,15 @@ public class InputManager : MonoBehaviour
 
     private PlayerInput _input;
 
-    private bool isInputBlocked = false;
+    public bool isInputBlocked {get; private set;}
 
     public UnityEvent OnLeftMouse;
     public UnityEvent OnRightMouse;
     public UnityEvent OnEsc;
 
     private void Awake() {
+        isInputBlocked = false;
+        
         Instance = this;
 
         _input = this.GetComponent<PlayerInput>();
