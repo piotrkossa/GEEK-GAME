@@ -11,9 +11,9 @@ public class GlobalVariables : MonoBehaviour
     public UnityEvent onUiUpdated;
     public UnityEvent onViewChanged;
 
-    private void Start() {
-        UpdateHealth(100);
-        UpdateMoney(100);
+    private void Awake() {
+        Health = 100;
+        Money = 100;
         CurrentLevelView = 0;
     }
 

@@ -7,8 +7,8 @@ public class UITESTING : MonoBehaviour
 
     private void Update() {
         TimeUntilSecond += Time.deltaTime;
-        if (TimeUntilSecond > 2f) {
-            _globalVariables.UpdateHealth(1);
+        if (TimeUntilSecond > 3f) {
+            _globalVariables.UpdateHealth(-30);
             _globalVariables.UpdateMoney(2);
             TimeUntilSecond = 0f;
         }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Threading.Tasks;
 
 public class TransitionManager : MonoBehaviour
@@ -29,6 +30,16 @@ public class TransitionManager : MonoBehaviour
         while (t <= 1f) {
             t += Time.deltaTime / time;
             objCanvasGroup.alpha = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
+            await Task.Yield();
+        }
+    }
+
+    public async Task SliderValueTransition(Slider objSlider, float originFloat, float destinyFloat, float time, float bezierY1, float bezierY2) {
+        float t = 0f;
+
+        while (t <= 1f) {
+            t += Time.deltaTime / time;
+            objSlider.value = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
             await Task.Yield();
         }
     }
