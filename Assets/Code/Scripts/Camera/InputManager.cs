@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     public UnityEvent OnLeftMouse;
     public UnityEvent OnRightMouse;
     public UnityEvent OnEsc;
+    public UnityEvent<Transform> OnGameObjectClicked;
 
     private void Awake() {
         isInputBlocked = false;
@@ -27,6 +28,10 @@ public class InputManager : MonoBehaviour
     private void OnLeftClick() {
         if (isInputBlocked) return;
         OnLeftMouse.Invoke();
+
+        Transform clickedObj = GetClickedObject();
+        if (clickedObj != null)
+            OnGameObjectClicked.Invoke(clickedObj);
     }
 
     private void OnEscape() {
@@ -38,7 +43,6 @@ public class InputManager : MonoBehaviour
         if (isInputBlocked) return;
         OnRightMouse.Invoke();
     }
-
 
 
     public void BlockAllInput() {

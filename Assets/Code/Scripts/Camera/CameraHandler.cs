@@ -15,19 +15,22 @@ public class CameraHandler : MonoBehaviour
         _mainCamera = Camera.main;
         _cameraTransition = this.gameObject.GetComponent<CameraTransition>();
 
-        InputManager.Instance.OnLeftMouse.AddListener(LeftClick);
+        InputManager.Instance.OnGameObjectClicked.AddListener(CheckIfMonitorClicked);
         InputManager.Instance.OnEsc.AddListener(Escape);
     }
 
-    private void LeftClick() {
-        Transform clickedObject = InputManager.Instance.GetClickedObject();
-        if (clickedObject == null) return;
+    private void CheckIfMonitorClicked(Transform objTransform) {
+        if (objTransform == null) return;
 
-        switch (clickedObject.tag) {
-            case "Level":
-                int number = int.Parse(clickedObject.name[^1].ToString());
-                 _cameraTransition.SetCam(number);
-                break;
+        Debug.Log(objTransform.name);
+
+        if (objTransform.tag == "Level") {
+            int number = int.Parse(objTransform.name[^1].ToString());
+            _cameraTransition.SetCam(number);
+        }
+        else if (objTransform.parent.tag == "Level") {
+            int number = int.Parse(objTransform.parent.name[^1].ToString());
+            _cameraTransition.SetCam(number);
         }
     }
 

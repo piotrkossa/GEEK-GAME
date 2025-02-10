@@ -15,7 +15,6 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     void Awake()
     {
-        fade.SetActive(false);
         thisButton = this.transform;
 
         originalPosition = thisButton.position;

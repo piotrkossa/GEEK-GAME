@@ -29,6 +29,22 @@ public class TransitionManager : MonoBehaviour
         }
     }
 
+    public async Task ScaleTransition(Transform objTransform, Vector3 originScale, Vector3 destinyScale, float time, float bezierY1, float bezierY2) {
+        GameObject obj = objTransform.gameObject;
+
+        transObj.Add(obj);
+
+        float t = 0f;
+
+        while (t <= 1f) {
+            if (obj == null || HasTransStopped(obj))
+                break;
+            t += Time.deltaTime / time;
+            objTransform.localScale = Vector3.Lerp(originScale, destinyScale, QuadraticBezierCurve(t, bezierY1, bezierY2));
+            await Task.Yield();
+        }
+    }
+
     public async Task CameraSizeTransition(Camera objCamera, float originFloat, float destinyFloat, float time, float bezierY1, float bezierY2) {
         GameObject obj = objCamera.gameObject;
 

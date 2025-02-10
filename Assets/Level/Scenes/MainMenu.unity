@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transitionManager: {fileID: 1028825687}
-  buttonImage: {fileID: 0}
+  thisButton: {fileID: 0}
   normalSprite: {fileID: -1507380766940037663, guid: 706e1d40198dfd243b082137bd374953, type: 3}
   fade: {fileID: 1909909610}
   moveDistance: 25
@@ -480,7 +480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &607099447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1223,7 +1223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &836707220
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1319,7 +1319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0.3383789, y: 149.99998}
   m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &919438188
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transitionManager: {fileID: 1028825687}
-  buttonImage: {fileID: 0}
+  thisButton: {fileID: 0}
   normalSprite: {fileID: -1507380766940037663, guid: 706e1d40198dfd243b082137bd374953, type: 3}
   fade: {fileID: 836707219}
   moveDistance: 25
@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transitionManager: {fileID: 1028825687}
-  buttonImage: {fileID: 0}
+  thisButton: {fileID: 0}
   normalSprite: {fileID: -1507380766940037663, guid: 706e1d40198dfd243b082137bd374953, type: 3}
   fade: {fileID: 607099446}
   moveDistance: 25
@@ -2562,7 +2562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1909909611
 RectTransform:
   m_ObjectHideFlags: 0

@@ -225,7 +225,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -242,7 +242,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.112457275, y: -0.06747484}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -252,7 +252,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 16, y: 9}
+  m_Size: {x: 18.609009, y: 10.574403}
   m_EdgeRadius: 0
 --- !u!114 &5406584311700287249
 MonoBehaviour:
@@ -776,21 +776,22 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 7.0892305, y: 0.13656253}
-      - {x: 4.717604, y: 0.14862216}
-      - {x: -4.045579, y: 0.13658041}
-      - {x: -4.04177, y: 2.1117299}
-      - {x: 7.125558, y: 2.1560752}
-      - {x: 7.1436033, y: 5.080594}
-      - {x: 6.273959, y: 5.111161}
-      - {x: 6.259902, y: 3.069067}
-      - {x: -4.92027, y: 3.0610347}
-      - {x: -4.9327364, y: -0.72836053}
-      - {x: 6.2140665, y: -0.70785415}
-      - {x: 6.2195826, y: -2.6755192}
-      - {x: -9.217863, y: -2.717318}
-      - {x: -9.21006, y: -3.571781}
-      - {x: 7.160057, y: -3.5631154}
+    - - {x: 5.2589293, y: 2.6368854}
+      - {x: 5.2723384, y: 5.0718184}
+      - {x: 6.115813, y: 5.075115}
+      - {x: 6.113869, y: 1.7504663}
+      - {x: -6.591045, y: 1.7501363}
+      - {x: -6.6046033, y: -3.4713411}
+      - {x: -2.085833, y: -3.4657955}
+      - {x: -2.0858111, y: -1.1546149}
+      - {x: 6.081593, y: -1.1350813}
+      - {x: 6.083943, y: -5.1772137}
+      - {x: 5.2214227, y: -5.180296}
+      - {x: 5.222752, y: -2.0014873}
+      - {x: -1.2103219, y: -2.0217724}
+      - {x: -1.2184672, y: -4.3419423}
+      - {x: -7.4447103, y: -4.3411217}
+      - {x: -7.457243, y: 2.634673}
   m_UseDelaunayMesh: 0
 --- !u!4 &6698785162845077780 stripped
 Transform:

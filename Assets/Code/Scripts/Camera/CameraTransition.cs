@@ -46,8 +46,8 @@ public class CameraTransition : MonoBehaviour
         tasks[1] = _transitionManager.VectorTransition(this.transform, this.transform.position, monitorLocations[cam], 1f, 0.55f, 1f);
         await Task.WhenAll(tasks);
 
-        isTransitioning = false;
         InputManager.Instance.UnlockAllInput();
+        isTransitioning = false;
     }
 
     public void SetCam(int cam) {
