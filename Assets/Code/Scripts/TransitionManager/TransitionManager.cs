@@ -5,7 +5,13 @@ using System.Collections.Generic;
 
 public class TransitionManager : MonoBehaviour
 {
+    public static TransitionManager Instance {get; private set;}
+
     private HashSet<GameObject> transObj = new HashSet<GameObject> {};
+
+    private void Awake() {
+        Instance = this;
+    }
 
     public async Task VectorTransition(Transform objTransform, Vector3 originPosition, Vector3 destinyPosition, float time, float bezierY1, float bezierY2) {
         GameObject obj = objTransform.gameObject;
