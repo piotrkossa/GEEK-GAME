@@ -4,47 +4,42 @@ using UnityEngine.EventSystems;
 
 public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public Image buttonImage; // Obrazek przycisku (np. ikona)
-    public Sprite normalSprite; // Standardowy wygląd
-    public Sprite hoverSprite; // Wygląd po najechaniu
-    public float moveDistance = 10f; // Przesunięcie przycisku w prawo
-    public float scaleFactor = 1.05f; // Współczynnik powiększenia (np. 1.05 oznacza 5% większy)
+    [SerializeField] private TransitionManager _transitionManager;
 
-    private Vector2 originalPosition; // Początkowa pozycja
-    private Vector2 originalSize; // Oryginalny rozmiar
+    public Image buttonImage;
+    public Sprite normalSprite;
+    public Sprite hoverSprite;
+    public float moveDistance = 10f;
+
+    private Vector3 originalPosition;
 
     void Start()
     {
         if (buttonImage == null)
             buttonImage = GetComponent<Image>(); // Pobranie Image, jeśli nie przypisano
 
-        originalPosition = buttonImage.rectTransform.anchoredPosition;
-        originalSize = buttonImage.rectTransform.sizeDelta; // Zapamiętaj oryginalny rozmiar
+        originalPosition = buttonImage.transform.position;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        buttonImage.sprite = hoverSprite; // Zmiana na nowy wygląd
-        buttonImage.rectTransform.anchoredPosition += new Vector2(moveDistance, 0); // Przesunięcie w prawo
 
-        // Zwiększenie rozmiaru o "scaleFactor"
-        buttonImage.rectTransform.sizeDelta = originalSize * scaleFactor; // Powiększenie o 5%
+    public async void OnPointerEnter(PointerEventData eventData)
+    {
+        _transitionManager.StopTransition(this.gameObject);
+        buttonImage.sprite = hoverSprite;
+        await _transitionManager.VectorTransition(this.transform, originalPosition, originalPosition + new Vector3(moveDistance, 0, 0), 0.3f, 0.55f, 1f);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public async void OnPointerExit(PointerEventData eventData)
     {
-        buttonImage.sprite = normalSprite; // Powrót do standardowego wyglądu
-        buttonImage.rectTransform.anchoredPosition = originalPosition; // Powrót na pierwotne miejsce
-
-        // Przywrócenie oryginalnego rozmiaru
-        buttonImage.rectTransform.sizeDelta = originalSize;
+        _transitionManager.StopTransition(this.gameObject);
+        buttonImage.sprite = normalSprite;
+        await _transitionManager.VectorTransition(this.transform, originalPosition + new Vector3(moveDistance, 0, 0), originalPosition, 0.3f, 0.55f, 1f);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         // Przywrócenie oryginalnej pozycji, rozmiaru i sprite'a po kliknięciu
-        buttonImage.rectTransform.anchoredPosition = originalPosition;
-        buttonImage.rectTransform.sizeDelta = originalSize;
+        buttonImage.transform.position = originalPosition;
         buttonImage.sprite = normalSprite; // Przywrócenie podstawowego kostiumu
 
         // Opcjonalnie, możesz dodać inne akcje po kliknięciu, jak przejście do nowej sceny itp.
