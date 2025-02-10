@@ -21,7 +21,7 @@ public class TransitionManager : MonoBehaviour
         float t = 0f;
 
         while (t <= 1f) {
-            if (HasTransStopped(obj))
+            if (obj == null || HasTransStopped(obj))
                 break;
             t += Time.deltaTime / time;
             objTransform.position = Vector3.Lerp(originPosition, destinyPosition, QuadraticBezierCurve(t, bezierY1, bezierY2));
@@ -37,7 +37,7 @@ public class TransitionManager : MonoBehaviour
         float t = 0f;
 
         while (t <= 1f) {
-            if (HasTransStopped(obj))
+            if (obj == null || HasTransStopped(obj))
                 break;
             t += Time.deltaTime / time;
             objCamera.orthographicSize = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
@@ -53,7 +53,7 @@ public class TransitionManager : MonoBehaviour
         float t = 0f;
 
         while (t <= 1f) {
-            if (HasTransStopped(obj))
+            if (obj == null || HasTransStopped(obj))
                 break;
             t += Time.deltaTime / time;
             objCanvasGroup.alpha = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
@@ -69,7 +69,7 @@ public class TransitionManager : MonoBehaviour
         float t = 0f;
 
         while (t <= 1f) {
-            if (HasTransStopped(obj))
+            if (obj == null || HasTransStopped(obj))
                 break;
             t += Time.deltaTime / time;
             objSlider.value = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
