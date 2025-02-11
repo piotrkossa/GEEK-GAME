@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class bulletScript : MonoBehaviour
+public class bulletScript2 : MonoBehaviour
 {
 
     private Transform target;
@@ -30,6 +30,10 @@ public class bulletScript : MonoBehaviour
         GameObject _enemyObject = other.gameObject;
         if (_enemyObject.CompareTag("Enemy")) {
             _enemyObject.GetComponent<EnemyHealth>().TakeDamage(bulletDamage);
+            Destroy(gameObject);
+        }
+        if (_enemyObject.CompareTag("Monitor border"))
+        {
             Destroy(gameObject);
         }
     }
