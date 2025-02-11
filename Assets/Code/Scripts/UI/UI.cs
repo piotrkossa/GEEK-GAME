@@ -7,6 +7,7 @@ public class UI : MonoBehaviour
 
     private CanvasGroup _thisCanvasGroup;
 
+
     private void Start() {
         _globalVariables.onViewChanged.AddListener(ChangeVisibleState);
         _thisCanvasGroup = this.GetComponent<CanvasGroup>();
