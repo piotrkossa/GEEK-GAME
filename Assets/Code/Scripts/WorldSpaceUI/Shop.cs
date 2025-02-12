@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Shop : MonoBehaviour
 {
@@ -9,40 +8,51 @@ public class Shop : MonoBehaviour
 
     [Header("Images")]
     [SerializeField] private GameObject shopShelves;
-    [SerializeField] private GameObject shopShop;
+    [SerializeField] private GameObject shopImage;
 
-    private Vector3 originScale;
-    private Vector3 clickedScale;
+    [Header("External Requirements")]
+    [SerializeField] private GlobalVariables _globalVariables;
 
-    void Start()
-    {
-        originScale = shopShop.transform.localScale;
-        clickedScale = Vector3.one * shrinkRatio;
-        InputManager.Instance.OnGameObjectClicked.AddListener(CheckIfShopClicked);
+    private void Start() {
+        _globalVariables.onViewChanged.AddListener(CheckIfInShop);
     }
 
-    private void CheckIfShopClicked(Transform objTransform)
-    {
-        if (objTransform.name == "ShopImage")
-        {
-            ShopClicked();
+    private bool isItIn = false;
+
+    private void CheckIfInShop() {
+        if (_globalVariables.CurrentLevelView == 4) {
+            isItIn = true;
+            ShopEntered();
+        }
+        else if (isItIn == true) {
+            ShopQuit();
+            isItIn = false;
         }
     }
 
-    private bool isTrans = false;
-    private async void ShopClicked()
+
+    private async void ShopEntered()
     {
-        if (isTrans) return;
+        InputManager.Instance.BlockAllInput();
 
-        isTrans = true;
+        await TransitionManager.Instance.ScaleTransition(shopImage.transform, Vector3.one, Vector3.zero, 0.3f, 0.61f, 0.88f);
+        shopImage.SetActive(false);
 
-        await TransitionManager.Instance.ScaleTransition(shopShelves.transform, originScale, clickedScale, 0.2f, 0.61f, 0.88f);
-        await TransitionManager.Instance.ScaleTransition(shopShop.transform, originScale, clickedScale, 0.2f, 0.61f, 0.88f);
-        shopShop.SetActive(false);
         shopShelves.SetActive(true);
-        await TransitionManager.Instance.ScaleTransition(shopShelves.transform, clickedScale, originScale, 0.2f, 0.61f, 0.88f);
+        await TransitionManager.Instance.ScaleTransition(shopShelves.transform, Vector3.zero, Vector3.one, 0.3f, 0.61f, 0.88f);
 
+        InputManager.Instance.UnlockAllInput();
+    }
 
-        isTrans = false;
+    private async void ShopQuit() {
+        InputManager.Instance.BlockAllInput();
+
+        await TransitionManager.Instance.ScaleTransition(shopShelves.transform, Vector3.one, Vector3.zero, 0.3f, 0.61f, 0.88f);
+        shopShelves.SetActive(false);
+
+        shopImage.SetActive(true);
+        await TransitionManager.Instance.ScaleTransition(shopImage.transform, Vector3.zero, Vector3.one, 0.3f, 0.61f, 0.88f);
+
+        InputManager.Instance.UnlockAllInput();
     }
 }

@@ -9,32 +9,22 @@ public class CameraHandler : MonoBehaviour
     private Camera _mainCamera;
     [SerializeField] private GlobalVariables _globalVariables;
     private CameraTransition _cameraTransition;
+    [SerializeField] float escTimeTrans;
+
+    private float thisSize;
+    private Vector3 thisPosition;
 
     private void Start()
     {
-        _mainCamera = Camera.main;
         _cameraTransition = this.gameObject.GetComponent<CameraTransition>();
 
-        InputManager.Instance.OnGameObjectClicked.AddListener(CheckIfMonitorClicked);
         InputManager.Instance.OnEsc.AddListener(Escape);
-    }
 
-    private void CheckIfMonitorClicked(Transform objTransform) {
-        if (objTransform == null) return;
-
-        Debug.Log(objTransform.name);
-
-        if (objTransform.tag == "Level") {
-            int number = int.Parse(objTransform.name[^1].ToString());
-            _cameraTransition.SetCam(number);
-        }
-        else if (objTransform.parent.tag == "Level") {
-            int number = int.Parse(objTransform.parent.name[^1].ToString());
-            _cameraTransition.SetCam(number);
-        }
+        thisPosition = this.transform.position;
+        thisSize = Camera.main.orthographicSize;
     }
 
     private void Escape() {
-        _cameraTransition.SetCam(0);
+        _cameraTransition.SetCam(0, thisPosition, thisSize, escTimeTrans);
     }
 }

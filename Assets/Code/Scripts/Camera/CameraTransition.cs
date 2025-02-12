@@ -9,53 +9,34 @@ public class CameraTransition : MonoBehaviour
 
     private Camera thisCam;
 
-    private float mainCamSize;
-    private float monitorCamSize = 5.554f;
-
-    [SerializeField] private Transform[] _levels = new Transform [4];
-    private Vector3[] monitorLocations = new Vector3[4];
-
     private bool isTransitioning = false;
 
 
     private void Awake() {
         thisCam = this.GetComponent<Camera>();
-
-        mainCamSize = thisCam.orthographicSize;
-
-        for (int i = 0; i < 4; i++) {
-            monitorLocations[i] = _levels[i].position;
-            monitorLocations[i].z = -1;
-        }
     }
 
 
-    private async void ChangeCam(int cam) {
+    private async void ChangeCam(Vector3 position, float size, float time) {
         isTransitioning = true;
         InputManager.Instance.BlockAllInput();
         
-        float size;
-        if (cam != 0) {
-            size = monitorCamSize;
-        }
-        else {
-            size = mainCamSize;
-        }
         Task[] tasks = new Task [2];
-        tasks[0] = _transitionManager.CameraSizeTransition(thisCam, thisCam.orthographicSize, size, 1f, 0.55f, 1f);
-        tasks[1] = _transitionManager.VectorTransition(this.transform, this.transform.position, monitorLocations[cam], 1f, 0.55f, 1f);
+        tasks[0] = _transitionManager.CameraSizeTransition(thisCam, thisCam.orthographicSize, size, time, 0.4f, 1f);
+        tasks[1] = _transitionManager.VectorTransition(this.transform, this.transform.position, position, time, 0.4f, 1f);
         await Task.WhenAll(tasks);
 
         InputManager.Instance.UnlockAllInput();
         isTransitioning = false;
     }
 
-    public void SetCam(int cam) {
+    public void SetCam(int cam, Vector3 position, float size, float time) {
         if (isTransitioning)
             return;
 
         if (_globalVariables.CurrentLevelView != cam) {
-            ChangeCam(cam);
+            position.z = -1;
+            ChangeCam(position, size, time);
             _globalVariables.UpdateCurrentLevelView(cam);
         }
     }

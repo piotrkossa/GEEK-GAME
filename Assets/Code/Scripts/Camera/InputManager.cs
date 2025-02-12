@@ -8,9 +8,8 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance {get; private set;}
 
-    private PlayerInput _input;
-
     public bool isInputBlocked {get; private set;}
+    private int blockCount = 0;
 
     public UnityEvent OnLeftMouse;
     public UnityEvent OnRightMouse;
@@ -21,8 +20,6 @@ public class InputManager : MonoBehaviour
         isInputBlocked = false;
         
         Instance = this;
-
-        _input = this.GetComponent<PlayerInput>();
     }
 
     private void OnLeftClick() {
@@ -46,11 +43,16 @@ public class InputManager : MonoBehaviour
 
 
     public void BlockAllInput() {
+        blockCount += 1;
         isInputBlocked = true;
     }
 
     public void UnlockAllInput() {
-        isInputBlocked = false;
+        if (blockCount > 0)
+            blockCount -= 1;
+
+        if (blockCount == 0)
+            isInputBlocked = false;
     }
 
     public Transform GetClickedObject() {
