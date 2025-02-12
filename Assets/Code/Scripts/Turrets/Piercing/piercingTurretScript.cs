@@ -75,7 +75,9 @@ public class piercingTurretScript : MonoBehaviour
 
     private void OnDrawGizmosSelected() // widac range jak siedzisz w unity
     {
+#if UNITY_EDITOR
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+#endif
     }
 }
