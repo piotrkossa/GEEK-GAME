@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virus-niebieski_0: -682635279204537441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

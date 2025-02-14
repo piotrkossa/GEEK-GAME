@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virus-rozowy_0: -5153796567796789490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virus-czerwony_0: -349429741435592088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

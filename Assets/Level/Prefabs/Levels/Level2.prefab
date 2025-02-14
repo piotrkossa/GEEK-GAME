@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 2353376943569874356}
   - component: {fileID: 2671890554806812411}
   - component: {fileID: 5298850700473105845}
+  - component: {fileID: 4935732208418651546}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Level
@@ -405,7 +406,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.099500656, y: -0.11371565}
+  m_Offset: {x: -0.0570364, y: -0.09700537}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -415,7 +416,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 18.587036, y: 10.592023}
+  m_Size: {x: 18.680582, y: 10.687594}
   m_EdgeRadius: 0
 --- !u!114 &5298850700473105845
 MonoBehaviour:
@@ -431,6 +432,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemySpawner: {fileID: 673042210863335088}
   _level3: {fileID: 0}
+--- !u!114 &4935732208418651546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9181796338019554878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09bc5d589e0f72d4286093e5c13fd17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camSize: 5.55
+  camNumber: 2
+  transTime: 0.8
 --- !u!1001 &632083772744637853
 PrefabInstance:
   m_ObjectHideFlags: 0

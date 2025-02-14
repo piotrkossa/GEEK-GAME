@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virus-fioletowy_0: 1715313246812515323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

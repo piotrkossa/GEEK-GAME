@@ -24,7 +24,7 @@ public class turretScript : MonoBehaviour
             return;
         }
 
-        RotateTowardsTarget();
+        bool isPointing = RotateTowardsTarget();
 
         if (!CheckTargetIsInRange())
         {
@@ -34,7 +34,7 @@ public class turretScript : MonoBehaviour
         {
             timeUntilFire += Time.deltaTime;
 
-            if (timeUntilFire >= 1f/bulletsPerSecond)
+            if (timeUntilFire >= 1f/bulletsPerSecond && isPointing)
             {
                 Shoot();
                 timeUntilFire = 0f;
@@ -60,18 +60,28 @@ public class turretScript : MonoBehaviour
         }
     }
 
-    private void RotateTowardsTarget() // wyliczamy kat i przesuwamy gun w kierunku enemy
+    private bool RotateTowardsTarget() // wyliczamy kat i przesuwamy gun w kierunku enemy
     {
+        float startingRotation = turretRotationPoint.rotation.eulerAngles.z;
+
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        float endingRotation = turretRotationPoint.rotation.eulerAngles.z;
+
+        if(Mathf.Abs(startingRotation - endingRotation) < 0.2f)
+            return true;
+
+        return false;
     }
 
     private bool CheckTargetIsInRange()
     {
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
+
 
     private void OnDrawGizmosSelected() // widac range jak siedzisz w unity
     {

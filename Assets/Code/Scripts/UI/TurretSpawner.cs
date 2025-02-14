@@ -73,7 +73,7 @@ public class TurretSpawner : MonoBehaviour
         }
         else
         {
-            Debug.Log("Nie mo�esz postawi� dzia�ki w tym miejscu!");
+            Debug.Log("Nie mozesz postawic dzialka w tym miejscu!");
             isPlacing = false;
             Destroy(objectBeingPlaced);
 
@@ -84,19 +84,18 @@ public class TurretSpawner : MonoBehaviour
     private void Escape() {
         if (!isPlacing) return;
 
-        isPlacing = false;
         Destroy(objectBeingPlaced);
 
         _placementIndicator.gameObject.SetActive(false);
+        isPlacing = false;
     }
 
     public void TurretChoosen(int slot)
     {
+        isPlacing = true;
         objectBeingPlaced = Instantiate(_icons[slot].gameObject, _icons[slot].transform.parent);
         objectBeingPlaced.GetComponent<Image>().sprite = _icons[slot].sprite;
 
         _placementIndicator.gameObject.SetActive(true);
-
-        isPlacing = true;
     }
 }

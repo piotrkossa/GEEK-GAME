@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virus-zolty_0: 1100332046358247724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

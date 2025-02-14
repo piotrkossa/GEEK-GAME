@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virus-zielony_0: -239639511732751166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

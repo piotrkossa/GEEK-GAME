@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class UI : MonoBehaviour
+public class UI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] GlobalVariables _globalVariables;
     [SerializeField] private TransitionManager _transitionManager;
@@ -9,32 +10,31 @@ public class UI : MonoBehaviour
 
 
     private void Start() {
-        _globalVariables.onViewChanged.AddListener(ChangeVisibleState);
         _thisCanvasGroup = this.GetComponent<CanvasGroup>();
-        _thisCanvasGroup.alpha = 0f;
-        this.gameObject.SetActive(false);
+        SwitchAvailability(false);
     }
 
     public GlobalVariables GetGlobalVariables() {
         return _globalVariables;
     }
 
-    private bool isChanging = false;
+    public void OnPointerEnter(PointerEventData data) {
+        SwitchAvailability(true);
+    }
 
-    private async void ChangeVisibleState() {
-        if (isChanging)
-            return;
-        
-        isChanging = true;
+    public void OnPointerExit(PointerEventData data)
+    {
+        SwitchAvailability(false);
+    }
 
-        if (_globalVariables.CurrentLevelView != 0) {
-            this.gameObject.SetActive(true);
-            await _transitionManager.CanvasGroupAlphaTransition(_thisCanvasGroup, 0f, 1f, 1f, 0.55f, 1f);
+    private void SwitchAvailability(bool state) {
+        if (state) {
+            _thisCanvasGroup.alpha = 1f;
+            _thisCanvasGroup.interactable = true;
         }
         else {
-            await _transitionManager.CanvasGroupAlphaTransition(_thisCanvasGroup, 1f, 0f, 1f, 1f, 0.55f);
-            this.gameObject.SetActive(false);
+            _thisCanvasGroup.alpha = 0f;
+            _thisCanvasGroup.interactable = false;
         }
-        isChanging = false;
     }
 }
