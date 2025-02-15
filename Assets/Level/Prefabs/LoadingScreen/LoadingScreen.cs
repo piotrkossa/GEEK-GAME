@@ -21,6 +21,8 @@ public class LoadingScreen : MonoBehaviour
 
         await TransitionManager.Instance.ScaleTransition(_logo, _logo.localScale, Vector3.one, 0.3f, 0f, 1f);
 
+        await Awaitable.WaitForSecondsAsync(0.5f);
+
         await TransitionManager.Instance.SliderValueTransition(_slider, 1f, 0f, 1f, 0.37f, 0.63f);
     }
 }

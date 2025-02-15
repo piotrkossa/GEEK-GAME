@@ -2413,6 +2413,58 @@ PrefabInstance:
       objectReference: {fileID: 870527557}
     - target: {fileID: 1588427463649046284, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
       propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759386132329240799, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 710
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759386132329240799, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -123
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418748496871982972, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6314992250769306656, guid: 2635906f66d90074ca107e0cd9cccc05, type: 3}
+    - target: {fileID: 2418748496871982972, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418748496871982972, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991210155761623669, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 88.4022
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991210155761623669, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 88.4022
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991210155761623669, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -85.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991210155761623669, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410857530813731365, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 72.2826
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410857530813731365, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 72.2826
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410857530813731365, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410857530813731365, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4413981771838291860, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
@@ -2514,7 +2566,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6843530802621252024, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1494039693}
   m_SourcePrefab: {fileID: 100100000, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
 --- !u!1 &1302045340
 GameObject:
@@ -2909,6 +2964,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465927679}
   m_CullTransparentMesh: 1
+--- !u!1 &1494039688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6843530802621252024, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+  m_PrefabInstance: {fileID: 1216442782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1494039693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494039688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c8fcf838aaf784f8053882461e2e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionTime: 0.3
 --- !u!1 &1578694207
 GameObject:
   m_ObjectHideFlags: 0
