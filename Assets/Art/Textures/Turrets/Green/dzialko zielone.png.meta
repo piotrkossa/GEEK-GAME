@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6735787c3f6fc1746989e9a63d8d4f1e
+guid: 6a3dd5313f32481429a29678dd703c05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7398409260249954404
-    second: dzialko_0
+      213: -8551298894649060496
+    second: dzialko zielone_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dzialko_0
+      name: dzialko zielone_0
       rect:
         serializedVersion: 2
-        x: 403
-        y: 356
-        width: 213
-        height: 327
+        x: 132
+        y: 77
+        width: 233
+        height: 333
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 468b824160e6ca660800000000000000
-      internalID: 7398409260249954404
+      spriteID: 073904846fea35980800000000000000
+      internalID: -8551298894649060496
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dzialko_0: 7398409260249954404
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -59,8 +59,8 @@ Transform:
   m_GameObject: {fileID: 3308623136990511704}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.43, z: 0}
-  m_LocalScale: {x: 0.29215524, y: 0.29215524, z: 0.29215524}
+  m_LocalPosition: {x: 0, y: 0.11, z: 0}
+  m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5562633743186129104}
@@ -109,12 +109,12 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7398409260249954404, guid: 6735787c3f6fc1746989e9a63d8d4f1e, type: 3}
+  m_Sprite: {fileID: 4803762841643636741, guid: 5a5dbbc55e1d903488b75c2a3bc19874, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 2.23, y: 3.27}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -227,12 +227,12 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2848297342934722902, guid: 8385c86cb7c12b84392f2b2cdc11e75a, type: 3}
+  m_Sprite: {fileID: -4102815330749518293, guid: b20d66528ffa23a4dbdc8a756519d8dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.52, y: 2.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 7216214945383436784}
   - component: {fileID: 7575018656760700636}
   m_Layer: 8
-  m_Name: Turret
+  m_Name: BlueTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
