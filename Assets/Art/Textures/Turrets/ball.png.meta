@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dfe9698b537c98b4c904db76384dc3dd
+guid: 27b5bc35257d60043a9f450c5124301b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6025753134935432947
-    second: czerwona kula_0
+      213: -3603556060819865620
+    second: ball_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,10 +100,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: czerwona kula_0
+      name: ball_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 25
         width: 49
         height: 49
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3fed508ec86cf9350800000000000000
-      internalID: 6025753134935432947
+      spriteID: cef30aaead89dfdc0800000000000000
+      internalID: -3603556060819865620
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ball_0: -3603556060819865620
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
