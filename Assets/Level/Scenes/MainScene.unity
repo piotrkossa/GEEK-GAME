@@ -2395,6 +2395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1082223632}
+  _globalVariables: {fileID: 1004929443}
 --- !u!1 &775163723
 GameObject:
   m_ObjectHideFlags: 0
@@ -4989,6 +4990,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnEsc:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEscUnlocked:
     m_PersistentCalls:
       m_Calls: []
   OnGameObjectClicked:

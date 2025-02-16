@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
     public UnityEvent OnLeftMouse;
     public UnityEvent OnRightMouse;
     public UnityEvent OnEsc;
+    public UnityEvent OnEscUnlocked;
     public UnityEvent<Transform> OnGameObjectClicked;
 
     private void Awake() {
@@ -32,8 +33,10 @@ public class InputManager : MonoBehaviour
     }
 
     private void OnEscape() {
-        if (isInputBlocked) return;
-        OnEsc.Invoke();
+        if (!isInputBlocked)
+            OnEsc.Invoke();
+            
+        OnEscUnlocked.Invoke();
     }
 
     private void OnRightClick() {

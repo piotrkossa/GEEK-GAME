@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      przycisk do ramki_0: 168668185479997397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

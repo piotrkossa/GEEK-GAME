@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        InputManager.Instance.UnlockAllInput();
     }
 
     public void Settings()
