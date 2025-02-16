@@ -93,7 +93,7 @@ public class TurretSpawner : MonoBehaviour
     public void TurretChoosen(int slot)
     {
         isPlacing = true;
-        objectBeingPlaced = Instantiate(_icons[slot].gameObject, _icons[slot].transform.parent);
+        objectBeingPlaced = Instantiate(_icons[slot].gameObject, _icons[slot].transform.parent.parent.parent);
         objectBeingPlaced.GetComponent<Image>().sprite = _icons[slot].sprite;
 
         _placementIndicator.gameObject.SetActive(true);

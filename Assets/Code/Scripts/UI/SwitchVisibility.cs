@@ -1,9 +1,5 @@
-using System;
-using Unity.Mathematics;
-using UnityEditor.Rendering.Universal.ShaderGraph;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class SwitchVisibility : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
