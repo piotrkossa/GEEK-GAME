@@ -109,12 +109,12 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7398409260249954404, guid: 6735787c3f6fc1746989e9a63d8d4f1e, type: 3}
+  m_Sprite: {fileID: 1751591117724389940, guid: 4ac422bc5c03544409df809914984ab5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 2.21, y: 3.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -227,12 +227,12 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2848297342934722902, guid: 8385c86cb7c12b84392f2b2cdc11e75a, type: 3}
+  m_Sprite: {fileID: -2490458848780107173, guid: 09117d6223e29a742af5525b016a1fb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.52, y: 2.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -289,7 +289,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 2429205407991770565, guid: 969f1ad7eabb2124f96f2a035846149e, type: 3}
+  bulletPrefab: {fileID: 2429205407991770565, guid: 90cf4299f1b9c074e884dac9b5bef1f9, type: 3}
   firingPoint: {fileID: 3941675567915650672}
   targetingRange: 3
   rotationSpeed: 150

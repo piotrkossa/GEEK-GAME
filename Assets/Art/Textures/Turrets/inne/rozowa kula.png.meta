@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6735787c3f6fc1746989e9a63d8d4f1e
+guid: 8983f48562d8c8f419f55edad5542858
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7398409260249954404
-    second: dzialko_0
+      213: -6963680734322123865
+    second: rozowa kula_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dzialko_0
+      name: rozowa kula_0
       rect:
         serializedVersion: 2
-        x: 403
-        y: 356
-        width: 213
-        height: 327
+        x: 27
+        y: 26
+        width: 49
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 468b824160e6ca660800000000000000
-      internalID: 7398409260249954404
+      spriteID: 7ab9f7d64490c5f90800000000000000
+      internalID: -6963680734322123865
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dzialko_0: 7398409260249954404
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
