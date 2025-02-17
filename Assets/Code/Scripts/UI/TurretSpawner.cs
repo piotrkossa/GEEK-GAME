@@ -1,18 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class TurretSpawner : MonoBehaviour
 {
-    [Header("Slots")]
-    [SerializeField] private List<Button> _slots;
-    private List<Image> _icons = new List<Image>();
+    private Dictionary<TurretTypes, GameObject> _turretProps = new Dictionary<TurretTypes, GameObject> {};
+    [Header("TurretProps")]
+    [SerializeField] private GameObject blueProp;
+    [SerializeField] private GameObject redProp;
+    [SerializeField] private GameObject yellowProp;
+    [SerializeField] private GameObject greenProp;
 
-    [Header("Icons")]
-    [SerializeField] private List<Sprite> _sprites;
-
+    private Dictionary<TurretTypes, GameObject> _turrets = new Dictionary<TurretTypes, GameObject> {};
     [Header("Turrets")]
-    [SerializeField] private List<GameObject> _turrets;
+    [SerializeField] private GameObject blueTurret;
+    [SerializeField] private GameObject redTurret;
+    [SerializeField] private GameObject yellowTurret;
+    [SerializeField] private GameObject greenTurret;
 
     [Header("Turrets grid")]
     [SerializeField] private LayerMask _placementBlockMask;
@@ -22,14 +26,16 @@ public class TurretSpawner : MonoBehaviour
 
     private bool isPlacing = false;
     private GameObject objectBeingPlaced = null;
+    private TurretTypes objectBeingPlacedType = TurretTypes.None;
 
     private void Start()
     {
         InputManager.Instance.OnLeftMouse.AddListener(Accept);
         InputManager.Instance.OnRightMouse.AddListener(Escape);
         InputManager.Instance.OnEsc.AddListener(Escape);
-
-        _icons[0].sprite = _sprites[0];
+        
+        AssignTurretsToDict();
+        AssignTurretPropsToDict();
     }
 
     private Vector3 mouseWorldPos;
@@ -46,7 +52,7 @@ public class TurretSpawner : MonoBehaviour
         mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0;
 
-        objectBeingPlaced.transform.position = Input.mousePosition;
+        objectBeingPlaced.transform.position = mouseWorldPos;
 
         _placementIndicator.transform.position = mouseWorldPos;
         Collider2D hit = Physics2D.OverlapBox(mouseWorldPos, boxSize, 0, _placementBlockMask);
@@ -64,7 +70,7 @@ public class TurretSpawner : MonoBehaviour
             
             _placementIndicator.gameObject.SetActive(false);
 
-            Instantiate(_turrets[0]).transform.position = mouseWorldPos;
+            Instantiate(_turrets[objectBeingPlacedType]).transform.position = mouseWorldPos;
         }
         else
         {
@@ -85,12 +91,26 @@ public class TurretSpawner : MonoBehaviour
         isPlacing = false;
     }
 
-    public void TurretChoosen(int slot, TurretTypes turretType)
+    public void TurretChoosen(TurretTypes turretType)
     {
         isPlacing = true;
-        objectBeingPlaced = Instantiate(_icons[slot].gameObject, _icons[slot].transform.parent.parent.parent);
-        objectBeingPlaced.GetComponent<Image>().sprite = _icons[slot].sprite;
+        objectBeingPlacedType = turretType;
+        objectBeingPlaced = Instantiate(_turretProps[turretType], this.transform.parent);
 
         _placementIndicator.gameObject.SetActive(true);
+    }
+
+    private void AssignTurretPropsToDict() {
+        _turretProps[TurretTypes.Blue] = blueProp;
+        _turretProps[TurretTypes.Green] = greenProp;
+        _turretProps[TurretTypes.Red] = redProp;
+        _turretProps[TurretTypes.Yellow] = yellowProp;
+    }
+
+    private void AssignTurretsToDict() {
+        _turrets[TurretTypes.Blue] = blueTurret;
+        _turrets[TurretTypes.Green] = greenTurret;
+        _turrets[TurretTypes.Red] = redTurret;
+        _turrets[TurretTypes.Yellow] = yellowTurret;
     }
 }

@@ -7,7 +7,6 @@ public class TurretSlotScript : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private TurretTypes turretType;
-    [SerializeField] private int slotNumber;
 
     [Header("External Requirements")]
     [SerializeField] private GlobalVariables _globalVariables;
@@ -39,6 +38,6 @@ public class TurretSlotScript : MonoBehaviour
     }
 
     private void OnClick() {
-        this.transform.parent.GetComponent<TurretSpawner>().TurretChoosen(slotNumber, turretType);
+        this.transform.parent.GetComponent<TurretSpawner>().TurretChoosen(turretType);
     }
 }

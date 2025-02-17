@@ -1893,7 +1893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfd9b81f2a0a84409c488f9d72f4306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: 1
+  turretType: 3
   _globalVariables: {fileID: 1004929443}
   _turretCountText: {fileID: 1980610672}
 --- !u!1 &482171845
@@ -3222,12 +3222,72 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: redProp
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: d28481d3a51c9654a80effa444e30063, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: blueProp
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: 86caf1cb4d331ca458e39c67722c7795, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: greenProp
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: beb1b3ed3645fd546900b9608f607a77, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: redTurret
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: 9b238debd6dde7c4d94504a15dbd5eb3, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: blueTurret
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: adc14bfbe274270478a1c6fa2930d44e, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: yellowProp
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: 9b45c23d1a39d824b99b5357135b0b91, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: greenTurret
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: 87ceb6e7ce3a7964c8681d8603c83743, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: yellowTurret
+      value: 
+      objectReference: {fileID: 7537092032873529876, guid: 85e37d829eff59c479eeca6c6ed6337f, type: 3}
+    - target: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
       propertyPath: _placementIndicator
       value: 
       objectReference: {fileID: 870527557}
     - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2063340149}
+    - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TurretChoosen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TurretSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348387769193273382, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2991210155761623669, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3433,7 +3493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfd9b81f2a0a84409c488f9d72f4306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: 0
+  turretType: 1
   _globalVariables: {fileID: 1004929443}
   _turretCountText: {fileID: 1096051926}
 --- !u!1 &1302045340
@@ -4814,7 +4874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfd9b81f2a0a84409c488f9d72f4306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: 3
+  turretType: 4
   _globalVariables: {fileID: 1004929443}
   _turretCountText: {fileID: 192177786}
 --- !u!114 &1912701002 stripped
@@ -5034,6 +5094,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e3cd5f4e6396df4683a1ab012f43d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2063340149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1025018591018548244, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+  m_PrefabInstance: {fileID: 1216442782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01455b554141c3c43b80ea17d0431f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

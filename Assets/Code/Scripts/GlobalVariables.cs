@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public enum TurretTypes {
+    None,
     Blue,
     Green,
     Red,
