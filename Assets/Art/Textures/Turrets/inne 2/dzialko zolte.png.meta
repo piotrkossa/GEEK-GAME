@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dzialko zolte_0: -5025249159021211544
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

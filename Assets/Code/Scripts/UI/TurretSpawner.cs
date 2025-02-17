@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 
 public class TurretSpawner : MonoBehaviour
 {
@@ -30,10 +29,6 @@ public class TurretSpawner : MonoBehaviour
         InputManager.Instance.OnRightMouse.AddListener(Escape);
         InputManager.Instance.OnEsc.AddListener(Escape);
 
-        foreach (Button slot in _slots)
-        {
-            _icons.Add(slot.transform.GetChild(0).GetComponent<Image>());
-        }
         _icons[0].sprite = _sprites[0];
     }
 
@@ -90,7 +85,7 @@ public class TurretSpawner : MonoBehaviour
         isPlacing = false;
     }
 
-    public void TurretChoosen(int slot)
+    public void TurretChoosen(int slot, TurretTypes turretType)
     {
         isPlacing = true;
         objectBeingPlaced = Instantiate(_icons[slot].gameObject, _icons[slot].transform.parent.parent.parent);

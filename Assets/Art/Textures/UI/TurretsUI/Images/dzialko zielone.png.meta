@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 09f0092fa226d914d808c26ff3337dbd
+guid: cacb150845c0dac488a5d0254b456a79
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -461896868415383977
-    second: PLACEHOLDER_turret_0
+      213: -8551298894649060496
+    second: dzialko zielone_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLACEHOLDER_turret_0
+      name: dzialko zielone_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 600
-        height: 635
+        x: 132
+        y: 77
+        width: 233
+        height: 333
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7565c33de330799f0800000000000000
-      internalID: -461896868415383977
+      spriteID: 073904846fea35980800000000000000
+      internalID: -8551298894649060496
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PLACEHOLDER_turret_0: -461896868415383977
+      dzialko zielone_0: -8551298894649060496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

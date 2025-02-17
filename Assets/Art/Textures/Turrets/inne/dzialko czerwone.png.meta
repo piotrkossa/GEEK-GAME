@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dzialko czerwone_0: 1751591117724389940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

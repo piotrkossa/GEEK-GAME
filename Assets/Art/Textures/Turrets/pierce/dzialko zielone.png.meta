@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dzialko zielone_0: -8551298894649060496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

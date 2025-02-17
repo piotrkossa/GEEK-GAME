@@ -59,8 +59,8 @@ Transform:
   m_GameObject: {fileID: 3308623136990511704}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.43, z: 0}
-  m_LocalScale: {x: 0.29215524, y: 0.29215524, z: 0.29215524}
+  m_LocalPosition: {x: 0, y: 0.13, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5562633743186129104}
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4803762841643636741, guid: 7f37facf2b31fb9489db4bb4bd8af104, type: 3}
+  m_Sprite: {fileID: -8551298894649060496, guid: d602a09570f2e1046a9104996a16d8fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -227,7 +227,7 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4102815330749518293, guid: 604748f43fe99b2498284716656403d0, type: 3}
+  m_Sprite: {fileID: 3734690339994850837, guid: 8ca70cca4f490e149b350b9c627c93da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -247,10 +247,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8145620359531968428}
-  - component: {fileID: 7216214945383436784}
   - component: {fileID: 7575018656760700636}
+  - component: {fileID: -6303190595242996241}
   m_Layer: 8
-  m_Name: Turret
+  m_Name: PiercingTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,27 +273,6 @@ Transform:
   - {fileID: 5562633743186129104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7216214945383436784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7537092032873529876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e530fe195a363a48b6c9314f7e32840, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretRotationPoint: {fileID: 5562633743186129104}
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 64
-  bulletPrefab: {fileID: 2429205407991770565, guid: 969f1ad7eabb2124f96f2a035846149e, type: 3}
-  firingPoint: {fileID: 3941675567915650672}
-  targetingRange: 3
-  rotationSpeed: 150
-  bulletsPerSecond: 2
 --- !u!61 &7575018656760700636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -340,3 +319,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.15, y: 1.15}
   m_EdgeRadius: 0
+--- !u!114 &-6303190595242996241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537092032873529876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fbf77a250036644bb6f412345bc986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretRotationPoint: {fileID: 5562633743186129104}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  bulletPrefab: {fileID: 2429205407991770565, guid: 8817b9859dc1fde43b16e4b8a3def3f0, type: 3}
+  firingPoint: {fileID: 3941675567915650672}
+  targetingRange: 5
+  rotationSpeed: 150
+  bulletsPerSecond: 1

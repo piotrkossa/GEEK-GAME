@@ -51,11 +51,11 @@ public class Shelved : MonoBehaviour
             if (_globalVariables.Money >= priceDefault)
             {
                 _globalVariables.UpdateMoney(-priceDefault);
-                _globalVariables.UpdateDefault(1);
+                _globalVariables.UpdateBlue(1);
             }
             else
             {
-                Debug.Log("Nie mo¿na zakupiæ dzia³ka");
+                Debug.Log("Nie moï¿½na zakupiï¿½ dziaï¿½ka");
             }
         }
     }
@@ -67,11 +67,11 @@ public class Shelved : MonoBehaviour
             if (_globalVariables.Money >= pricePierce)
             {
                 _globalVariables.UpdateMoney(-pricePierce);
-                _globalVariables.UpdatePierce(1);
+                _globalVariables.UpdateGreen(1);
             }
             else
             {
-                Debug.Log("Nie mo¿na zakupiæ dzia³ka");
+                Debug.Log("Nie moï¿½na zakupiï¿½ dziaï¿½ka");
             }
         }
     }
@@ -83,7 +83,7 @@ public class Shelved : MonoBehaviour
             if (_globalVariables.Money >= priceFire)
             {
                 _globalVariables.UpdateMoney(-priceFire);
-                _globalVariables.UpdateDefault(1);
+                _globalVariables.UpdateYellow(1);
 
             }
         }
@@ -96,11 +96,11 @@ public class Shelved : MonoBehaviour
             if (_globalVariables.Money >= priceFast)
             {
                 _globalVariables.UpdateMoney(-priceFast);
-                _globalVariables.UpdateFast(1);
+                _globalVariables.UpdateRed(1);
             }
             else
             {
-                Debug.Log("Nie mo¿na zakupiæ dzia³ka");
+                Debug.Log("Nie moï¿½na zakupiï¿½ dziaï¿½ka");
             }
         }
     }

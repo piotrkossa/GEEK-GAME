@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      czerwona kula_0: 6025753134935432947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

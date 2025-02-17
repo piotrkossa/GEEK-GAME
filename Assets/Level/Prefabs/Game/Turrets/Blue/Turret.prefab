@@ -59,8 +59,8 @@ Transform:
   m_GameObject: {fileID: 3308623136990511704}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.43, z: 0}
-  m_LocalScale: {x: 0.29215524, y: 0.29215524, z: 0.29215524}
+  m_LocalPosition: {x: 0, y: 0.13, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5562633743186129104}
@@ -109,12 +109,12 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1751591117724389940, guid: 4ac422bc5c03544409df809914984ab5, type: 3}
+  m_Sprite: {fileID: 4803762841643636741, guid: 7f37facf2b31fb9489db4bb4bd8af104, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.21, y: 3.22}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -227,12 +227,12 @@ SpriteRenderer:
   m_SortingLayerID: -421393045
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2490458848780107173, guid: 09117d6223e29a742af5525b016a1fb3, type: 3}
+  m_Sprite: {fileID: -4102815330749518293, guid: 604748f43fe99b2498284716656403d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.52, y: 2.53}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 7216214945383436784}
   - component: {fileID: 7575018656760700636}
   m_Layer: 8
-  m_Name: Turret 2
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,11 +289,11 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 2429205407991770565, guid: 90cf4299f1b9c074e884dac9b5bef1f9, type: 3}
+  bulletPrefab: {fileID: 2429205407991770565, guid: 969f1ad7eabb2124f96f2a035846149e, type: 3}
   firingPoint: {fileID: 3941675567915650672}
   targetingRange: 3
   rotationSpeed: 150
-  bulletsPerSecond: 1
+  bulletsPerSecond: 2
 --- !u!61 &7575018656760700636
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,27 +1,38 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum TurretTypes {
+    Blue,
+    Green,
+    Red,
+    Yellow
+}
+
 public class GlobalVariables : MonoBehaviour
 {
     public int Health {get; private set;}
     public int Money {get; private set;}
-    public int DefaultAmmount { get; private set; }
-    public int PierceAmmount { get; private set; }
-    public int FireAmmount { get; private set; }
-    public int FastAmmount { get; private set; }
+
+    public int BlueAmount { get; private set; }
+    public int GreenAmount { get; private set; }
+    public int YellowAmount { get; private set; }
+    public int RedAmount { get; private set; }
 
     public int CurrentLevelView {get; private set;}
 
     public UnityEvent onUiUpdated;
     public UnityEvent onViewChanged;
+    public UnityEvent onTurretChanged;
 
     private void Awake() {
         Health = 100;
         Money = 100;
         CurrentLevelView = 0;
-        DefaultAmmount = 1;
-        PierceAmmount = 0;
-        FireAmmount = 0;
+
+        BlueAmount = 1;
+        GreenAmount = 0;
+        RedAmount = 0;
+        YellowAmount = 0;
 
     }
 
@@ -45,21 +56,25 @@ public class GlobalVariables : MonoBehaviour
         onUiUpdated.Invoke();
     }
 
-    public void UpdateDefault(int ammount)
+    public void UpdateBlue(int ammount)
     {
-        DefaultAmmount += ammount;
+        BlueAmount += ammount;
+        onTurretChanged.Invoke();
     }
-    public void UpdatePierce(int ammount)
+    public void UpdateGreen(int ammount)
     {
-        PierceAmmount += ammount;
+        GreenAmount += ammount;
+        onTurretChanged.Invoke();
     }
-    public void UpdateFire(int ammount)
+    public void UpdateYellow(int ammount)
     {
-        FireAmmount += ammount;
+        YellowAmount += ammount;
+        onTurretChanged.Invoke();
     }
-    public void UpdateFast(int ammount)
+    public void UpdateRed(int ammount)
     {
-        FastAmmount += ammount;
+        RedAmount += ammount;
+        onTurretChanged.Invoke();
     }
 
     public void UpdateCurrentLevelView(int level) {
