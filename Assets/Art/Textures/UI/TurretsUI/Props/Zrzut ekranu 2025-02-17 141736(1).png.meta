@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 18c7ff43a78002a4eb4a37382204bfe0
+guid: 3fc2d5fddd416cd44a2d8a69d91c666c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5507145884785490183
-    second: komputery_0
+      213: 3482147382793349811
+    second: Zrzut ekranu 2025-02-17 141736(1)_0
+  - first:
+      213: 6031606383533200688
+    second: Zrzut ekranu 2025-02-17 141736(1)_1
+  - first:
+      213: -4917782305926142139
+    second: Zrzut ekranu 2025-02-17 141736(1)_2
+  - first:
+      213: 8356971117445139175
+    second: Zrzut ekranu 2025-02-17 141736(1)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: komputery_0
+      name: red
       rect:
         serializedVersion: 2
-        x: 99
-        y: 0
-        width: 3741
-        height: 2095
+        x: 105
+        y: 471
+        width: 252
+        height: 294
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 709b4ec01005d6c40800000000000000
-      internalID: 5507145884785490183
+      spriteID: 3ba24fe6892135030800000000000000
+      internalID: 3482147382793349811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 468
+        width: 253
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035997b8c0294b350800000000000000
+      internalID: 6031606383533200688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 53
+        width: 250
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547229c5c0780cbb0800000000000000
+      internalID: -4917782305926142139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 59
+        width: 251
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea448544fce9f370800000000000000
+      internalID: 8356971117445139175
       vertices: []
       indices: 
       edges: []
@@ -125,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4a94049aa14cfdd429cebf4e7250a2c8
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      komputery_0: 5507145884785490183
+      blue: -4917782305926142139
+      green: 8356971117445139175
+      red: 3482147382793349811
+      yellow: 6031606383533200688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
