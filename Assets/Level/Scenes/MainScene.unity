@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 63677246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.492817, y: 0.7404294, z: -1}
+  m_LocalPosition: {x: -4.54832, y: 0.73028266, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -197,7 +197,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.398504
+  orthographic size: 17.333181
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8551298894649060496, guid: cacb150845c0dac488a5d0254b456a79, type: 3}
+  m_Sprite: {fileID: -5025249159021211544, guid: ff17985102d4a0d439fa548c2f56a6aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfd9b81f2a0a84409c488f9d72f4306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: 2
+  turretType: 4
   _globalVariables: {fileID: 1004929443}
   _turretCountText: {fileID: 482171847}
 --- !u!1 &443980240
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1751591117724389940, guid: de90f0c85794b7b4586e53a7ac1f5287, type: 3}
+  m_Sprite: {fileID: -8551298894649060496, guid: cacb150845c0dac488a5d0254b456a79, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1893,7 +1893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfd9b81f2a0a84409c488f9d72f4306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: 3
+  turretType: 2
   _globalVariables: {fileID: 1004929443}
   _turretCountText: {fileID: 1980610672}
 --- !u!1 &482171845
@@ -3309,6 +3309,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3.261
       objectReference: {fileID: 0}
+    - target: {fileID: 3521498961697543055, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: _globalVariables
+      value: 
+      objectReference: {fileID: 1004929443}
     - target: {fileID: 3701613966398447836, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4960,7 +4964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5025249159021211544, guid: ff17985102d4a0d439fa548c2f56a6aa, type: 3}
+  m_Sprite: {fileID: 1751591117724389940, guid: de90f0c85794b7b4586e53a7ac1f5287, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4990,7 +4994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfd9b81f2a0a84409c488f9d72f4306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: 4
+  turretType: 3
   _globalVariables: {fileID: 1004929443}
   _turretCountText: {fileID: 192177786}
 --- !u!114 &1912701002 stripped

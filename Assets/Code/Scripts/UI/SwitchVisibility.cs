@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 public class SwitchVisibility : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] private GlobalVariables _globalVariables;
     private static Vector3 originPosition;
 
     private static Vector3 hidenPosition;
@@ -16,6 +17,7 @@ public class SwitchVisibility : MonoBehaviour, IPointerEnterHandler, IPointerExi
         this.transform.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         originPosition = this.transform.position;
         hidenPosition = originPosition - new Vector3(0, 123, 0);
+        _globalVariables.onViewChanged.AddListener(() => {if (_globalVariables.CurrentLevelView == 0) HideThis();});
 
         this.transform.position = hidenPosition;
     }
