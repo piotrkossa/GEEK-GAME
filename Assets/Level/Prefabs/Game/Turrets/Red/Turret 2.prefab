@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8145620359531968428}
-  - component: {fileID: 7216214945383436784}
+  - component: {fileID: 4832910449756798057}
   - component: {fileID: 7575018656760700636}
   m_Layer: 8
   m_Name: Turret 2
@@ -273,7 +273,7 @@ Transform:
   - {fileID: 5562633743186129104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7216214945383436784
+--- !u!114 &4832910449756798057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7537092032873529876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e530fe195a363a48b6c9314f7e32840, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d80750414d99243a6b7fb3e9e2479b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   turretRotationPoint: {fileID: 5562633743186129104}
@@ -291,9 +291,8 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 2429205407991770565, guid: 90cf4299f1b9c074e884dac9b5bef1f9, type: 3}
   firingPoint: {fileID: 3941675567915650672}
-  targetingRange: 3
+  targetingRange: 5
   rotationSpeed: 150
-  bulletsPerSecond: 1
 --- !u!61 &7575018656760700636
 BoxCollider2D:
   m_ObjectHideFlags: 0

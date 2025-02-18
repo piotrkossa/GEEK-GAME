@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8934296141473279045}
   bulletSpeed: 5
-  bulletDamage: 1
+  bulletDamage: 3
   maxDistance: 3
 --- !u!58 &8801512874290391661
 CircleCollider2D:

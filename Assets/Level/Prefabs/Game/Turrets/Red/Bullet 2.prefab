@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 607854687933831720}
   - component: {fileID: 3374415637919331774}
   - component: {fileID: 8934296141473279045}
-  - component: {fileID: 8456799496096233774}
+  - component: {fileID: 2754655140464273909}
   - component: {fileID: 8801512874290391661}
   m_Layer: 7
   m_Name: Bullet 2
@@ -117,7 +117,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &8456799496096233774
+--- !u!114 &2754655140464273909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,12 +126,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2429205407991770565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e99bd76852745499125a6c4c97e23f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e36ef019ed98e64d84979a144bc55f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8934296141473279045}
   bulletSpeed: 5
-  bulletDamage: 1
+  bulletDamage: 2147483647
   maxDistance: 3
 --- !u!58 &8801512874290391661
 CircleCollider2D:

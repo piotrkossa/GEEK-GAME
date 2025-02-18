@@ -37,7 +37,7 @@ public class GlobalVariables : MonoBehaviour
 
     private void Awake() {
         Health = 100;
-        Money = 0;
+        Money = 300;
         CurrentLevelView = 0;
     }
 

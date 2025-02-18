@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
 
-public class turretScript : MonoBehaviour
+public class yellowTurretScript : MonoBehaviour
 {
     [Header("Refrences")]
     [SerializeField] private Transform turretRotationPoint;
@@ -45,7 +45,7 @@ public class turretScript : MonoBehaviour
     private void Shoot()  //tworzy pocisk w firingpoint i ustawia cel
     {
         GameObject _bulletObject = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
-        bulletScript _bulletScript = _bulletObject.GetComponent<bulletScript>();
+        yellowBulletScript _bulletScript = _bulletObject.GetComponent<yellowBulletScript>();
         _bulletScript.SetTarget(target);
     }
 

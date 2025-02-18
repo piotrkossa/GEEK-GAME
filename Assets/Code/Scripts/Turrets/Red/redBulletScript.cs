@@ -1,7 +1,7 @@
 using System.Net.NetworkInformation;
 using UnityEngine;
 
-public class bulletScript : MonoBehaviour
+public class redBulletScript : MonoBehaviour
 {
 
     private Transform target;

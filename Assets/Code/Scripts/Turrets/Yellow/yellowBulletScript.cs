@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class bulletScript2 : MonoBehaviour
+public class yellowBulletScript : MonoBehaviour
 {
 
     private Transform target;
