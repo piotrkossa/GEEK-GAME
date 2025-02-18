@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "przycisk na cen\u0119_0": 8747269762400664022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

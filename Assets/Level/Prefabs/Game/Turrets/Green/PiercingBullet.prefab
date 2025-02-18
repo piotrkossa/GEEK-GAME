@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 607854687933831720}
   - component: {fileID: 3374415637919331774}
   - component: {fileID: 8934296141473279045}
-  - component: {fileID: 8456799496096233774}
+  - component: {fileID: -2335478321471153522}
   - component: {fileID: 8801512874290391661}
   m_Layer: 7
   m_Name: PiercingBullet
@@ -117,7 +117,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &8456799496096233774
+--- !u!114 &-2335478321471153522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,13 +126,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2429205407991770565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e99bd76852745499125a6c4c97e23f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c4bccd4dbefa3d4fb8ae3d1bd7a46b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8934296141473279045}
-  bulletSpeed: 5
+  bulletSpeed: 10
   bulletDamage: 1
-  maxDistance: 3
+  maxPiercingAmount: 2
 --- !u!58 &8801512874290391661
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
