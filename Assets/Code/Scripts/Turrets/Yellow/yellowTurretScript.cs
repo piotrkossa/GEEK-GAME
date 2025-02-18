@@ -8,17 +8,18 @@ public class yellowTurretScript : MonoBehaviour
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform firingPoint; 
+    [SerializeField] private Transform firingPoint;
 
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
-    [SerializeField] private float bulletsPerSecond = 1f; // Bullets per second
+    [SerializeField] private float bulletsPerSecond = 1f; // Iloœæ pocisków na sekundê
     private Transform target;
     private float timeUntilFire;
-    private void Update() //wybranie celu sprawdzenie czy w zasiegu i strzal
+
+    private void Update() // Wybór celu, sprawdzanie zasiêgu i strzelanie
     {
-        if (target == null) //obranie nowego celu
+        if (target == null) // Jeœli brak celu – poszukaj nowego
         {
             FindTarget();
             return;
@@ -34,7 +35,7 @@ public class yellowTurretScript : MonoBehaviour
         {
             timeUntilFire += Time.deltaTime;
 
-            if (timeUntilFire >= 1f/bulletsPerSecond && isPointing)
+            if (timeUntilFire >= 1f / bulletsPerSecond && isPointing)
             {
                 Shoot();
                 timeUntilFire = 0f;
@@ -42,25 +43,40 @@ public class yellowTurretScript : MonoBehaviour
         }
     }
 
-    private void Shoot()  //tworzy pocisk w firingpoint i ustawia cel
+    private void Shoot()  // Tworzy trzy pociski: jeden œledz¹cy cel i dwa pod k¹tem 45°
     {
-        GameObject _bulletObject = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
-        yellowBulletScript _bulletScript = _bulletObject.GetComponent<yellowBulletScript>();
-        _bulletScript.SetTarget(target);
+        // Obliczamy bazowy kierunek od punktu wystrza³u do celu
+        Vector2 baseDirection = ((Vector2)target.position - (Vector2)firingPoint.position).normalized;
+
+        // Pocisk 1: lec¹cy dok³adnie w stronê przeciwnika (œledzenie)
+        GameObject bullet1 = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        yellowBulletScript bulletScript1 = bullet1.GetComponent<yellowBulletScript>();
+        bulletScript1.SetTarget(target);
+
+        // Pocisk 2: lec¹cy pod k¹tem +45° wzglêdem bazowego kierunku
+        Vector2 leftDirection = Quaternion.Euler(0, 0, 45) * baseDirection;
+        GameObject bullet2 = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        yellowBulletScript bulletScript2 = bullet2.GetComponent<yellowBulletScript>();
+        bulletScript2.SetDirection(leftDirection);
+
+        // Pocisk 3: lec¹cy pod k¹tem -45° wzglêdem bazowego kierunku
+        Vector2 rightDirection = Quaternion.Euler(0, 0, -45) * baseDirection;
+        GameObject bullet3 = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        yellowBulletScript bulletScript3 = bullet3.GetComponent<yellowBulletScript>();
+        bulletScript3.SetDirection(rightDirection);
     }
 
-    private void FindTarget() // szukanie pierwszego przeciwnika przez raycast w okregu
+    private void FindTarget() // Szukanie pierwszego przeciwnika za pomoc¹ CircleCastAll
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.position, 0f, enemyMask);
-        // odwoluj sie do maski aby zidentyfikowac ze to enemy a nie cos innego
-        
+
         if (hits.Length > 0)
         {
             target = hits[0].transform;
         }
     }
 
-    private bool RotateTowardsTarget() // wyliczamy kat i przesuwamy gun w kierunku enemy
+    private bool RotateTowardsTarget() // Obracanie wie¿yczki w kierunku celu
     {
         float startingRotation = turretRotationPoint.rotation.eulerAngles.z;
 
@@ -71,10 +87,7 @@ public class yellowTurretScript : MonoBehaviour
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         float endingRotation = turretRotationPoint.rotation.eulerAngles.z;
 
-        if(Mathf.Abs(startingRotation - endingRotation) < 0.2f)
-            return true;
-
-        return false;
+        return Mathf.Abs(startingRotation - endingRotation) < 0.2f;
     }
 
     private bool CheckTargetIsInRange()
@@ -82,8 +95,7 @@ public class yellowTurretScript : MonoBehaviour
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
 
-
-    private void OnDrawGizmosSelected() // widac range jak siedzisz w unity
+    private void OnDrawGizmosSelected() // Rysowanie zasiêgu w edytorze Unity
     {
 #if UNITY_EDITOR
         Handles.color = Color.cyan;

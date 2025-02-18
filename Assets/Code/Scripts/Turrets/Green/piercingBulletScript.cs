@@ -11,6 +11,7 @@ public class piercingBulletScript : MonoBehaviour
     [SerializeField] private float bulletSpeed = 5f;
     [SerializeField] private int bulletDamage = 1;
     [SerializeField] private int maxPiercingAmount = 2;
+
     private int pierced = 0;
 
     // Ustawiamy kierunek lotu na podstawie celu
@@ -55,6 +56,10 @@ public class piercingBulletScript : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+        }
+        else if (other.CompareTag("Monitorborder"))
+        {
+            Destroy(gameObject);
         }
     }
 }

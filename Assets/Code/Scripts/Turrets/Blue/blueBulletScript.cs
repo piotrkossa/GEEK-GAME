@@ -12,9 +12,6 @@ public class blueBulletScript : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
     [SerializeField] private int bulletDamage = 1;
-    [SerializeField] private float maxDistance = 3f;
-
-    private Vector3 startingPosition;
     public void SetTarget(Transform _target)
     {
         target = _target;
@@ -37,21 +34,7 @@ public class blueBulletScript : MonoBehaviour
             _enemyObject.GetComponent<EnemyHealth>().TakeDamage(bulletDamage);
             Destroy(gameObject);
         }
-        else if (_enemyObject.CompareTag("Monitor border"))
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void Start()
-    {
-        startingPosition = transform.position;
-    }
-
-    private void Update()
-    {
-        float traveledDistance = Vector3.Distance(startingPosition, transform.position);
-        if (traveledDistance >= maxDistance)
+        else if (_enemyObject.CompareTag("Monitorborder"))
         {
             Destroy(gameObject);
         }

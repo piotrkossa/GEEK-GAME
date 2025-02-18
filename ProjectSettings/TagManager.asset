@@ -6,19 +6,19 @@ TagManager:
   tags:
   - Enemy
   - Level
-  - Monitor border
+  - Monitorborder
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Water
   - Water
   - UI
   - Enemy
   - Bullet
   - BlockingLayer
   - Monitor
-  - 
+  - Monitorborder
   - 
   - 
   - 

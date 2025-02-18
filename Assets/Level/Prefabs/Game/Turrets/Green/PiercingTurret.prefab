@@ -339,4 +339,4 @@ MonoBehaviour:
   firingPoint: {fileID: 3941675567915650672}
   targetingRange: 3
   rotationSpeed: 200
-  bulletsPerSecond: 0.5
+  bulletsPerSecond: 0.6
