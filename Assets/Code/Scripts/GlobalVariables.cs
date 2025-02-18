@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,10 +15,19 @@ public class GlobalVariables : MonoBehaviour
     public int Health {get; private set;}
     public int Money {get; private set;}
 
-    public int BlueAmount { get; private set; }
-    public int GreenAmount { get; private set; }
-    public int YellowAmount { get; private set; }
-    public int RedAmount { get; private set; }
+    public Dictionary<TurretTypes, int> TurretPrices {get; private set;} = new Dictionary<TurretTypes, int> {
+        [TurretTypes.Blue] = 50,
+        [TurretTypes.Green] = 100,
+        [TurretTypes.Yellow] = 150,
+        [TurretTypes.Red] = 200
+    };
+
+    public Dictionary<TurretTypes, int> TurretsOwned {get; private set;} = new Dictionary<TurretTypes, int> {
+        [TurretTypes.Blue] = 1,
+        [TurretTypes.Green] = 0,
+        [TurretTypes.Yellow] = 0,
+        [TurretTypes.Red] = 0
+    };
 
     public int CurrentLevelView {get; private set;}
 
@@ -27,14 +37,8 @@ public class GlobalVariables : MonoBehaviour
 
     private void Awake() {
         Health = 100;
-        Money = 100;
+        Money = 0;
         CurrentLevelView = 0;
-
-        BlueAmount = 1;
-        GreenAmount = 0;
-        RedAmount = 0;
-        YellowAmount = 0;
-
     }
 
     public void UpdateHealth(int health) {
@@ -47,34 +51,20 @@ public class GlobalVariables : MonoBehaviour
         onUiUpdated.Invoke();
     }
 
-    public void UpdateMoney(int money) {
+    public bool UpdateMoney(int money) {
         if (Money + money < 0) {
-            Money = 0;
-            Debug.Log("GlobalVariables.cs: MONEY ERROR");
+            return false;
         }
         else
             Money += money;
+
         onUiUpdated.Invoke();
+        return true;
     }
 
-    public void UpdateBlue(int ammount)
+    public void UpdateTurrets(TurretTypes turretType, int amount)
     {
-        BlueAmount += ammount;
-        onTurretChanged.Invoke();
-    }
-    public void UpdateGreen(int ammount)
-    {
-        GreenAmount += ammount;
-        onTurretChanged.Invoke();
-    }
-    public void UpdateYellow(int ammount)
-    {
-        YellowAmount += ammount;
-        onTurretChanged.Invoke();
-    }
-    public void UpdateRed(int ammount)
-    {
-        RedAmount += ammount;
+        TurretsOwned[turretType] += amount;
         onTurretChanged.Invoke();
     }
 

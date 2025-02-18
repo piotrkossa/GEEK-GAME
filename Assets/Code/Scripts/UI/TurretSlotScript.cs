@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class TurretSlotScript : MonoBehaviour
@@ -21,23 +20,13 @@ public class TurretSlotScript : MonoBehaviour
     }
 
     private void UpdateTurrets() {
-        switch (turretType) {
-            case TurretTypes.Blue:
-                _turretCountText.text = _globalVariables.BlueAmount.ToString();
-                break;
-            case TurretTypes.Green:
-                _turretCountText.text = _globalVariables.GreenAmount.ToString();
-                break;
-            case TurretTypes.Yellow:
-                _turretCountText.text = _globalVariables.YellowAmount.ToString();
-                break;
-            case TurretTypes.Red:
-                _turretCountText.text = _globalVariables.RedAmount.ToString();
-                break;
-        }
+        _turretCountText.text = _globalVariables.TurretsOwned[turretType].ToString();
     }
 
     private void OnClick() {
-        this.transform.parent.GetComponent<TurretSpawner>().TurretChoosen(turretType);
+        if (_globalVariables.TurretsOwned[turretType] > 0)
+            this.transform.parent.GetComponent<TurretSpawner>().TurretChoosen(turretType);
+        else
+            Debug.Log("TurretSlotScript.cs: Nie masz juz turretow LLL");
     }
 }

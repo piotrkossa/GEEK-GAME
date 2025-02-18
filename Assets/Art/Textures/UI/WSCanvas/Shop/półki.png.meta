@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 311d8f99f038cd440b9ca586cbb7ad68
+guid: cba26837eeb0b0c4198f92c0446fc843
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2119799618409566682
-    second: przycisk sklep_0
+      213: -2624208601725999313
+    second: "p\xF3\u0142ki_0"
+  - first:
+      213: -4710859901047656167
+    second: "p\xF3\u0142ki_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: przycisk sklep_0
+      name: "p\xF3\u0142ki_0"
       rect:
         serializedVersion: 2
-        x: 1482
-        y: 98
-        width: 629
-        height: 316
+        x: 1235
+        y: 1279
+        width: 1144
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad19f42958a0b6d10800000000000000
-      internalID: 2119799618409566682
+      spriteID: f27e89d2e20f49bd0800000000000000
+      internalID: -2624208601725999313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "p\xF3\u0142ki_1"
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 622
+        width: 1144
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9113c6311e9af9eb0800000000000000
+      internalID: -4710859901047656167
       vertices: []
       indices: 
       edges: []
@@ -134,8 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      przycisk sklep_0: 2119799618409566682
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

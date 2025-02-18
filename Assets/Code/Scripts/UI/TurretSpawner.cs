@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurretSpawner : MonoBehaviour
 {
+    [SerializeField] private GlobalVariables _globalVariables;
+
     private Dictionary<TurretTypes, GameObject> _turretProps = new Dictionary<TurretTypes, GameObject> {};
     [Header("TurretProps")]
     [SerializeField] private GameObject blueProp;
@@ -12,7 +14,7 @@ public class TurretSpawner : MonoBehaviour
     [SerializeField] private GameObject greenProp;
 
     private Dictionary<TurretTypes, GameObject> _turrets = new Dictionary<TurretTypes, GameObject> {};
-    [Header("Turrets")]
+    [Header("Turrets Prefabs")]
     [SerializeField] private GameObject blueTurret;
     [SerializeField] private GameObject redTurret;
     [SerializeField] private GameObject yellowTurret;
@@ -20,8 +22,8 @@ public class TurretSpawner : MonoBehaviour
 
     [Header("Turrets grid")]
     [SerializeField] private LayerMask _placementBlockMask;
-    private Vector2 boxSize = new Vector2(1.15f, 1.15f);
     [SerializeField] private SpriteRenderer _placementIndicator;
+    private Vector2 boxSize = new Vector2(1.15f, 1.15f);
 
 
     private bool isPlacing = false;
@@ -71,6 +73,8 @@ public class TurretSpawner : MonoBehaviour
             _placementIndicator.gameObject.SetActive(false);
 
             Instantiate(_turrets[objectBeingPlacedType]).transform.position = mouseWorldPos;
+            _globalVariables.UpdateTurrets(objectBeingPlacedType, -1);
+            
         }
         else
         {

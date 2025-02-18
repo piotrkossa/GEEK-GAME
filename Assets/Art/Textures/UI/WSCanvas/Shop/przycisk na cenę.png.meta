@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 11dbd4460aec88c42b4fe28bf499acc5
+guid: 6e16e97e7e0de7f4ca1b128836448083
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4668331764589204306
-    second: polki_0
+      213: 8747269762400664022
+    second: "przycisk na cen\u0119_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: polki_0
+      name: "przycisk na cen\u0119_0"
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 461
-        width: 1291
-        height: 1324
+        x: 328
+        y: 212
+        width: 357
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eacecf57ef0c63fb0800000000000000
-      internalID: -4668331764589204306
+      spriteID: 6d9386ef08b846970800000000000000
+      internalID: 8747269762400664022
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      polki_0: -4668331764589204306
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
