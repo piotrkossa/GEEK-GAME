@@ -14,8 +14,15 @@ public class yellowTurretScript : MonoBehaviour
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float bulletsPerSecond = 1f; // Iloœæ pocisków na sekundê
+
     private Transform target;
     private float timeUntilFire;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Update() // Wybór celu, sprawdzanie zasiêgu i strzelanie
     {
@@ -47,6 +54,8 @@ public class yellowTurretScript : MonoBehaviour
     {
         // Obliczamy bazowy kierunek od punktu wystrza³u do celu
         Vector2 baseDirection = ((Vector2)target.position - (Vector2)firingPoint.position).normalized;
+
+        audioManager.PlaySFX(audioManager.shoot);
 
         // Pocisk 1: lec¹cy dok³adnie w stronê przeciwnika (œledzenie)
         GameObject bullet1 = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);

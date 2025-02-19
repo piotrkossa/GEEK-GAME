@@ -12,17 +12,18 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public float moveDistance = 10f;
 
     private Vector3 originalPosition;
-
+    AudioManagerMenu audioManager;
     void Awake()
     {
         thisButton = this.transform;
-
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerMenu>();
         originalPosition = thisButton.position;
     }
 
 
     public async void OnPointerEnter(PointerEventData eventData)
     {
+        audioManager.PlaySFX(audioManager.choice);
         _transitionManager.StopTransition(this.gameObject);
         fade.SetActive(true);
         await _transitionManager.VectorTransition(this.transform, originalPosition, originalPosition + new Vector3(moveDistance, 0, 0), 0.3f, 0.55f, 1f);

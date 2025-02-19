@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Level
   - Monitorborder
+  - Audio
   layers:
   - Default
   - TransparentFX

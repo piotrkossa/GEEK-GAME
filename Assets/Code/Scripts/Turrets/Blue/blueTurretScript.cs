@@ -14,8 +14,15 @@ public class blueTurretScript : MonoBehaviour
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float bulletsPerSecond = 1f; // Bullets per second
+
     private Transform target;
     private float timeUntilFire;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Update() //wybranie celu sprawdzenie czy w zasiegu i strzal
     {
         if (target == null) //obranie nowego celu
@@ -45,6 +52,7 @@ public class blueTurretScript : MonoBehaviour
     private void Shoot()  //tworzy pocisk w firingpoint i ustawia cel
     {
         GameObject _bulletObject = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        audioManager.PlaySFX(audioManager.shoot);
         blueBulletScript _bulletScript = _bulletObject.GetComponent<blueBulletScript>();
         _bulletScript.SetTarget(target);
     }

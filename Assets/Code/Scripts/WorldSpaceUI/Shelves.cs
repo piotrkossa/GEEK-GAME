@@ -7,6 +7,7 @@ public class Shelved : MonoBehaviour
 {
 
     [SerializeField] private GlobalVariables _globalVariables;
+    AudioManager audioManager;
 
     [Header("Buttons")]
     [SerializeField] private Button _blueButton;
@@ -22,6 +23,10 @@ public class Shelved : MonoBehaviour
 
     private Dictionary<TurretTypes, Image> iconImages = new Dictionary<TurretTypes, Image> {};
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start() {
         _blueButton.onClick.AddListener(delegate{ButtonClicked(TurretTypes.Blue);});
@@ -51,6 +56,7 @@ public class Shelved : MonoBehaviour
 
     private async void PurchaseAccepted(TurretTypes turretType) {
         _globalVariables.UpdateTurrets(turretType, 1);
+        audioManager.PlaySFX(audioManager.buy);
         await TransitionManager.Instance.ScaleTransition(iconImages[turretType].transform, Vector3.one, Vector3.one * 0.8f, 0.15f, 0.61f, 0.88f);
         await TransitionManager.Instance.ScaleTransition(iconImages[turretType].transform.transform, Vector3.one * 0.8f, Vector3.one, 0.15f, 0.61f, 0.88f);
     }
