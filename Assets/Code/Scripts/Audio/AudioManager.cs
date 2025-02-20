@@ -1,5 +1,5 @@
-using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,28 +10,46 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clip")]
     public AudioClip buy;
     public AudioClip shoot;
-    public AudioClip[] soundtracks;
+    public AudioClip mainMenu;
+    public AudioClip background;
     public AudioClip gameover;
+    public AudioClip choice;
 
-    private int loopsPerClip = 3;
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
-        musicSource.loop = false;
-        StartCoroutine(PlaySoundtrack());
+        musicSource.clip = mainMenu;
+        musicSource.Play();
     }
 
-    IEnumerator PlaySoundtrack()
+    private void OnEnable()
     {
-        for (int i = 0; i < soundtracks.Length; i++)
-        {
-            for (int loop = 0; loop < loopsPerClip; loop++)
-            {
-                musicSource.clip = soundtracks[i];
-                musicSource.Play();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
-                yield return new WaitForSeconds(soundtracks[i].length);
-            }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainScene")
+        {
+            PlayMainSceneMusic();
+        }
+    }
+
+    private void PlayMainSceneMusic()
+    {
+        if (musicSource.clip != background)
+        {
+            musicSource.clip = background;
+            musicSource.Play();
         }
     }
 
@@ -40,4 +58,13 @@ public class AudioManager : MonoBehaviour
         SFXSource.PlayOneShot(clip);
     }
 
+    public void SetMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        SFXSource.volume = volume;
+    }
 }

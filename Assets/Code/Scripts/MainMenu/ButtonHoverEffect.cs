@@ -12,10 +12,10 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public float moveDistance = 10f;
 
     private Vector3 originalPosition;
-    AudioManagerMenu audioManager;
+    AudioManager audioManager;
     void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerMenu>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         thisButton = this.transform;
         originalPosition = thisButton.position;
     }
