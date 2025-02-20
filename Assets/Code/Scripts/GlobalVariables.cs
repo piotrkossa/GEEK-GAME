@@ -29,11 +29,18 @@ public class GlobalVariables : MonoBehaviour
         [TurretTypes.Red] = 0
     };
 
+    public Dictionary<int, int> MonitorTurretCount {get; private set;} = new Dictionary<int, int> {
+        [1] = 0,
+        [2] = 0,
+        [3] = 0
+    };
+
     public int CurrentLevelView {get; private set;}
 
     public UnityEvent onUiUpdated;
     public UnityEvent onViewChanged;
     public UnityEvent onTurretChanged;
+    public UnityEvent<int> onMonitorTurretCountChanged;
 
     private void Awake() {
         Health = 100;
@@ -71,5 +78,21 @@ public class GlobalVariables : MonoBehaviour
     public void UpdateCurrentLevelView(int level) {
         CurrentLevelView = level;
         onViewChanged.Invoke();
+    }
+
+    public void UpdateMonitorTurretCount() {
+        MonitorTurretCount[CurrentLevelView] += 1;
+        onMonitorTurretCountChanged.Invoke(CurrentLevelView);
+    }
+
+    public bool CanPlaceTurret(int monitor) {
+        int other1 = monitor % 3;
+        int other2 = (monitor+1) % 3;
+        other1++; other2++;
+
+        if (MonitorTurretCount[monitor] - MonitorTurretCount[other1] >= 2 || MonitorTurretCount[monitor] - MonitorTurretCount[other2] >= 2)
+            return false;
+        
+        return true;
     }
 }

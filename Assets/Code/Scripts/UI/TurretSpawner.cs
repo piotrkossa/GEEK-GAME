@@ -65,7 +65,7 @@ public class TurretSpawner : MonoBehaviour
         if (!isPlacing) return;
 
         Collider2D hit = Physics2D.OverlapBox(mouseWorldPos, boxSize, 0, _placementBlockMask);
-        if (hit == null)
+        if (hit == null && _globalVariables.CanPlaceTurret(_globalVariables.CurrentLevelView))
         {
             isPlacing = false;
             Destroy(objectBeingPlaced);
@@ -74,6 +74,7 @@ public class TurretSpawner : MonoBehaviour
 
             Instantiate(_turrets[objectBeingPlacedType]).transform.position = mouseWorldPos;
             _globalVariables.UpdateTurrets(objectBeingPlacedType, -1);
+            _globalVariables.UpdateMonitorTurretCount();
             
         }
         else
