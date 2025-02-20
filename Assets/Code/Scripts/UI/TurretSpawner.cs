@@ -25,6 +25,9 @@ public class TurretSpawner : MonoBehaviour
     [SerializeField] private SpriteRenderer _placementIndicator;
     private Vector2 boxSize = new Vector2(1.15f, 1.15f);
 
+    [Header("Levels")]
+    [SerializeField] private Transform[] _levels = new Transform [3];
+
 
     private bool isPlacing = false;
     private GameObject objectBeingPlaced = null;
@@ -72,7 +75,7 @@ public class TurretSpawner : MonoBehaviour
             
             _placementIndicator.gameObject.SetActive(false);
 
-            Instantiate(_turrets[objectBeingPlacedType]).transform.position = mouseWorldPos;
+            Instantiate(_turrets[objectBeingPlacedType], _levels[_globalVariables.CurrentLevelView-1]).transform.position = mouseWorldPos;
             _globalVariables.UpdateTurrets(objectBeingPlacedType, -1);
             _globalVariables.UpdateMonitorTurretCount();
             
