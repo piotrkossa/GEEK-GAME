@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        SetMusicVolume(PlayerPrefs.GetFloat("MusicSliderValue", 1f));
+        SetSFXVolume(PlayerPrefs.GetFloat("SFXSliderValue", 1f));
     }
 
     private void Start()

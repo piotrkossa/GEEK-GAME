@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GlobalVariables _globalVariables;
+    [SerializeField] GameObject settingsScreen;
+    [SerializeField] GameObject buttonsScreen;
+
 
     private void Start()
     {
@@ -20,7 +23,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Settings()
     {
-
+        buttonsScreen.SetActive(false);
+        settingsScreen.SetActive(true);
     }
 
     public void Help()
