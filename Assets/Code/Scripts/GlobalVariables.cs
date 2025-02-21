@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum TurretTypes {
     None,
@@ -51,7 +52,7 @@ public class GlobalVariables : MonoBehaviour
     public void UpdateHealth(int health) {
         if (Health + health < 0) {
             Health = 0;
-            Debug.Log("GlobalVariables.cs: END GAME");
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
         else
             Health += health;
