@@ -8212,7 +8212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8497556228390623937, guid: a419b2fe194dedd4a87860ec10f97337, type: 3}
       propertyPath: phase3.duration
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8497556228390623937, guid: a419b2fe194dedd4a87860ec10f97337, type: 3}
       propertyPath: phase1.enemies.Array.size

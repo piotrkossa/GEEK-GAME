@@ -75,7 +75,7 @@ public class blueTurretScript : MonoBehaviour
 
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
 
-        // SprawdŸ, czy ró¿nica miêdzy aktualnym k¹tem a docelowym jest niewielka
+        // Sprawdï¿½, czy rï¿½nica miï¿½dzy aktualnym kï¿½tem a docelowym jest niewielka
         if (Quaternion.Angle(turretRotationPoint.rotation, desiredRotation) < 0.2f)
             return true;
 

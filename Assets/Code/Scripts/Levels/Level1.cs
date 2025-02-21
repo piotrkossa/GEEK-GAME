@@ -59,6 +59,8 @@ public class Level1 : MonoBehaviour
 
     private async void ManagePhases() {
         await PerformPhase(phases[0]);
+        await PerformPhase(phases[1]);
+        await PerformPhase(phases[2]);
     }
 
     private async Task PerformPhase(Phase phase) {

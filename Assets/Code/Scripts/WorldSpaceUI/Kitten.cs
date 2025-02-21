@@ -20,11 +20,17 @@ public class Kitten : MonoBehaviour
     private Vector3 originScale;
     private Vector3 clickedScale;
 
+    private float maxHealth;
+
+    private bool isAngry = false;
+
     private void Start() {
+        maxHealth = _globalVariables.Health;
         originScale = kittenImage.transform.localScale;
         clickedScale = Vector3.one * shrinkRatio;
 
         InputManager.Instance.OnGameObjectClicked.AddListener(CheckIfKittenClicked);
+        _globalVariables.onUiUpdated.AddListener(CheckIfIsLow);
     }
 
     private void CheckIfKittenClicked(Transform objTransform) {
@@ -40,13 +46,35 @@ public class Kitten : MonoBehaviour
 
         isTrans = true;
 
-        kittenImage.sprite = clickedCatSprite;
+        if (!isAngry)
+            kittenImage.sprite = clickedCatSprite;
 
         await TransitionManager.Instance.ScaleTransition(kittenImage.transform, originScale, clickedScale, 0.2f, 0.61f, 0.88f);
         await TransitionManager.Instance.ScaleTransition(kittenImage.transform, clickedScale, originScale, 0.2f, 0.61f, 0.88f);
 
-        kittenImage.sprite = restingCatSprite;
+        if (!isAngry)
+            kittenImage.sprite = restingCatSprite;
 
         isTrans = false;
+    }
+
+    private async void CheckIfIsLow() {
+        float hbValue = _globalVariables.Health / maxHealth;
+        hbValue = hbValue - (hbValue % 0.125f);
+
+        if (hbValue <= 0.375f) {
+            if (isAngry) return;
+            isAngry = true;
+            await TransitionManager.Instance.ImageColorTransition(kittenImage, new Color(1, 1, 1, 1), new Color(1, 1, 1, 0), 0.4f, 0f, 1f);
+            kittenImage.sprite = loosingCatSprite;
+            await TransitionManager.Instance.ImageColorTransition(kittenImage, new Color(1, 1, 1, 0), new Color(1, 1, 1, 1), 0.4f, 0f, 1f);
+        }
+        else {
+            if (!isAngry) return;
+            await TransitionManager.Instance.ImageColorTransition(kittenImage, new Color(1, 1, 1, 1), new Color(1, 1, 1, 0), 0.4f, 0f, 1f);
+            kittenImage.sprite = restingCatSprite;
+            await TransitionManager.Instance.ImageColorTransition(kittenImage, new Color(1, 1, 1, 0), new Color(1, 1, 1, 1), 0.4f, 0f, 1f);
+            isAngry = false;
+        }
     }
 }
