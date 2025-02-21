@@ -293,7 +293,7 @@ MonoBehaviour:
   firingPoint: {fileID: 3941675567915650672}
   targetingRange: 3
   rotationSpeed: 150
-  bulletsPerSecond: 10
+  bulletsPerSecond: 1
 --- !u!61 &7575018656760700636
 BoxCollider2D:
   m_ObjectHideFlags: 0

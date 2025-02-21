@@ -58,10 +58,7 @@ public class Level1 : MonoBehaviour
     }
 
     private async void ManagePhases() {
-        foreach (Phase phase in phases) {
-            Debug.Log(phase);
-            await PerformPhase(phase);
-        }
+        await PerformPhase(phases[0]);
     }
 
     private async Task PerformPhase(Phase phase) {
@@ -73,6 +70,12 @@ public class Level1 : MonoBehaviour
 
         await Awaitable.WaitForSecondsAsync(phase.duration);
         StopAllCoroutines();
+        while (true) {
+            await Awaitable.WaitForSecondsAsync(1f);
+            if (GlobalVariables.Instance.EnemyAmount == 0) {
+                break;
+            }
+        }
     }
 
     private IEnumerator SpawnCoroutine(EnemyTypes enemyType, float startDelay, float interval) {

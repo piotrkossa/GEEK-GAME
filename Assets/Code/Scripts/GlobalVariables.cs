@@ -13,6 +13,8 @@ public enum TurretTypes {
 
 public class GlobalVariables : MonoBehaviour
 {
+    public static GlobalVariables Instance {get; private set;}
+
     public int Health {get; private set;}
     public int Money {get; private set;}
 
@@ -50,6 +52,10 @@ public class GlobalVariables : MonoBehaviour
         Money = 300;
         CurrentLevelView = 0;
         EnemyAmount = 0;
+    }
+
+    private void Start() {
+        Instance = this;
     }
 
     public void UpdateHealth(int health) {

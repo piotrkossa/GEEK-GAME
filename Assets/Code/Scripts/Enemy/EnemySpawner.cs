@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private EnemyPath _enemyPath;
-    [SerializeField] private GlobalVariables _globalVariables;
 
     public UnityEvent<GameObject> OnEnemyDone;
 
@@ -24,9 +23,5 @@ public class EnemySpawner : MonoBehaviour
 
     public Vector3[] GetPath() {
         return path;
-    }
-
-    public GlobalVariables GetGlobalVariables() {
-        return _globalVariables;
     }
 }
