@@ -45,6 +45,11 @@ public class AudioManager : MonoBehaviour
         {
             PlayMainSceneMusic();
         }
+
+        else if (scene.name == "EndGame")
+        {
+            PlayEndSceneMusic();
+        }
     }
 
     private void PlayMainSceneMusic()
@@ -52,6 +57,15 @@ public class AudioManager : MonoBehaviour
         if (musicSource.clip != background)
         {
             musicSource.clip = background;
+            musicSource.Play();
+        }
+    }
+
+    private void PlayEndSceneMusic()
+    {
+        if (musicSource.clip != gameover)
+        {
+            musicSource.clip = gameover;
             musicSource.Play();
         }
     }
