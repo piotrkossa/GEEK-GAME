@@ -93,6 +93,22 @@ public class TransitionManager : MonoBehaviour
         }
     }
 
+    public async Task ImageColorTransition(Image objImage, Color originColor, Color destinyColor, float time, float bezierY1, float bezierY2) {
+        GameObject obj = objImage.gameObject;
+
+        transObj.Add(obj);
+
+        float t = 0f;
+
+        while (t <= 1f) {
+            if (obj == null || HasTransStopped(obj))
+                break;
+            t += Time.deltaTime / time;
+            objImage.color = Color.Lerp(originColor, destinyColor, QuadraticBezierCurve(t, bezierY1, bezierY2));
+            await Task.Yield();
+        }
+    }
+
     private float QuadraticBezierCurve(float t, float y1, float y2) {
         float y = 3f * Mathf.Pow((1-t), 2) * t * y1 + 3 * (1-t) * Mathf.Pow(t, 2) * y2 + Mathf.Pow(t, 3);
 

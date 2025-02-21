@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sowak_0: -5187281984327041384
+      sowak_1: -7488612245891801618
+      sowak_2: 3256332999064770215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
