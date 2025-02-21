@@ -10,11 +10,11 @@ public class Level2 : MonoBehaviour
         _enemySpawner.OnEnemyDone.AddListener(EnemyDone);
     }
 
-    private void EnemyDone() {
-        _level3.EnemyEntered();
+    private void EnemyDone(GameObject enemyPrefab) {
+        _level3.EnemyEntered(enemyPrefab);
     }
 
-    public void EnemyEntered() {
-        _enemySpawner.SpawnEnemy();
+    public void EnemyEntered(GameObject enemyPrefab) {
+        _enemySpawner.SpawnEnemy(enemyPrefab);
     }
 }

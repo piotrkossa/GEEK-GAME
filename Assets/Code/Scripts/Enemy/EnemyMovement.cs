@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
+    private GlobalVariables _globalVariables;
 
     private EnemySpawner _enemySpawner;
     private Vector3[] pathPoints;
@@ -14,6 +15,10 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start() {
         _enemySpawner = this.transform.parent.gameObject.GetComponent<EnemySpawner>();
+
+        _globalVariables = _enemySpawner.GetGlobalVariables();
+        _globalVariables.UpdateEnemyAmount(1);
+        
         pathPoints = _enemySpawner.GetPath();
         this.transform.position = pathPoints[0];
         pointsCount = pathPoints.Length;
@@ -23,7 +28,8 @@ public class EnemyMovement : MonoBehaviour
         if (this.transform.position == pathPoints[currentGoal]) {
             currentGoal += 1;
             if (currentGoal == pointsCount) {
-                _enemySpawner.PathCompleted();
+                _enemySpawner.PathCompleted(this.gameObject);
+                _globalVariables.UpdateEnemyAmount(-1);
                 Destroy(this.gameObject);
                 return;
             }

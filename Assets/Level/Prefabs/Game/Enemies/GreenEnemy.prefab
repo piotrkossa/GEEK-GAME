@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 332075070535856976}
   - component: {fileID: 1812283894803327914}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: GreenEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -349429741435592088, guid: 7802c8c1ebc5aaa46a637cdfee0d421b, type: 3}
+  m_Sprite: {fileID: -239639511732751166, guid: d83264d90323ef844b4e89fac9fe517e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c015518bd8fb24abfeb59aa42dff96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _globalVariables: {fileID: 0}
   hitPoints: 2
 --- !u!114 &1812283894803327914
 MonoBehaviour:
@@ -180,4 +181,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2c9c83d3a68f144b3174ffa9abc710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.1

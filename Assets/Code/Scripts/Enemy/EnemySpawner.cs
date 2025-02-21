@@ -3,11 +3,10 @@ using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _enemyPrefab;
-
     [SerializeField] private EnemyPath _enemyPath;
+    [SerializeField] private GlobalVariables _globalVariables;
 
-    public UnityEvent OnEnemyDone;
+    public UnityEvent<GameObject> OnEnemyDone;
 
     private Vector3[] path;
 
@@ -15,15 +14,19 @@ public class EnemySpawner : MonoBehaviour
         path = _enemyPath.GetPath();
     }
     
-    public void SpawnEnemy() {
+    public void SpawnEnemy(GameObject _enemyPrefab) {
         Object.Instantiate(_enemyPrefab, this.transform);
     }
 
-    public void PathCompleted() {
-        OnEnemyDone.Invoke();
+    public void PathCompleted(GameObject enemyPrefab) {
+        OnEnemyDone.Invoke(enemyPrefab);
     }
 
     public Vector3[] GetPath() {
         return path;
+    }
+
+    public GlobalVariables GetGlobalVariables() {
+        return _globalVariables;
     }
 }

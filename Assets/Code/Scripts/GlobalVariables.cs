@@ -15,6 +15,8 @@ public class GlobalVariables : MonoBehaviour
     public int Health {get; private set;}
     public int Money {get; private set;}
 
+    public int EnemyAmount {get; private set;}
+
     public Dictionary<TurretTypes, int> TurretPrices {get; private set;} = new Dictionary<TurretTypes, int> {
         [TurretTypes.Blue] = 50,
         [TurretTypes.Green] = 100,
@@ -46,6 +48,7 @@ public class GlobalVariables : MonoBehaviour
         Health = 100;
         Money = 300;
         CurrentLevelView = 0;
+        EnemyAmount = 0;
     }
 
     public void UpdateHealth(int health) {
@@ -56,6 +59,10 @@ public class GlobalVariables : MonoBehaviour
         else
             Health += health;
         onUiUpdated.Invoke();
+    }
+
+    public void UpdateEnemyAmount(int n) {
+        EnemyAmount += n;
     }
 
     public bool UpdateMoney(int money) {
