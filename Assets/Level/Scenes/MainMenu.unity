@@ -674,6 +674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 249970601671293921, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
+      propertyPath: startWithoutIcon
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1763536576300699874, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
       propertyPath: m_Name
       value: SceneTransition

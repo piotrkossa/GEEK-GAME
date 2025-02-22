@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
         if (isTrans) return;
         isTrans = true;
         await _sceneTransition.EndTransition();
-        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Cutscene", LoadSceneMode.Single);
 
         isTrans = false;
     }
