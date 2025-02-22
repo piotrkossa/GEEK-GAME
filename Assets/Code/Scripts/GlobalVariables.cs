@@ -19,6 +19,7 @@ public class GlobalVariables : MonoBehaviour
     public int Money {get; private set;}
 
     public int EnemyAmount {get; private set;}
+    public bool isQuestioning = false;
 
     public Dictionary<TurretTypes, int> TurretPrices {get; private set;} = new Dictionary<TurretTypes, int> {
         [TurretTypes.Blue] = 50,

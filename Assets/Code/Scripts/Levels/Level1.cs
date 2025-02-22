@@ -19,6 +19,7 @@ public class Level1 : MonoBehaviour
 {
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private Level2 _level2;
+    [SerializeField] private Waves _waveInfo;
     
 
     [Header("Enemies Prefab")]
@@ -58,8 +59,19 @@ public class Level1 : MonoBehaviour
     }
 
     private async void ManagePhases() {
+        await Awaitable.WaitForSecondsAsync(3f);
+        await _waveInfo.ShowWaveInfo(0);
+        await Awaitable.WaitForSecondsAsync(2f);
         await PerformPhase(phases[0]);
+
+        await Awaitable.WaitForSecondsAsync(3f);
+        await _waveInfo.ShowWaveInfo(1);
+        await Awaitable.WaitForSecondsAsync(3f);
         await PerformPhase(phases[1]);
+
+        await Awaitable.WaitForSecondsAsync(3f);
+        await _waveInfo.ShowWaveInfo(2);
+        await Awaitable.WaitForSecondsAsync(3f);
         await PerformPhase(phases[2]);
     }
 

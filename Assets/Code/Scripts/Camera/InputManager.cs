@@ -17,20 +17,12 @@ public class InputManager : MonoBehaviour
     public UnityEvent OnEscUnlocked;
     public UnityEvent<Transform> OnGameObjectClicked;
 
-    private bool isCursorOverUI = false;
-
     private void Awake() {
         isInputBlocked = false;
         
         Instance = this;
     }
 
-    private void Update() {
-        if (EventSystem.current.IsPointerOverGameObject())
-            isCursorOverUI = true;
-        else
-            isCursorOverUI = false;
-    }
 
     private void OnLeftClick() {
         if (isInputBlocked) return;
@@ -69,7 +61,7 @@ public class InputManager : MonoBehaviour
 
     public Transform GetClickedObject() {
         RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
-        if (!rayHit.collider || isCursorOverUI) return null;
+        if (!rayHit.collider) return null;
 
         return rayHit.transform;
     }

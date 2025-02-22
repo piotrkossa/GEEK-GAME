@@ -20,6 +20,9 @@ public class Questiontest : MonoBehaviour
         while (currentIndex < question.Count)
         {
             yield return new WaitForSeconds(5f);
+            if (_globalVariables.EnemyAmount == 0) continue;
+
+            _globalVariables.isQuestioning = true;
             var q = question[currentIndex];
             bool answered = false;
             InputManager.Instance.BlockAllInput();
@@ -47,6 +50,7 @@ public class Questiontest : MonoBehaviour
 
             currentIndex++;
             InputManager.Instance.UnlockAllInput();
+            _globalVariables.isQuestioning = false;
             yield return new WaitForSeconds(15f);
         }
     }
