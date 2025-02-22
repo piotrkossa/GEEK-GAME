@@ -181,7 +181,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &5782037984449883792
 MonoBehaviour:
@@ -238,6 +238,7 @@ MonoBehaviour:
   _topRect: {fileID: 726141901735166950}
   _botRect: {fileID: 8503142331949738942}
   _icon: {fileID: 3536779751983082313}
+  startWithoutIcon: 0
 --- !u!1 &1921064533288264307
 GameObject:
   m_ObjectHideFlags: 0
