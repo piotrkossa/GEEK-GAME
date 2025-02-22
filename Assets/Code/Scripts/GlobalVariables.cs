@@ -46,7 +46,7 @@ public class GlobalVariables : MonoBehaviour
     public UnityEvent onUiUpdated;
     public UnityEvent onViewChanged;
     public UnityEvent onTurretChanged;
-    public UnityEvent<int> onMonitorTurretCountChanged;
+    public UnityEvent onMonitorTurretCountChanged;
 
     private void Awake() {
         Health = 100;
@@ -97,7 +97,7 @@ public class GlobalVariables : MonoBehaviour
 
     public void UpdateMonitorTurretCount() {
         MonitorTurretCount[CurrentLevelView] += 1;
-        onMonitorTurretCountChanged.Invoke(CurrentLevelView);
+        onMonitorTurretCountChanged.Invoke();
     }
 
     public bool CanPlaceTurret(int monitor) {

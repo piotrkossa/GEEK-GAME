@@ -19,12 +19,14 @@ public class MonitorsInfo : MonoBehaviour
         _globalVariables.onMonitorTurretCountChanged.AddListener(ManageMonitors);
     }
 
-    private void ManageMonitors(int monitor) {
-        if (_globalVariables.CanPlaceTurret(monitor)) {
-            _monitors[monitor-1].sprite = greenMonitor;
+    private void ManageMonitors() {
+        for (int i = 0; i < _globalVariables.MonitorTurretCount.Count; i++)
+
+        if (_globalVariables.CanPlaceTurret(i+1)) {
+            _monitors[i].sprite = greenMonitor;
         }
         else {
-            _monitors[monitor-1].sprite = redMonitor;
+            _monitors[i].sprite = redMonitor;
         }
     }
 }
