@@ -56,13 +56,14 @@ public class Shelved : MonoBehaviour
 
     private async void PurchaseAccepted(TurretTypes turretType) {
         _globalVariables.UpdateTurrets(turretType, 1);
-        audioManager.PlaySFX(audioManager.buy);
+        audioManager.PlaySFX(audioManager.buyAccepted);
         await TransitionManager.Instance.ScaleTransition(iconImages[turretType].transform, Vector3.one, Vector3.one * 0.8f, 0.15f, 0.61f, 0.88f);
         await TransitionManager.Instance.ScaleTransition(iconImages[turretType].transform.transform, Vector3.one * 0.8f, Vector3.one, 0.15f, 0.61f, 0.88f);
     }
 
     private async void PurchaseDeclined(TurretTypes turretType) {
         iconImages[turretType].color = Color.red;
+        audioManager.PlaySFX(audioManager.buyDeclined);
         await Awaitable.WaitForSecondsAsync(0.3f);
         iconImages[turretType].color = Color.white;
     }

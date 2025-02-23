@@ -7,13 +7,30 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 
-    [Header("Audio Clip")]
-    public AudioClip buy;
-    public AudioClip shoot;
+    [Header("Audio Clip Menu")]
     public AudioClip mainMenu;
-    public AudioClip background;
-    public AudioClip gameover;
     public AudioClip choice;
+    public AudioClip backlight;
+
+    [Header ("Audio Clip Cutscene")]
+    public AudioClip cutscene;
+
+    [Header("Audio Clip In Game")]
+    public AudioClip wave1;
+    public AudioClip wave2;
+    public AudioClip wave3;
+
+    public AudioClip buyAccepted;
+    public AudioClip buyDeclined;
+    public AudioClip shoot;
+    public AudioClip dead;
+    public AudioClip kittenMeow;
+    public AudioClip placing;
+
+    [Header("Audio Clip Gameover")]
+    public AudioClip gameover;
+
+    private Waves waves;
 
     private void Awake()
     {
@@ -41,22 +58,44 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "MainScene")
+        if (scene.name == "Cutscene")
+        {
+            PlayCutSceneMusic();
+        }
+
+        else if (scene.name == "MainScene")
         {
             PlayMainSceneMusic();
         }
 
-        else if (scene.name == "EndGame")
+        else if (scene.name == "GameOver")
         {
             PlayEndSceneMusic();
         }
     }
 
+    //private void Update()
+    //{
+    //    if (waves.actualWave == 2)
+    //    {
+    //        musicSource.Stop();
+    //        musicSource.clip = wave2;
+    //        musicSource.Play();
+    //    }
+    //    else if (waves.actualWave == 3)
+    //    {
+    //        musicSource.Stop();
+    //        musicSource.clip = wave3;
+    //        musicSource.Play();
+    //    }
+    //}
+
     private void PlayMainSceneMusic()
     {
-        if (musicSource.clip != background)
+        if (musicSource.clip != wave1)
         {
-            musicSource.clip = background;
+            musicSource.Stop();
+            musicSource.clip = wave1;
             musicSource.Play();
         }
     }
@@ -65,7 +104,18 @@ public class AudioManager : MonoBehaviour
     {
         if (musicSource.clip != gameover)
         {
+            musicSource.Stop();
             musicSource.clip = gameover;
+            musicSource.Play();
+        }
+    }
+
+    private void PlayCutSceneMusic()
+    {
+        if (musicSource.clip != cutscene)
+        {
+            musicSource.Stop();
+            musicSource.clip = cutscene;
             musicSource.Play();
         }
     }

@@ -23,6 +23,7 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public async void OnPointerEnter(PointerEventData eventData)
     {
+        audioManager.PlaySFX(audioManager.backlight);
         _transitionManager.StopTransition(this.gameObject);
         fade.SetActive(true);
         await _transitionManager.VectorTransition(this.transform, originalPosition, originalPosition + new Vector3(moveDistance, 0, 0), 0.3f, 0.55f, 1f);

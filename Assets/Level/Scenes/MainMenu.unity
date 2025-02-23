@@ -682,6 +682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 1763536576300699874, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2113125916753373812, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3409,12 +3413,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 37466020}
   SFXSource: {fileID: 2036940865}
-  buy: {fileID: 8300000, guid: f1ad1976fca73104f978021897616e24, type: 3}
-  shoot: {fileID: 8300000, guid: 7c46f95368d7f3c4fb5e80c56a9bd428, type: 3}
   mainMenu: {fileID: 8300000, guid: 029f8a0aded3f4a4cad7e42a94d9163c, type: 3}
-  background: {fileID: 8300000, guid: 9e3f8819d52fad64a8dfa42bfcc1bbb7, type: 3}
-  gameover: {fileID: 8300000, guid: beab92df5a94e764eb33f7b231a16565, type: 3}
   choice: {fileID: 8300000, guid: c8a0cbe995f5cb34f851d78867058bee, type: 3}
+  backlight: {fileID: 8300000, guid: 1fb09c61906981147b6f76c420d55711, type: 3}
+  cutscene: {fileID: 8300000, guid: 10ece4c8ccf8d974eaf11ec145bbc934, type: 3}
+  wave1: {fileID: 8300000, guid: 9e3f8819d52fad64a8dfa42bfcc1bbb7, type: 3}
+  wave2: {fileID: 8300000, guid: a65e39ac90bb1c243996d1f39a695714, type: 3}
+  wave3: {fileID: 8300000, guid: 36c265e376fbabf429b7e62bfc2b998f, type: 3}
+  buyAccepted: {fileID: 8300000, guid: f1ad1976fca73104f978021897616e24, type: 3}
+  buyDeclined: {fileID: 8300000, guid: 9f55d9b8c49a5ea43b144347d814b0cd, type: 3}
+  shoot: {fileID: 8300000, guid: 18be806210d36374da4278da31173b2b, type: 3}
+  dead: {fileID: 8300000, guid: b5c41d87fd67602418992907e47c9810, type: 3}
+  kittenMeow: {fileID: 8300000, guid: 9b0dfb0b4cf200d49bd432b3410d70e3, type: 3}
+  placing: {fileID: 8300000, guid: 571421970cd4d704fad1bca5564e351d, type: 3}
+  gameover: {fileID: 8300000, guid: beab92df5a94e764eb33f7b231a16565, type: 3}
 --- !u!4 &1766707011
 Transform:
   m_ObjectHideFlags: 0

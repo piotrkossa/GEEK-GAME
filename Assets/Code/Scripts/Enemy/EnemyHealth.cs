@@ -8,6 +8,11 @@ public class EnemyHealth : MonoBehaviour
     private int maxPoints;
 
     private SpriteRenderer spriteRenderer;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start() {
         spriteRenderer = this.GetComponent<SpriteRenderer>();
@@ -23,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
         if (hitPoints <= 0)
         {
             GlobalVariables.Instance.UpdateEnemyAmount(-1);
+            audioManager.PlaySFX(audioManager.dead);
             Destroy(gameObject);
         }
     }
