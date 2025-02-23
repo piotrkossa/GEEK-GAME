@@ -18,6 +18,9 @@ public class GlobalVariables : MonoBehaviour
     public int Health {get; private set;}
     public int Money {get; private set;}
 
+    private float timePlaying;
+    private float bestTime;
+
     public int EnemyAmount {get; private set;}
     public bool isQuestioning = false;
 
@@ -57,6 +60,17 @@ public class GlobalVariables : MonoBehaviour
 
     private void Start() {
         Instance = this;
+        bestTime = PlayerPrefs.GetFloat("BestTime", 1f);
+    }
+
+    private void Update()
+    {
+        timePlaying += Time.deltaTime;
+        if (timePlaying >= PlayerPrefs.GetFloat("BestTime"))
+        {
+            PlayerPrefs.SetFloat("BestTime", timePlaying);
+            Debug.Log(PlayerPrefs.GetFloat("BestTime"));
+        }
     }
 
     public void UpdateHealth(int health) {

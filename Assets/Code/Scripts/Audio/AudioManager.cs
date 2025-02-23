@@ -31,10 +31,20 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clip Gameover")]
     public AudioClip gameover;
 
+    private static AudioManager instance;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         SetMusicVolume(PlayerPrefs.GetFloat("MusicSliderValue", 1f));
         SetSFXVolume(PlayerPrefs.GetFloat("SFXSliderValue", 1f));
     }
@@ -42,8 +52,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         musicSource.loop = true;
-        musicSource.clip = mainMenu;
-        musicSource.Play();
+        PlayMainMenuMusic();
     }
 
     private void OnEnable()
@@ -58,6 +67,11 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, LoadSceneMode mode)
     {
+        if (scene.name == "MainMenu")
+        {
+            PlayMainMenuMusic();
+        }
+
         if (scene.name == "Cutscene")
         {
             PlayCutSceneMusic();
@@ -100,6 +114,16 @@ public class AudioManager : MonoBehaviour
                 return;
         }
         musicSource.Play();
+    }
+
+    private void PlayMainMenuMusic()
+    {
+        if (musicSource.clip != mainMenu)
+        {
+            musicSource.Stop();
+            musicSource.clip = mainMenu;
+            musicSource.Play();
+        }
     }
 
     private void PlayEndSceneMusic()

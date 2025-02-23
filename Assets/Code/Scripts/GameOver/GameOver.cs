@@ -10,8 +10,15 @@ public class GameOver : MonoBehaviour
     [SerializeField] TextMeshProUGUI EnemyDefeated;
     [SerializeField] TextMeshProUGUI Information;
 
+    private void Start()
+    {
+        GameplayTimer.text = (PlayerPrefs.GetFloat("BesTime").ToString());
+    }
+
     public void Exit()
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
+
+
 }
