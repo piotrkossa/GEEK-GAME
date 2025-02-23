@@ -26,11 +26,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip dead;
     public AudioClip kittenMeow;
     public AudioClip placing;
+    public AudioClip question;
 
     [Header("Audio Clip Gameover")]
     public AudioClip gameover;
 
-    private Waves waves;
 
     private void Awake()
     {
@@ -74,22 +74,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if (waves.actualWave == 2)
-    //    {
-    //        musicSource.Stop();
-    //        musicSource.clip = wave2;
-    //        musicSource.Play();
-    //    }
-    //    else if (waves.actualWave == 3)
-    //    {
-    //        musicSource.Stop();
-    //        musicSource.clip = wave3;
-    //        musicSource.Play();
-    //    }
-    //}
-
     private void PlayMainSceneMusic()
     {
         if (musicSource.clip != wave1)
@@ -98,6 +82,24 @@ public class AudioManager : MonoBehaviour
             musicSource.clip = wave1;
             musicSource.Play();
         }
+    }
+
+    public void PlayWaveMusic(int wave)
+    {
+        musicSource.Stop();
+        switch (wave)
+        {
+            case 1:
+                musicSource.clip = wave2;
+                break;
+            case 2:
+                musicSource.clip = wave3;
+                break;
+            default:
+                Debug.LogWarning("Nieznany numer fali: " + wave);
+                return;
+        }
+        musicSource.Play();
     }
 
     private void PlayEndSceneMusic()

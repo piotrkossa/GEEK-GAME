@@ -17,6 +17,8 @@ public enum EnemyTypes {
 
 public class Level1 : MonoBehaviour
 {
+    AudioManager audioManager;
+
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private Level2 _level2;
     [SerializeField] private Waves _waveInfo;
@@ -52,6 +54,11 @@ public class Level1 : MonoBehaviour
         public Enemy[] enemies;
     }
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start() {
         FillDictionaries();
         _enemySpawner.OnEnemyDone.AddListener(EnemyDone);
@@ -66,11 +73,13 @@ public class Level1 : MonoBehaviour
 
         await Awaitable.WaitForSecondsAsync(3f);
         await _waveInfo.ShowWaveInfo(1);
+        audioManager.PlayWaveMusic(1);
         await Awaitable.WaitForSecondsAsync(3f);
         await PerformPhase(phases[1]);
 
         await Awaitable.WaitForSecondsAsync(3f);
         await _waveInfo.ShowWaveInfo(2);
+        audioManager.PlayWaveMusic(2);
         await Awaitable.WaitForSecondsAsync(3f);
         await PerformPhase(phases[2]);
     }

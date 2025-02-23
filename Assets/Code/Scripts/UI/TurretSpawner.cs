@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretSpawner : MonoBehaviour
 {
     [SerializeField] private GlobalVariables _globalVariables;
+    AudioManager audioManager;
 
     private Dictionary<TurretTypes, GameObject> _turretProps = new Dictionary<TurretTypes, GameObject> {};
     [Header("TurretProps")]
@@ -32,6 +33,11 @@ public class TurretSpawner : MonoBehaviour
     private bool isPlacing = false;
     private GameObject objectBeingPlaced = null;
     private TurretTypes objectBeingPlacedType = TurretTypes.None;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -74,6 +80,8 @@ public class TurretSpawner : MonoBehaviour
             Destroy(objectBeingPlaced);
             
             _placementIndicator.gameObject.SetActive(false);
+
+            audioManager.PlaySFX(audioManager.placing);
 
             Instantiate(_turrets[objectBeingPlacedType], _levels[_globalVariables.CurrentLevelView-1]).transform.position = mouseWorldPos;
             _globalVariables.UpdateTurrets(objectBeingPlacedType, -1);

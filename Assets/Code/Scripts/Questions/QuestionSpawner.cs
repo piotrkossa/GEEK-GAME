@@ -9,6 +9,12 @@ public class Questiontest : MonoBehaviour
     [SerializeField] private GlobalVariables _globalVariables;
     [SerializeField] List<Questions> question;
     private int currentIndex = 0;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -26,6 +32,7 @@ public class Questiontest : MonoBehaviour
             var q = question[currentIndex];
             bool answered = false;
             InputManager.Instance.BlockAllInput();
+            audioManager.PlaySFX(audioManager.question);
             QuestionScript.Instance.ShowQuestion(
                 q.questionText,
                 q.answerA,
@@ -59,10 +66,12 @@ public class Questiontest : MonoBehaviour
     {
         if (isCorrect)
         {
+            audioManager.PlaySFX(audioManager.choice);
             _globalVariables.UpdateMoney(100);
         }
         else
         {
+            audioManager.PlaySFX(audioManager.buyDeclined);
             _globalVariables.UpdateMoney(-100);
         }
 

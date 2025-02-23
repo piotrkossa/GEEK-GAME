@@ -3426,6 +3426,7 @@ MonoBehaviour:
   dead: {fileID: 8300000, guid: b5c41d87fd67602418992907e47c9810, type: 3}
   kittenMeow: {fileID: 8300000, guid: 9b0dfb0b4cf200d49bd432b3410d70e3, type: 3}
   placing: {fileID: 8300000, guid: 571421970cd4d704fad1bca5564e351d, type: 3}
+  question: {fileID: 8300000, guid: 0e6b3a380eb54014c9f62b82d3c443ed, type: 3}
   gameover: {fileID: 8300000, guid: beab92df5a94e764eb33f7b231a16565, type: 3}
 --- !u!4 &1766707011
 Transform:

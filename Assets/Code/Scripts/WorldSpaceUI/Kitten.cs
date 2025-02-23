@@ -23,7 +23,11 @@ public class Kitten : MonoBehaviour
     private float maxHealth;
 
     private bool isAngry = false;
-
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Start() {
         maxHealth = _globalVariables.Health;
         originScale = kittenImage.transform.localScale;
@@ -49,6 +53,8 @@ public class Kitten : MonoBehaviour
         if (!isAngry)
             kittenImage.sprite = clickedCatSprite;
 
+        audioManager.PlaySFX(audioManager.kittenMeow);
+        
         await TransitionManager.Instance.ScaleTransition(kittenImage.transform, originScale, clickedScale, 0.2f, 0.61f, 0.88f);
         await TransitionManager.Instance.ScaleTransition(kittenImage.transform, clickedScale, originScale, 0.2f, 0.61f, 0.88f);
 

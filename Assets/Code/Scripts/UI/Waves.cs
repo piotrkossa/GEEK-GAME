@@ -5,9 +5,15 @@ using System.Threading.Tasks;
 public class Waves : MonoBehaviour
 {
     [SerializeField] private Image[] _waves = new Image [3];
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     public void HideAlerts() {
         foreach (Image image in _waves) {
+            audioManager.PlaySFX(audioManager.choice);
             image.gameObject.SetActive(false);
         }
         this.gameObject.SetActive(false);
