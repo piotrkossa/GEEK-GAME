@@ -68,6 +68,7 @@ public class Questiontest : MonoBehaviour
         {
             audioManager.PlaySFX(audioManager.choice);
             _globalVariables.UpdateMoney(100);
+            _globalVariables.UpdateCorrectAnswers();
         }
         else
         {

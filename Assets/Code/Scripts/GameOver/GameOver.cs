@@ -12,7 +12,9 @@ public class GameOver : MonoBehaviour
 
     private void Start()
     {
-        GameplayTimer.text = (PlayerPrefs.GetFloat("BesTime").ToString());
+        GameplayTimer.text = "Czas gry: "; PlayerPrefs.GetFloat("TimePlaying").ToString();
+        CorrectAnswers.text = "Liczba poprawnych odpowiedzi: "; PlayerPrefs.GetInt("CorrectAnswers").ToString();
+        EnemyDefeated.text = "Liczba pokonanych przeciwników: "; PlayerPrefs.GetInt("EnemyDefeated").ToString();
     }
 
     public void Exit()

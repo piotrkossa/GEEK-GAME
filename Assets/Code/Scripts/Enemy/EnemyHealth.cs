@@ -29,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
         {
             GlobalVariables.Instance.UpdateEnemyAmount(-1);
             audioManager.PlaySFX(audioManager.dead);
+            GlobalVariables.Instance.UpdateEnemyDefeated();
             Destroy(gameObject);
         }
     }
