@@ -4,24 +4,21 @@ using System.Collections;
 
 public class FadeInTextMeshPro : MonoBehaviour
 {
-    public TextMeshProUGUI textMesh; // Przypisz TextMeshProUGUI w Inspectorze
-    private float duration = 0.5f; // Czas trwania animacji
+    private Transform _title;
+    private Vector3 originPos;
 
     void Start()
     {
-        textMesh.color = new Color(textMesh.color.r, textMesh.color.g, textMesh.color.b, 0); // Ukryj tekst
-        StartCoroutine(FadeIn());
+        _title = this.transform;
+        originPos = _title.position;
+        _title.position -= new Vector3(900, 0, 0);
+        
+        FadeIn();
     }
 
-    IEnumerator FadeIn()
+    private async void FadeIn()
     {
-        float elapsed = 0f;
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            float alpha = Mathf.Clamp01(elapsed / duration);
-            textMesh.color = new Color(textMesh.color.r, textMesh.color.g, textMesh.color.b, alpha);
-            yield return null;
-        }
+        await Awaitable.WaitForSecondsAsync(1.5f);
+        await TransitionManager.Instance.VectorTransition(_title, _title.position, originPos, 0.8f, 1f, 1f);
     }
 }

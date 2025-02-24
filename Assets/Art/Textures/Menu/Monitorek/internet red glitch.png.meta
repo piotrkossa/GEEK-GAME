@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: bde84e3d110feb2498441ebc707fd859
+guid: 942a9c8c810094d458070c115236ffca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8131723258404985467
-    second: smutna buzka czerwona_0
+      213: 5226671305029818952
+    second: internet red glitch_0
+  - first:
+      213: 7534975889968173386
+    second: internet red glitch_1
+  - first:
+      213: 4127109092204437440
+    second: internet red glitch_2
+  - first:
+      213: -919772501538623420
+    second: internet red glitch_3
+  - first:
+      213: 7296309440066414621
+    second: internet red glitch_4
+  - first:
+      213: 1892854466516605587
+    second: internet red glitch_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +115,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: smutna buzka czerwona_0
+      name: internet red glitch_1
       rect:
         serializedVersion: 2
-        x: 2477
+        x: 3424
         y: 811
-        width: 900
-        height: 867
+        width: 197
+        height: 151
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5852dfab7c0562f80800000000000000
-      internalID: -8131723258404985467
+      spriteID: a419fa066ac919860800000000000000
+      internalID: 7534975889968173386
       vertices: []
       indices: 
       edges: []
@@ -125,7 +140,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 636576082e56de34a9a60c380955a467
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      smutna buzka czerwona_0: -8131723258404985467
+      internet red glitch_1: 7534975889968173386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

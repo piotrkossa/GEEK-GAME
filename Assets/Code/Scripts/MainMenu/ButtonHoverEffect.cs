@@ -6,18 +6,20 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     [SerializeField] private TransitionManager _transitionManager;
 
-    public Transform thisButton;
-    public Sprite normalSprite;
+    private Transform thisButton;
     public GameObject fade;
-    public float moveDistance = 10f;
+    public float moveDistance = 25f;
 
     private Vector3 originalPosition;
+    private Vector3 goalPosition;
     AudioManager audioManager;
-    void Awake()
+
+    private void Start()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         thisButton = this.transform;
         originalPosition = thisButton.position;
+        goalPosition = originalPosition + new Vector3(moveDistance, 0, 0);
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
 
@@ -26,14 +28,14 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         audioManager.PlaySFX(audioManager.backlight);
         _transitionManager.StopTransition(this.gameObject);
         fade.SetActive(true);
-        await _transitionManager.VectorTransition(this.transform, originalPosition, originalPosition + new Vector3(moveDistance, 0, 0), 0.3f, 0.55f, 1f);
+        await _transitionManager.VectorTransition(this.transform, originalPosition, goalPosition, 0.3f, 0.55f, 1f);
     }
 
     public async void OnPointerExit(PointerEventData eventData)
     {
         _transitionManager.StopTransition(this.gameObject);
         fade.SetActive(false);
-        await _transitionManager.VectorTransition(this.transform, originalPosition + new Vector3(moveDistance, 0, 0), originalPosition, 0.3f, 0.55f, 1f);
+        await _transitionManager.VectorTransition(this.transform, goalPosition, originalPosition, 0.3f, 0.55f, 1f);
     }
 
     public void OnPointerClick(PointerEventData eventData)
