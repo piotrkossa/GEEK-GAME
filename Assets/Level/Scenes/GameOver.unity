@@ -211,12 +211,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -407,8 +407,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 20.73}
+  m_CellSize: {x: 100, y: 80}
+  m_Spacing: {x: 0, y: 40}
   m_Constraint: 1
   m_ConstraintCount: 1
 --- !u!1 &908897689
@@ -714,12 +714,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -823,12 +823,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -1057,12 +1057,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 80
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 80
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1201,12 +1201,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -1370,9 +1370,12 @@ MonoBehaviour:
   EnemyDefeated: {fileID: 1423395811}
   Information: {fileID: 1477499544}
   ciekawostka:
-  - trescCiekawostki: piotr lubi czarnych
-  - trescCiekawostki: filip kocha koty
-  - trescCiekawostki: daro rucha lene
+  - trescCiekawostki: "Creeper (1971): Pierwszy wirus, kt\xF3ry nie niszczy\u0142
+      system\xF3w, a jedynie wy\u015Bwietla\u0142 komunikat. "
+  - trescCiekawostki: "Anonymous: Hakerska grupa, kt\xF3rej ataki na systemy rz\u0105dowe
+      zapowiada\u0142y er\u0119 cyberwojny. "
+  - trescCiekawostki: "Atak na auta: W 2015 roku udowodniono, \u017Ce nowoczesne
+      samochody mog\u0105 by\u0107 zdalnie przej\u0119te.      "
 --- !u!1 &1997212591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1404,7 @@ RectTransform:
   m_GameObject: {fileID: 1997212591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 908897690}
@@ -1409,7 +1412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 999, y: 213}
+  m_AnchoredPosition: {x: 985, y: 206}
   m_SizeDelta: {x: 900, y: 283}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997212593
