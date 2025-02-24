@@ -10,5 +10,4 @@ public class Questions
     public bool isCorrectB;
     public string answerC;
     public bool isCorrectC;
-
 }

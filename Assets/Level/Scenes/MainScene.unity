@@ -8524,13 +8524,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].answerA
-      value: "Pr\xF3ba wy\u0142udzenia danych przez podszywanie si\u0119 pod zaufan\u0105
-        instytucj\u0119 "
+      value: "Atak polegaj\u0105cy na fizycznym w\u0142amaniu si\u0119 do biura (nie
+        tylko hakerzy, ale i z\u0142odzieje kawy!) "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].answerB
-      value: "Atak polegaj\u0105cy na fizycznym w\u0142amaniu si\u0119 do biura (nie
-        tylko hakerzy, ale i z\u0142odzieje kawy!) "
+      value: "Pr\xF3ba wy\u0142udzenia danych przez podszywanie si\u0119 pod zaufan\u0105
+        instytucj\u0119 "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].answerC
@@ -8539,8 +8539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].answerA
-      value: "U\u017Cywanie silnych hase\u0142 oraz w\u0142\u0105czenie dwusk\u0142adnikowej
-        autoryzacji "
+      value: 'Instalacja oprogramowania antywirusowego i regularne aktualizacje  '
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].answerB
@@ -8549,7 +8548,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].answerC
-      value: 'Instalacja oprogramowania antywirusowego i regularne aktualizacje  '
+      value: "U\u017Cywanie silnych hase\u0142 oraz w\u0142\u0105czenie dwusk\u0142adnikowej
+        autoryzacji "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].answerA
@@ -8656,24 +8656,64 @@ PrefabInstance:
       value: d
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
-      propertyPath: question.Array.data[1].isCorrectA
+      propertyPath: question.Array.data[0].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[0].isCorrectB
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[0].isCorrectC
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[1].isCorrectA
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectB
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[1].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].isCorrectA
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[2].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[2].isCorrectC
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].isCorrectA
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[3].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[3].isCorrectC
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].isCorrectA
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[4].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[4].isCorrectC
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[5].isCorrectA
