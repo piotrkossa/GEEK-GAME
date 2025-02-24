@@ -31,6 +31,9 @@ public class Questiontest : MonoBehaviour
             _globalVariables.isQuestioning = true;
             var q = question[currentIndex];
             bool answered = false;
+            Debug.Log(q.isCorrectA);
+            Debug.Log(q.isCorrectB);
+            Debug.Log(q.isCorrectC);
             InputManager.Instance.BlockAllInput();
             audioManager.PlaySFX(audioManager.question);
             QuestionScript.Instance.ShowQuestion(
@@ -50,7 +53,7 @@ public class Questiontest : MonoBehaviour
                 yield return null;
             }
 
-            if (!answered)
+            if (answered == false)
             {
                 OnAnswerChosen(false);
             }
