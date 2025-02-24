@@ -20,6 +20,13 @@ public class SceneTransition : MonoBehaviour
     private Vector3 topRectGoal;
     private Vector3 botRectGoal;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start() {
         startingTopRectPos = _topRect.position;
         startingBotRectPos = _botRect.position;
@@ -37,6 +44,8 @@ public class SceneTransition : MonoBehaviour
 
     private async void StartTransition() {
         this.gameObject.SetActive(true);
+
+        audioManager.PlaySFX(audioManager.kittenMeow);
 
         if (!startWithoutIcon) {
             await Awaitable.WaitForSecondsAsync(1f);

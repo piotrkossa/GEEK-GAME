@@ -7,6 +7,13 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject settingsScreen;
     [SerializeField] GameObject buttonsScreen;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
 
     private void Start()
     {
@@ -16,6 +23,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Play()
     {
+        audioManager.PlaySFX(audioManager.choice);
         this.gameObject.SetActive(false);
         Time.timeScale = 1;
         InputManager.Instance.UnlockAllInput();
@@ -23,17 +31,20 @@ public class PauseMenu : MonoBehaviour
 
     public void Settings()
     {
+        audioManager.PlaySFX(audioManager.choice);
         buttonsScreen.SetActive(false);
         settingsScreen.SetActive(true);
     }
 
     public void Help()
     {
+        audioManager.PlaySFX(audioManager.choice);
 
     }
 
     public void Menu()
     {
+        audioManager.PlaySFX(audioManager.choice);
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
     }

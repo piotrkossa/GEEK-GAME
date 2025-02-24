@@ -50,6 +50,7 @@ public class GameMenuSettings : MonoBehaviour
 
     public void Back()
     {
+        audioManager.PlaySFX(audioManager.choice);
         settingScreen.SetActive(false);
         buttonsScreen.SetActive(true);
     }

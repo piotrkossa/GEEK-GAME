@@ -9,7 +9,8 @@ public class TransitionManager : MonoBehaviour
 
     private HashSet<GameObject> transObj = new HashSet<GameObject> {};
 
-    private void Awake() {
+    private void Awake()
+    {
         Instance = this;
     }
 
