@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using System.Collections;
 
 public class UICostumeChanger : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class UICostumeChanger : MonoBehaviour
     private void Start()
     {
         uiImage = this.GetComponent<Image>();
-        ManageCostumes();
+        StartCoroutine(CostumesSetter());
     }
 
     public void EnterOptions()
@@ -33,25 +34,34 @@ public class UICostumeChanger : MonoBehaviour
         isOptionsActive = false;
     }
 
-    private async void ManageCostumes() {
+    private Task task;
+
+    private IEnumerator CostumesSetter() {
         while (true) {
             if (isOptionsActive && !isInOptionsNow) {
                 isInOptionsNow = true;
-                await TransitionManager.Instance.ImageColorTransition(uiImage, Color.white, new Color(1, 1, 1, 0), fadeDuration, 0f, 1f);
+                task = TransitionManager.Instance.ImageColorTransition(uiImage, Color.white, new Color(1, 1, 1, 0), fadeDuration, 0f, 1f);
+                yield return new WaitUntil(() => task.IsCompleted);
+
                 uiImage.sprite = optionsCostume;
-                await TransitionManager.Instance.ImageColorTransition(uiImage, new Color(1, 1, 1, 0), Color.white, fadeDuration, 0f, 1f);
+
+                task = TransitionManager.Instance.ImageColorTransition(uiImage, new Color(1, 1, 1, 0), Color.white, fadeDuration, 0f, 1f);
+                yield return new WaitUntil(() => task.IsCompleted);
             }
             else if (!isOptionsActive) {
                 isInOptionsNow = false;
-                await TransitionManager.Instance.ImageColorTransition(uiImage, Color.white, new Color(1, 1, 1, 0), fadeDuration, 0f, 1f);
+                task = TransitionManager.Instance.ImageColorTransition(uiImage, Color.white, new Color(1, 1, 1, 0), fadeDuration, 0f, 1f);
+                yield return new WaitUntil(() => task.IsCompleted);
+
                 uiImage.sprite = costumes[DrawIndex()];
-                await TransitionManager.Instance.ImageColorTransition(uiImage, new Color(1, 1, 1, 0), Color.white, fadeDuration, 0f, 1f);
+                task =  TransitionManager.Instance.ImageColorTransition(uiImage, new Color(1, 1, 1, 0), Color.white, fadeDuration, 0f, 1f);
+                yield return new WaitUntil(() => task.IsCompleted);
             }
             
             for (int i = 0; i < 31; i++) {
                 if (isOptionsActive != isInOptionsNow) break;
 
-                await Awaitable.WaitForSecondsAsync(0.1f);
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }
