@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 63677246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2050347, y: 10.74828, z: -1}
+  m_LocalPosition: {x: -4.49, y: 0.89, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,7 +243,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.576116
+  orthographic size: 17.428762
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -8506,10 +8506,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 165
       objectReference: {fileID: 0}
-    - target: {fileID: 3573884631987998034, guid: 874ce298f20142c46b55360b822907ce, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3999838355776297954, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 89
@@ -8665,11 +8661,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].isCorrectB
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].isCorrectC
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectA
@@ -8875,10 +8871,6 @@ PrefabInstance:
     - target: {fileID: 6775856553946584150, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
       value: 0.4745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 7328446756941362049, guid: 874ce298f20142c46b55360b822907ce, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7777373031440720071, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: m_Pivot.x

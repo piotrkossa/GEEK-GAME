@@ -20,9 +20,9 @@ public class QuestionScript : MonoBehaviour
     {
         Instance = this;
         textMeshPro = transform.Find("Question").GetComponent<TextMeshProUGUI>();
-        AnswerOneBtn = transform.Find("AnswerThreeBtn").GetComponent<Button>();
+        AnswerOneBtn = transform.Find("AnswerOneBtn").GetComponent<Button>();
         AnswerTwoBtn = transform.Find("AnswerTwoBtn").GetComponent<Button>();
-        AnswerThreeBtn = transform.Find("AnswerOneBtn").GetComponent<Button>();
+        AnswerThreeBtn = transform.Find("AnswerThreeBtn").GetComponent<Button>();
         Hide(); 
     }
 
