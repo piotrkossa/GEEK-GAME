@@ -34,6 +34,7 @@ public class UICostumeChanger : MonoBehaviour
     }
 
     private async void ManageCostumes() {
+        await Awaitable.WaitForSecondsAsync(2f);
         while (true) {
             if (isOptionsActive && !isInOptionsNow) {
                 isInOptionsNow = true;
