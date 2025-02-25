@@ -45,9 +45,8 @@ public class SceneTransition : MonoBehaviour
     private async void StartTransition() {
         this.gameObject.SetActive(true);
 
-        audioManager.PlaySFX(audioManager.kittenMeow);
-
         if (!startWithoutIcon) {
+            audioManager.PlaySFX(audioManager.kittenMeow);
             await Awaitable.WaitForSecondsAsync(1f);
             await TransitionManager.Instance.ImageColorTransition(_icon, iconStartingColor, iconEndingColor, 1.5f, 1f, 1f);
             await Awaitable.WaitForSecondsAsync(0.7f);
