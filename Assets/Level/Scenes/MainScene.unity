@@ -396,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -2.7}
+  m_AnchoredPosition: {x: -7.1, y: -8.6}
   m_SizeDelta: {x: 120.69, y: 91.44}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &123281434
@@ -446,15 +446,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
+  m_fontSize: 64
   m_fontSizeBase: 65
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 65
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -0.6712265, z: 0, w: 0}
+  m_margin: {x: -16.165325, y: 4.493332, z: -15.462524, w: 3.688961}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3701,6 +3701,12 @@ PolygonCollider2D:
       - {x: 37.927464, y: 9.033719}
       - {x: 23.752314, y: 1.8914216}
       - {x: 42.108948, y: 1.7548143}
+      - {x: 42.106136, y: 0.7978631}
+      - {x: 47.932602, y: 0.7974292}
+      - {x: 47.86538, y: -7.086649}
+      - {x: 42.647545, y: -7.1364746}
+      - {x: 42.557434, y: 0.67370653}
+      - {x: 42.565033, y: -7.015543}
       - {x: 42.07733, y: -9.007126}
       - {x: 32.801186, y: -8.983541}
       - {x: 23.239697, y: -8.929392}
@@ -3715,6 +3721,13 @@ PolygonCollider2D:
       - {x: 20.865051, y: 6.141174}
       - {x: 20.96218, y: -4.4781184}
       - {x: 2.1265926, y: -4.3995686}
+      - {x: 2.0456944, y: -1.4676024}
+      - {x: 2.0904713, y: -0.8656975}
+      - {x: -3.820982, y: -0.98397315}
+      - {x: -3.6945744, y: 6.9279375}
+      - {x: 1.5600376, y: 6.9212775}
+      - {x: 1.9552174, y: -0.77137446}
+      - {x: 2.0413113, y: 0.46507776}
       - {x: 2.1593456, y: 6.1938415}
       - {x: 3.031271, y: 6.306649}
       - {x: 3.002798, y: 7.2569685}
@@ -9049,7 +9062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectA
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectB
@@ -9057,7 +9070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectC
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].isCorrectA
