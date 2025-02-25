@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
 {
-    [SerializeField] private Transform _topRect;
-    [SerializeField] private Transform _botRect;
+    [SerializeField] private RectTransform _topRect;
+    [SerializeField] private RectTransform _botRect;
     [SerializeField] private Image _icon;
 
     [SerializeField] private bool startWithoutIcon;
@@ -28,8 +28,8 @@ public class SceneTransition : MonoBehaviour
     }
 
     private void Start() {
-        startingTopRectPos = _topRect.position;
-        startingBotRectPos = _botRect.position;
+        startingTopRectPos = _topRect.anchoredPosition;
+        startingBotRectPos = _botRect.anchoredPosition;
 
         topRectGoal = startingTopRectPos + new Vector3(0, 540, 0);
         botRectGoal = startingBotRectPos + new Vector3(0, -540, 0);
@@ -55,8 +55,8 @@ public class SceneTransition : MonoBehaviour
 
         Task[] tasks = new Task [2];
 
-        tasks[0] = TransitionManager.Instance.VectorTransition(_topRect, startingTopRectPos, topRectGoal, 1f, 0f, 0f);
-        tasks[1] = TransitionManager.Instance.VectorTransition(_botRect, startingBotRectPos, botRectGoal, 1f, 0f, 0f);
+        tasks[0] = TransitionManager.Instance.AnchoredPositionTransition(_topRect, startingTopRectPos, topRectGoal, 1f, 0f, 0f);
+        tasks[1] = TransitionManager.Instance.AnchoredPositionTransition(_botRect, startingBotRectPos, botRectGoal, 1f, 0f, 0f);
 
         await Task.WhenAll(tasks);
         this.gameObject.SetActive(false);
@@ -66,8 +66,8 @@ public class SceneTransition : MonoBehaviour
         this.gameObject.SetActive(true);
         Task[] tasks = new Task [2];
 
-        tasks[0] = TransitionManager.Instance.VectorTransition(_topRect, topRectGoal, startingTopRectPos, 1f, 0f, 0f);
-        tasks[1] = TransitionManager.Instance.VectorTransition(_botRect, botRectGoal, startingBotRectPos, 1f, 0f, 0f);
+        tasks[0] = TransitionManager.Instance.AnchoredPositionTransition(_topRect, topRectGoal, startingTopRectPos, 1f, 0f, 0f);
+        tasks[1] = TransitionManager.Instance.AnchoredPositionTransition(_botRect, botRectGoal, startingBotRectPos, 1f, 0f, 0f);
 
         await Task.WhenAll(tasks);
 

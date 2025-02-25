@@ -111,7 +111,7 @@ public class TurretSpawner : MonoBehaviour
     {
         isPlacing = true;
         objectBeingPlacedType = turretType;
-        objectBeingPlaced = Instantiate(_turretProps[turretType], this.transform.parent);
+        objectBeingPlaced = Instantiate(_turretProps[turretType], this.transform.parent.parent);
 
         _placementIndicator.gameObject.SetActive(true);
     }

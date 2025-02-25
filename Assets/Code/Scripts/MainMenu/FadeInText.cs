@@ -4,21 +4,21 @@ using System.Collections;
 
 public class FadeInTextMeshPro : MonoBehaviour
 {
-    private Transform _title;
+    private RectTransform _title;
     private Vector3 originPos;
 
     void Start()
     {
-        _title = this.transform;
-        originPos = _title.position;
-        _title.position -= new Vector3(900, 0, 0);
+        _title = this.GetComponent<RectTransform>();
+        originPos = _title.anchoredPosition;
+        _title.anchoredPosition -= new Vector2(900, 0);
         
         FadeIn();
     }
 
     private async void FadeIn()
     {
-        await Awaitable.WaitForSecondsAsync(1.5f);
-        await TransitionManager.Instance.VectorTransition(_title, _title.position, originPos, 0.8f, 1f, 1f);
+        await Awaitable.WaitForSecondsAsync(1f);
+        await TransitionManager.Instance.AnchoredPositionTransition(_title, _title.anchoredPosition, originPos, 0.8f, 1f, 1f);
     }
 }

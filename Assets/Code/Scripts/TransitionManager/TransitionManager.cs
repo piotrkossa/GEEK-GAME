@@ -26,7 +26,7 @@ public class TransitionManager : MonoBehaviour
                 break;
             t += Time.deltaTime / time;
             objTransform.position = Vector3.Lerp(originPosition, destinyPosition, QuadraticBezierCurve(t, bezierY1, bezierY2));
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
         }
     }
 
@@ -42,7 +42,7 @@ public class TransitionManager : MonoBehaviour
                 break;
             t += Time.deltaTime / time;
             objTransform.localScale = Vector3.Lerp(originScale, destinyScale, QuadraticBezierCurve(t, bezierY1, bezierY2));
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
         }
     }
 
@@ -58,7 +58,7 @@ public class TransitionManager : MonoBehaviour
                 break;
             t += Time.deltaTime / time;
             objCamera.orthographicSize = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
         }
     }
 
@@ -74,7 +74,7 @@ public class TransitionManager : MonoBehaviour
                 break;
             t += Time.deltaTime / time;
             objCanvasGroup.alpha = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
         }
     }
 
@@ -90,7 +90,7 @@ public class TransitionManager : MonoBehaviour
                 break;
             t += Time.deltaTime / time;
             objSlider.value = Mathf.Lerp(originFloat, destinyFloat, QuadraticBezierCurve(t, bezierY1, bezierY2));
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
         }
     }
 
@@ -106,7 +106,23 @@ public class TransitionManager : MonoBehaviour
                 break;
             t += Time.deltaTime / time;
             objImage.color = Color.Lerp(originColor, destinyColor, QuadraticBezierCurve(t, bezierY1, bezierY2));
-            await Task.Yield();
+            await Awaitable.NextFrameAsync();
+        }
+    }
+
+    public async Task AnchoredPositionTransition(RectTransform objTransform, Vector3 originPosition, Vector3 destinyPosition, float time, float bezierY1, float bezierY2) {
+        GameObject obj = objTransform.gameObject;
+
+        transObj.Add(obj);
+
+        float t = 0f;
+
+        while (t <= 1f) {
+            if (obj == null || HasTransStopped(obj))
+                break;
+            t += Time.deltaTime / time;
+            objTransform.anchoredPosition = Vector3.Lerp(originPosition, destinyPosition, QuadraticBezierCurve(t, bezierY1, bezierY2));
+            await Awaitable.NextFrameAsync();
         }
     }
 
