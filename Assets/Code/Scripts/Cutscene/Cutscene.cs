@@ -10,7 +10,12 @@ public class Cutscene : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Sprite[] _sceneSprites = new Sprite [13];
     [SerializeField] private Image _image;
     private int slideCounter = 0;
+    AudioManager audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -39,5 +44,11 @@ public class Cutscene : MonoBehaviour, IPointerClickHandler
     private async void GoToMainScene() {
         await _sceneTransition.EndTransition();
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void SkipClicked()
+    {
+        GoToMainScene();
+        audioManager.PlaySFX(audioManager.choice);
     }
 }

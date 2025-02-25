@@ -28,6 +28,10 @@ public class QuestionScript : MonoBehaviour
 
     public void ShowQuestion(string questionText, string asnwerOne, string asnwerTwo, string asnwerThree, Action oneButton, Action twoButton, Action threeButton)
     {
+        AnswerOneBtn.onClick.RemoveAllListeners();
+        AnswerTwoBtn.onClick.RemoveAllListeners();
+        AnswerThreeBtn.onClick.RemoveAllListeners();
+
         Task task = TransitionManager.Instance.ScaleTransition(this.transform, Vector3.zero, Vector3.one, 0.6f, 1f, 1f);
         gameObject.SetActive(true);
         textMeshPro.text = questionText;
