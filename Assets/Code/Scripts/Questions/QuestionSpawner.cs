@@ -67,15 +67,13 @@ public class Questiontest : MonoBehaviour
         if (isCorrect)
         {
             audioManager.PlaySFX(audioManager.choice);
-            Debug.Log("Poprawnie");
-            _globalVariables.UpdateMoney(100);
+            _globalVariables.UpdateMoney(75);
             _globalVariables.UpdateCorrectAnswers();
         }
         else
         {
             audioManager.PlaySFX(audioManager.buyDeclined);
-            Debug.Log("Niepoprawnie");
-            _globalVariables.UpdateMoney(-100);
+            _globalVariables.UpdateMoney(-50);
         }
 
     }
