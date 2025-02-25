@@ -66,7 +66,10 @@ public class Level1 : MonoBehaviour
     }
 
     private async void ManagePhases() {
-        await Awaitable.WaitForSecondsAsync(3f);
+        InputManager.Instance.BlockAllInput();
+        await Awaitable.WaitForSecondsAsync(5f);
+        InputManager.Instance.UnlockAllInput();
+        
         await _waveInfo.ShowWaveInfo(0);
         await Awaitable.WaitForSecondsAsync(2f);
         await PerformPhase(phases[0]);
