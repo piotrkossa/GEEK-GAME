@@ -46,6 +46,7 @@ public class TutorialManager : MonoBehaviour
     public void Exit()
     {
         gameObject.SetActive(false);
-        buttonsScreen.SetActive(true);
+        InputManager.Instance.UnlockAllInput();
+        Time.timeScale = 1;
     }
 }
