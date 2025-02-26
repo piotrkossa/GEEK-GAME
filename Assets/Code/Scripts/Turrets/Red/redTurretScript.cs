@@ -69,16 +69,12 @@ public class redTurretScript : MonoBehaviour
 
     private bool RotateTowardsTarget() // wyliczamy kat i przesuwamy gun w kierunku enemy
     {
-        float startingRotation = turretRotationPoint.rotation.eulerAngles.z;
+        float desiredAngle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        Quaternion desiredRotation = Quaternion.Euler(new Vector3(0f, 0f, desiredAngle));
 
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
 
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-
-        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        float endingRotation = turretRotationPoint.rotation.eulerAngles.z;
-
-        if(Mathf.Abs(startingRotation - endingRotation) < 0.2f)
+        if (Quaternion.Angle(turretRotationPoint.rotation, desiredRotation) < 0.2f)
             return true;
 
         return false;

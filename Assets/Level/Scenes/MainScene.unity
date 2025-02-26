@@ -3193,7 +3193,7 @@ MonoBehaviour:
     myszk\u0105 na fioletowe strza\u0142ki kt\xF3re pojawi\u0105 si\u0119 na dole
     ekranu kiedy przybli\u017Cysz si\u0119 do jednego z monitor\xF3w, nast\u0119pnie
     klikasz i przeci\u0105gasz dane dzia\u0142ko na wybrane przez siebie miejsce.
-    Zwracaj jednak uwag\u0119 na lewy g\xF3rny r\xF3g g\u0142\xF3wnego ekranu gry! "
+    Zwracaj jednak uwag\u0119 na prawy g\xF3rny r\xF3g g\u0142\xF3wnego ekranu gry! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}
   m_sharedMaterial: {fileID: -6618404824323204192, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}

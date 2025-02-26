@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.UIElements;
 
 public class piercingTurretScript : MonoBehaviour
 {
@@ -8,12 +6,12 @@ public class piercingTurretScript : MonoBehaviour
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform firingPoint; 
+    [SerializeField] private Transform firingPoint;
 
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
-    [SerializeField] private float bulletsPerSecond = 1f; // Bullets per second
+    [SerializeField] private float bulletsPerSecond = 1f;
     private Transform target;
     private float timeUntilFire;
     AudioManager audioManager;
@@ -22,9 +20,10 @@ public class piercingTurretScript : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
-    private void Update() //wybranie celu sprawdzenie czy w zasiegu i strzal
+
+    private void Update()
     {
-        if (target == null) //obranie nowego celu
+        if (target == null)
         {
             FindTarget();
             return;
@@ -40,7 +39,7 @@ public class piercingTurretScript : MonoBehaviour
         {
             timeUntilFire += Time.deltaTime;
 
-            if (timeUntilFire >= 1f/bulletsPerSecond && isPointing)
+            if (timeUntilFire >= 1f / bulletsPerSecond && isPointing)
             {
                 Shoot();
                 timeUntilFire = 0f;
@@ -48,7 +47,7 @@ public class piercingTurretScript : MonoBehaviour
         }
     }
 
-    private void Shoot()  //tworzy pocisk w firingpoint i ustawia cel
+    private void Shoot()
     {
         GameObject _bulletObject = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         audioManager.PlaySFX(audioManager.shoot);
@@ -56,44 +55,46 @@ public class piercingTurretScript : MonoBehaviour
         _bulletScript.SetTarget(target);
     }
 
-    private void FindTarget() // szukanie pierwszego przeciwnika przez raycast w okregu
+    private void FindTarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.position, 0f, enemyMask);
-        // odwoluj sie do maski aby zidentyfikowac ze to enemy a nie cos innego
-        
-        if (hits.Length > 0)
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, targetingRange, enemyMask);
+        float closestDistance = Mathf.Infinity;
+        target = null;
+
+        foreach (Collider2D hit in hits)
         {
-            target = hits[0].transform;
+            float distanceToTarget = Vector2.Distance(transform.position, hit.transform.position);
+            if (distanceToTarget < closestDistance)
+            {
+                closestDistance = distanceToTarget;
+                target = hit.transform;
+            }
         }
     }
 
-    private bool RotateTowardsTarget() // wyliczamy kat i przesuwamy gun w kierunku enemy
+    private bool RotateTowardsTarget()
     {
-        float startingRotation = turretRotationPoint.rotation.eulerAngles.z;
+        if (target == null) return false;
 
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        Vector3 direction = target.position - turretRotationPoint.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
 
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        Quaternion desiredRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
 
-        float endingRotation = turretRotationPoint.rotation.eulerAngles.z;
-
-        if(Mathf.Abs(startingRotation - endingRotation) < 0.2f)
-            return true;
-
-        return false;
+        return Quaternion.Angle(turretRotationPoint.rotation, desiredRotation) < 0.2f;
     }
 
     private bool CheckTargetIsInRange()
     {
-        return Vector2.Distance(target.position, transform.position) <= targetingRange;
+        return target != null && Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
 
-    private void OnDrawGizmosSelected() // widac range jak siedzisz w unity
+    private void OnDrawGizmosSelected()
     {
 #if UNITY_EDITOR
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, targetingRange);
 #endif
     }
 }

@@ -87,16 +87,15 @@ public class yellowTurretScript : MonoBehaviour
 
     private bool RotateTowardsTarget() // Obracanie wie¿yczki w kierunku celu
     {
-        float startingRotation = turretRotationPoint.rotation.eulerAngles.z;
+        float desiredAngle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        Quaternion desiredRotation = Quaternion.Euler(new Vector3(0f, 0f, desiredAngle));
 
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
 
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        if (Quaternion.Angle(turretRotationPoint.rotation, desiredRotation) < 0.2f)
+            return true;
 
-        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        float endingRotation = turretRotationPoint.rotation.eulerAngles.z;
-
-        return Mathf.Abs(startingRotation - endingRotation) < 0.2f;
+        return false;
     }
 
     private bool CheckTargetIsInRange()
