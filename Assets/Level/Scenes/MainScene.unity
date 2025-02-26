@@ -11455,148 +11455,320 @@ PrefabInstance:
       objectReference: {fileID: 1004929443}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.size
-      value: 5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].answerA
-      value: "Pr\xF3ba wy\u0142udzenia danych przez podszywanie si\u0119 pod zaufan\u0105
-        instytucj\u0119"
+      value: "Zignorowa\u0107 atak, mo\u017Ce sam przejdzie "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].answerB
-      value: "Atak polegaj\u0105cy na fizycznym w\u0142amaniu si\u0119 do biura (nie
-        tylko hakerzy, ale i z\u0142odzieje kawy!) "
+      value: "Zablokowa\u0107 dost\u0119p do sieci i analizowa\u0107 logi "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].answerC
-      value: "Spos\xF3b na \"z\u0142owienie\" informacji przy u\u017Cyciu internetowych
-        przyn\u0119t  "
+      value: "Uruchomi\u0107 system alarmowy bez sprawdzania niczego "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].answerA
-      value: 'Instalacja oprogramowania antywirusowego i regularne aktualizacje  '
+      value: "Zainstalowa\u0107 nowe oprogramowanie bez usuwania starego "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].answerB
-      value: "Przypadkowe klikanie w ka\u017Cdy link \u2013 bo kto by chcia\u0142
-        si\u0119 m\u0119czy\u0107? "
+      value: "Uruchomi\u0107 komputer w trybie awaryjnym i uruchomi\u0107 skaner
+        antywirusowy "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].answerC
-      value: "U\u017Cywanie silnych hase\u0142 oraz w\u0142\u0105czenie dwusk\u0142adnikowej
-        autoryzacji "
+      value: "Ignorowa\u0107 to i poczeka\u0107, a\u017C samo zniknie "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].answerA
-      value: "System zabezpiecze\u0144 blokuj\u0105cy nieautoryzowany dost\u0119p
-        do sieci "
+      value: "Klikasz na link, by sprawdzi\u0107, dok\u0105d prowadzi "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].answerB
-      value: "Nowoczesna \"\u015Bciana ognia\", kt\xF3ra pali wszelkie niechciane
-        po\u0142\u0105czenia "
+      value: "Usuwasz wiadomo\u015B\u0107 i ignorujesz j\u0105 "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].answerC
-      value: "Aplikacja s\u0142u\u017C\u0105ca do przegl\u0105dania stron internetowych
-        (chyba, \u017Ce lubisz niespodzianki!)  "
+      value: "Kopiujesz link i wklejasz go w wyszukiwarce, aby sprawdzi\u0107, czy
+        jest bezpieczny "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].answerA
-      value: "Z\u0142o\u015Bliwe oprogramowanie mog\u0105ce uszkodzi\u0107 system
-        lub ukra\u015B\u0107 dane "
+      value: "U\u017Cywanie imienia i nazwiska w ha\u015Ble "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].answerB
-      value: "Nowy hit muzyczny, kt\xF3ry podbija listy przeboj\xF3w (ha, marzenia...) "
+      value: "U\u017Cywanie kombinacji liter, cyfr i znak\xF3w specjalnych "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].answerC
-      value: "Komputerowe \"przezi\u0119bienie\", kt\xF3re najlepiej leczy\u0107
-        odpowiednimi aktualizacjami  "
+      value: "U\u017Cywanie daty urodzenia "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].answerA
-      value: "Ryzyko przechwycenia przesy\u0142anych danych przez osoby o nie najlepszych
-        intencjach "
+      value: "Pr\xF3buje si\u0119 zalogowa\u0107 10 razy, by sprawdzi\u0107, czy
+        has\u0142o si\u0119 \"od\u015Bwie\u017Cy\" "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].answerB
-      value: "Darmowy internet dla s\u0105siad\xF3w \u2013 brzmi kusz\u0105co, ale
-        zap\u0142acisz tego cen\u0119 "
+      value: "Zmieniasz has\u0142o i sprawdzasz, czy jest nadal bezpieczne "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].answerC
-      value: "Mo\u017Cliwo\u015B\u0107 zdobycia \"supermocy\" w pobieraniu... o ile
-        takie co\u015B istnieje!  "
+      value: "Zawiadamiasz dostawc\u0119 us\u0142ug i czekasz na odpowied\u017A "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[5].answerA
-      value: d
+      value: "Zignorowa\u0107 i kontynuowa\u0107 prac\u0119 "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[5].answerB
-      value: d
+      value: "Pr\xF3bowa\u0107 zap\u0142aci\u0107 za odzyskanie danych "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[5].answerC
-      value: d
+      value: "Od\u0142\u0105czy\u0107 urz\u0105dzenie od sieci i skontaktowa\u0107
+        si\u0119 z ekspertem ds. bezpiecze\u0144stwa "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[6].answerA
-      value: d
+      value: "Zawsze otwiera\u0107 za\u0142\u0105czniki w e-mailach od nieznajomych "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[6].answerB
-      value: d
+      value: "Sprawdza\u0107 dok\u0142adnie, czy nadawca e-maila jest tym, za kogo
+        si\u0119 podaje "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[6].answerC
-      value: d
+      value: "Ignorowa\u0107 wiadomo\u015Bci, kt\xF3re wygl\u0105daj\u0105 podejrzanie,
+        ale nie maj\u0105 \u017Cadnych za\u0142\u0105cznik\xF3w "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[7].answerA
-      value: d
+      value: "Zwi\u0119kszone zu\u017Cycie baterii w telefonie "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[7].answerB
-      value: d
+      value: "Nag\u0142e op\xF3\u017Anienia i brak dost\u0119pu do strony internetowej "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[7].answerC
-      value: d
+      value: "Wysokie zu\u017Cycie pami\u0119ci RAM "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[8].answerA
-      value: d
+      value: 'Wykorzystywanie sieci VPN '
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[8].answerB
-      value: d
+      value: "Zgadywanie hase\u0142 przez brute force "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[8].answerC
-      value: d
+      value: "Stosowanie kod\xF3w QR do po\u0142\u0105cze\u0144 "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[9].answerA
-      value: d
+      value: "Kontroluje, kt\xF3re dane mog\u0105 przechodzi\u0107 przez sie\u0107 "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[9].answerB
-      value: d
+      value: 'Zabezpiecza komputer przed wirusami '
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[9].answerC
-      value: d
+      value: 'Szyfruje dane w Internecie '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[10].answerA
+      value: "Zmiana has\u0142a do konta "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[10].answerB
+      value: "Pr\xF3ba negocjacji z przest\u0119pcami "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[10].answerC
+      value: 'Natychmiastowa zmiana konta bankowego i zawiadomienie banku '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[11].answerA
+      value: "Zmieniasz has\u0142o i sprawdzasz ostatnie sesje logowania "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[11].answerB
+      value: "Ignorujesz to, licz\u0105c \u017Ce to nieistotna sytuacja "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[11].answerC
+      value: "Skontaktujesz si\u0119 z administratorem, by sprawdzi\u0107, co si\u0119
+        dzieje "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[12].answerA
+      value: 'SQL Injection '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[12].answerB
+      value: 'Cross-site Scripting (XSS) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[12].answerC
+      value: Keylogging
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[13].answerA
+      value: "Atak polegaj\u0105cy na podszywaniu si\u0119 pod inn\u0105 osob\u0119
+        lub system"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[13].answerB
+      value: "Z\u0142o\u015Bliwe oprogramowanie zmieniaj\u0105ce has\u0142a "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[13].answerC
+      value: "Wys\u0142anie fa\u0142szywych e-maili, aby spowodowa\u0107 chaos "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[14].answerA
+      value: "U\u017Cywanie tylko jednego has\u0142a do wielu kont "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[14].answerB
+      value: "Wykorzystanie tylko hase\u0142, kt\xF3re \u0142atwo zapami\u0119ta\u0107 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[14].answerC
+      value: "Potrzebujesz dw\xF3ch metod weryfikacji, np. has\u0142a i kodu SMS "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[15].answerA
+      value: "U\u017Cywanie szyfrowanego po\u0142\u0105czenia (HTTPS) "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[15].answerB
+      value: 'Ignorowanie problemu, bo to nie twoja wina '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[15].answerC
+      value: "Zmiana has\u0142a do wszystkich kont bez zmiany urz\u0105dzenia "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[16].answerA
+      value: "Niezrozumia\u0142e warunki umowy i \u017Cadne szczeg\xF3\u0142y dotycz\u0105ce
+        ochrony prywatno\u015Bci "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[16].answerB
+      value: "Zgoda na wysy\u0142anie newsletter\xF3w, nawet je\u015Bli ci to nie
+        odpowiada "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[16].answerC
+      value: "Nic, warunki s\u0105 zawsze standardowe i nie trzeba si\u0119 nimi
+        przejmowa\u0107 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[17].answerA
+      value: "Zignorowa\u0107 to, mo\u017Ce samo minie "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[17].answerB
+      value: "Natychmiast prze\u0142\u0105czy\u0107 si\u0119 na inne urz\u0105dzenie,
+        nie zmieniaj\u0105c nic na obecnym "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[17].answerC
+      value: "Uruchomi\u0107 komputer w trybie awaryjnym i przeprowadzi\u0107 pe\u0142ne
+        skanowanie "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[18].answerA
+      value: "Program, kt\xF3ry monitoruje i rejestruje wci\u015Bni\u0119te klawisze
+        na klawiaturze "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[18].answerB
+      value: "Aplikacja do szyfrowania twoich hase\u0142 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[18].answerC
+      value: "Oprogramowanie, kt\xF3re naprawia uszkodzone pliki systemowe "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[19].answerA
+      value: "Ustawi\u0107 silne has\u0142o do routera i zaktualizowa\u0107 oprogramowanie"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[19].answerB
+      value: "Zwi\u0119kszy\u0107 liczb\u0119 urz\u0105dze\u0144 w sieci, aby atak
+        by\u0142 trudniejszy do przeprowadzenia "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[19].answerC
+      value: "U\u017Cy\u0107 routera bez \u017Cadnych zabezpiecze\u0144 dla wygody "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[20].answerA
+      value: "Manipulowanie lud\u017Ami, by ujawnili swoje dane osobowe "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[20].answerB
+      value: "U\u017Cywanie specjalistycznego oprogramowania do atak\xF3w "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[20].answerC
+      value: "In\u017Cynieria programowa zabezpieczaj\u0105ca dane w Internecie "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[21].answerA
+      value: "Narz\u0119dzie do zarz\u0105dzania urz\u0105dzeniami w sieci "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[21].answerB
+      value: "Spos\xF3b na zabezpieczenie systemu przed wirusami "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[21].answerC
+      value: "Atak na system komputerowy, kt\xF3rego luka nie zosta\u0142a jeszcze
+        naprawiona "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[22].answerA
+      value: "Poniewa\u017C aktualizacje zawsze poprawiaj\u0105 wygl\u0105d interfejsu "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[22].answerB
+      value: "Zawieraj\u0105 poprawki zabezpiecze\u0144, kt\xF3re chroni\u0105 przed
+        nowymi zagro\u017Ceniami "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[22].answerC
+      value: "System nie dzia\u0142a poprawnie bez najnowszych aktualizacji "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[23].answerA
+      value: "Zawsze, gdy logujesz si\u0119 do publicznej sieci Wi-Fi "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[23].answerB
+      value: "Tylko wtedy, gdy musisz ogl\u0105da\u0107 filmiki w Internecie "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[23].answerC
+      value: "Tylko gdy \u0142\u0105czysz si\u0119 z sieci\u0105 firmow\u0105 "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].isCorrectA
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].isCorrectB
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].isCorrectC
@@ -11604,11 +11776,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectA
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectB
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].isCorrectC
@@ -11616,11 +11788,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].isCorrectA
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].isCorrectB
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].isCorrectC
@@ -11628,11 +11800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].isCorrectA
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].isCorrectB
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].isCorrectC
@@ -11640,11 +11812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].isCorrectA
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].isCorrectB
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].isCorrectC
@@ -11652,18 +11824,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[5].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[5].isCorrectC
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[6].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[6].isCorrectB
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[7].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[7].isCorrectB
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[8].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[8].isCorrectB
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
@@ -11671,45 +11859,177 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[10].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[11].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[12].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[13].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[14].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[15].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[16].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[17].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[18].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[19].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[20].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[20].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[21].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[22].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[22].isCorrectC
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[23].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].questionText
-      value: Co to jest phishing?
+      value: "Twoja baza zosta\u0142a zaatakowana przez haker\xF3w. Co powiniene\u015B
+        zrobi\u0107 jako pierwszy? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[1].questionText
-      value: "Jakie s\u0105 najcz\u0119stsze metody ochrony przed atakami cybernetycznymi? "
+      value: "Twoje urz\u0105dzenie zosta\u0142o zainfekowane z\u0142o\u015Bliwym
+        oprogramowaniem. Jak je usun\u0105\u0107? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[2].questionText
-      value: 'Co to jest firewall? '
+      value: 'Widzisz podejrzany link w e-mailu od nieznajomego. Co robisz? '
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[3].questionText
-      value: "Czym s\u0105 wirusy komputerowe? "
+      value: "Zabezpieczasz has\u0142o do swojego konta. Co powinno by\u0107 najlepsz\u0105
+        praktyk\u0105? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[4].questionText
-      value: "Jakie zagro\u017Cenia niesie za sob\u0105 u\u017Cywanie niezabezpieczonych
-        sieci Wi-Fi? "
+      value: "Pr\xF3bujesz logowa\u0107 si\u0119 do swojego konta, ale widzisz, \u017Ce
+        has\u0142o nie dzia\u0142a. Co robisz? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[5].questionText
-      value: jews
+      value: "Twoje urz\u0105dzenie jest atakowane przez ransomware. Co powiniene\u015B
+        zrobi\u0107? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[6].questionText
-      value: jews
+      value: "Jakie zachowanie mo\u017Ce pom\xF3c w zapobieganiu phishingowi? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[7].questionText
-      value: jews
+      value: "Co mo\u017Ce by\u0107 oznak\u0105 ataku typu DDoS? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[8].questionText
-      value: jews
+      value: "Co jest najcz\u0119\u015Bciej wykorzystywan\u0105 metod\u0105 atak\xF3w
+        na sieci Wi-Fi? "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[9].questionText
-      value: jews
+      value: "Jak\u0105 funkcj\u0119 pe\u0142ni zapora sieciowa (firewall)? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[10].questionText
+      value: "Twoje konto bankowe zosta\u0142o przej\u0119te przez cyberprzest\u0119pc\xF3w.
+        Jakie powinno by\u0107 pierwsze dzia\u0142anie? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[11].questionText
+      value: "Zauwa\u017Cy\u0142e\u015B podejrzane logowanie na swoim koncie. Co
+        robisz? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[12].questionText
+      value: "Jaki typ ataku na stron\u0119 WWW jest najcz\u0119\u015Bciej wykorzystywany
+        do wykradania danych? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[13].questionText
+      value: "Co to jest \u201Espoofing\u201D w kontek\u015Bcie cyberbezpiecze\u0144stwa? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[14].questionText
+      value: "Co oznacza poj\u0119cie \u201Edwusk\u0142adnikowe uwierzytelnianie\u201D? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[15].questionText
+      value: "Twoja sie\u0107 jest atakowana przez tzw. \u201Eman-in-the-middle\u201D
+        (MITM). Jakie jest najlepsze rozwi\u0105zanie? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[16].questionText
+      value: "Zgadzasz si\u0119 na warunki us\u0142ugi na nowej stronie. Co powinno
+        ci\u0119 zaniepokoi\u0107? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[17].questionText
+      value: "Twoje konto zosta\u0142o zaatakowane przez trojana. Co powiniene\u015B
+        zrobi\u0107? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[18].questionText
+      value: "Co to jest \u201Ekeylogger\u201D? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[19].questionText
+      value: "Twoja sie\u0107 jest pe\u0142na urz\u0105dze\u0144. Jak najlepiej zabezpieczy\u0107
+        j\u0105 przed atakami? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[20].questionText
+      value: "Co to jest \u201Esocial engineering\u201D w kontek\u015Bcie cyberbezpiecze\u0144stwa? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[21].questionText
+      value: "Co oznacza termin \u201Ezero-day exploit\u201D? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[22].questionText
+      value: "Dlaczego regularnie aktualizowanie systemu operacyjnego jest wa\u017Cne? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[23].questionText
+      value: "Kiedy powinno si\u0119 u\u017Cywa\u0107 VPN? "
       objectReference: {fileID: 0}
     - target: {fileID: 4616669415124144551, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
