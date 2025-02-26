@@ -28,6 +28,11 @@ public class QuestionScript : MonoBehaviour
 
     public void ShowQuestion(string questionText, string asnwerOne, string asnwerTwo, string asnwerThree, Action oneButton, Action twoButton, Action threeButton)
     {
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        float randomX = UnityEngine.Random.Range(-350f, 350f);
+        float randomY = UnityEngine.Random.Range(-130f, 130f);
+        rectTransform.anchoredPosition = new Vector2(randomX, randomY);
+
         AnswerOneBtn.onClick.RemoveAllListeners();
         AnswerTwoBtn.onClick.RemoveAllListeners();
         AnswerThreeBtn.onClick.RemoveAllListeners();
