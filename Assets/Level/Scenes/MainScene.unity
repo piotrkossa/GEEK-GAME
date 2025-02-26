@@ -11763,6 +11763,85 @@ PrefabInstance:
       value: "Tylko gdy \u0142\u0105czysz si\u0119 z sieci\u0105 firmow\u0105 "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[24].answerA
+      value: "Zbi\xF3r dobrych praktyk w zakresie ochrony prywatno\u015Bci i bezpiecze\u0144stwa
+        online "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[24].answerB
+      value: "Procedura czyszczenia urz\u0105dzenia z plik\xF3w tymczasowych"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[24].answerC
+      value: 'Praktyka usuwania starych aplikacji z telefonu '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[25].answerA
+      value: "Z\u0142o\u015Bliwe oprogramowanie, kt\xF3re ukrywa obecno\u015B\u0107
+        wirus\xF3w lub innych zagro\u017Ce\u0144 w systemie "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[25].answerB
+      value: "Aplikacja zabezpieczaj\u0105ca dost\u0119p do danych "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[25].answerC
+      value: "Narz\u0119dzie do optymalizacji dzia\u0142ania systemu "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[26].answerA
+      value: "Natychmiast zap\u0142aci\u0107 okup, aby odzyska\u0107 dane "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[26].answerB
+      value: "Spr\xF3bowa\u0107 wy\u0142\u0105czy\u0107 urz\u0105dzenie i nie p\u0142aci\u0107
+        okupowi "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[26].answerC
+      value: "Zignorowa\u0107 i poczeka\u0107, a\u017C sam zniknie "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[27].answerA
+      value: "Spos\xF3b na zabezpieczenie portfela kryptowalutowego "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[27].answerB
+      value: "Atak polegaj\u0105cy na wykorzystaniu komputer\xF3w do kopania kryptowalut
+        bez zgody w\u0142a\u015Bciciela "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[27].answerC
+      value: "Z\u0142o\u015Bliwe oprogramowanie do przechwytywania hase\u0142 w grach
+        online "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[28].answerA
+      value: "Zawsze u\u017Cywa\u0107 prywatnego trybu przegl\u0105darki "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[28].answerB
+      value: "Zalogowa\u0107 si\u0119 na swoje konto Google "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[28].answerC
+      value: "Zawsze wylogowa\u0107 si\u0119 z wszystkich aplikacji po zako\u0144czeniu
+        sesji "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[29].answerA
+      value: "Sprawdzi\u0107 certyfikat SSL i upewni\u0107 si\u0119, \u017Ce strona
+        zaczyna si\u0119 od \"https://\" "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[29].answerB
+      value: "Sprawdzi\u0107 tylko wygl\u0105d strony i liczb\u0119 reklam "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[29].answerC
+      value: "Nie sprawdza\u0107 nic, bo ka\u017Cda strona jest bezpieczna"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].isCorrectA
       value: 0
       objectReference: {fileID: 0}
@@ -11923,6 +12002,30 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[24].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[25].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[26].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[27].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[28].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[29].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].questionText
       value: "Twoja baza zosta\u0142a zaatakowana przez haker\xF3w. Co powiniene\u015B
         zrobi\u0107 jako pierwszy? "
@@ -12030,6 +12133,33 @@ PrefabInstance:
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[23].questionText
       value: "Kiedy powinno si\u0119 u\u017Cywa\u0107 VPN? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[24].questionText
+      value: "Co to jest \u201Ecyberhigiena\u201D? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[25].questionText
+      value: "Co to jest \u201Crootkit\u201D? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[26].questionText
+      value: "Twoja sie\u0107 zosta\u0142a zaatakowana przez ransomware. Co musisz
+        zrobi\u0107? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[27].questionText
+      value: 'Co to jest "cryptojacking"? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[28].questionText
+      value: "Jakie zabezpieczenie jest najskuteczniejsze w przypadku publicznych
+        komputer\xF3w? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[29].questionText
+      value: "Jakie informacje nale\u017Cy sprawdza\u0107 przy ocenie wiarygodno\u015Bci
+        strony internetowej? "
       objectReference: {fileID: 0}
     - target: {fileID: 4616669415124144551, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -13241,15 +13371,15 @@ RectTransform:
   m_GameObject: {fileID: 1603676737}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 730094257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -117}
-  m_SizeDelta: {x: 88, y: 132}
+  m_AnchoredPosition: {x: -2, y: -95}
+  m_SizeDelta: {x: 183, y: 272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603676739
 MonoBehaviour:
@@ -13271,7 +13401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7100483761027377686, guid: 19c3043a49e282747bc85d1eb1413837, type: 3}
+  m_Sprite: {fileID: -1601906364800958372, guid: 9b0ec1926fd4e9146b79ad337485ff61, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

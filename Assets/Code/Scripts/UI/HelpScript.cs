@@ -6,6 +6,12 @@ public class TutorialManager : MonoBehaviour
     public GameObject[] screens;
     private int currentScreenIndex = 0;
     [SerializeField] GameObject buttonsScreen;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -30,6 +36,7 @@ public class TutorialManager : MonoBehaviour
         if (currentScreenIndex < screens.Length - 1)
         {
             currentScreenIndex++;
+            audioManager.PlaySFX(audioManager.choice);
             ShowScreen(currentScreenIndex);
         }
     }
@@ -38,13 +45,16 @@ public class TutorialManager : MonoBehaviour
     {
         if (currentScreenIndex > 0)
         {
+
             currentScreenIndex--;
+            audioManager.PlaySFX(audioManager.choice);
             ShowScreen(currentScreenIndex);
         }
     }
 
     public void Exit()
     {
+        audioManager.PlaySFX(audioManager.choice);
         gameObject.SetActive(false);
         InputManager.Instance.UnlockAllInput();
         Time.timeScale = 1;
