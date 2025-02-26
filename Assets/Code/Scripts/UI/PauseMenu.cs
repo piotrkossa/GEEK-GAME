@@ -41,7 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void Help()
     {
         audioManager.PlaySFX(audioManager.choice);
-        buttonsScreen.SetActive(false);
+        this.gameObject.SetActive(false);
         helpScreen.SetActive(true);
     }
 
