@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GlobalVariables _globalVariables;
     [SerializeField] GameObject settingsScreen;
     [SerializeField] GameObject buttonsScreen;
+    [SerializeField] GameObject helpScreen;
     [SerializeField] private SceneTransition _sceneTransition;
 
     AudioManager audioManager;
@@ -40,6 +41,8 @@ public class PauseMenu : MonoBehaviour
     public void Help()
     {
         audioManager.PlaySFX(audioManager.choice);
+        buttonsScreen.SetActive(false);
+        helpScreen.SetActive(true);
     }
 
     public async void Menu()
