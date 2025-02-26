@@ -62,42 +62,55 @@ public class Level1 : MonoBehaviour
     private void Start() {
         FillDictionaries();
         _enemySpawner.OnEnemyDone.AddListener(EnemyDone);
-        ManagePhases();
+        StartCoroutine(ManagePhases());
     }
 
-    private async void ManagePhases() {
+    private IEnumerator ManagePhases() {
         InputManager.Instance.BlockAllInput();
-        await Awaitable.WaitForSecondsAsync(5f);
+        yield return new WaitForSeconds(5f);
         InputManager.Instance.UnlockAllInput();
         
-        await _waveInfo.ShowWaveInfo(0);
-        await Awaitable.WaitForSecondsAsync(2f);
-        await PerformPhase(phases[0]);
+        Task task = _waveInfo.ShowWaveInfo(0);
+        yield return new WaitUntil(() => task.IsCompleted);
+        yield return new WaitForSeconds(2f);
 
-        await Awaitable.WaitForSecondsAsync(3f);
-        await _waveInfo.ShowWaveInfo(1);
+        yield return PerformPhase(phases[0]);
+
+        yield return new WaitForSeconds(3f);
+
+        task = _waveInfo.ShowWaveInfo(1);
+        yield return new WaitUntil(() => task.IsCompleted);
         audioManager.PlayWaveMusic(1);
-        await Awaitable.WaitForSecondsAsync(3f);
-        await PerformPhase(phases[1]);
+        yield return new WaitForSeconds(3f);
 
-        await Awaitable.WaitForSecondsAsync(3f);
-        await _waveInfo.ShowWaveInfo(2);
+        yield return PerformPhase(phases[1]);
+
+        yield return new WaitForSeconds(3f);
+
+        task = _waveInfo.ShowWaveInfo(2);
+        yield return new WaitUntil(() => task.IsCompleted);
         audioManager.PlayWaveMusic(2);
-        await Awaitable.WaitForSecondsAsync(3f);
-        await PerformPhase(phases[2]);
+        yield return new WaitForSeconds(3f);
+
+        yield return PerformPhase(phases[2]);
     }
 
-    private async Task PerformPhase(Phase phase) {
+    private IEnumerator PerformPhase(Phase phase) {
         float delay = 0f;
+        List<Coroutine> coroutines = new List<Coroutine> {};
         foreach (Enemy enemy in phase.enemies) {
-            StartCoroutine(SpawnCoroutine(enemy.enemyType, delay, enemy.interval));
+            coroutines.Add(StartCoroutine(SpawnCoroutine(enemy.enemyType, delay, enemy.interval)));
             delay += 0.3f;
         }
 
-        await Awaitable.WaitForSecondsAsync(phase.duration);
-        StopAllCoroutines();
+        yield return new WaitForSeconds(phase.duration);
+        
+        foreach (Coroutine coroutine in coroutines) {
+            StopCoroutine(coroutine);
+        }
+
         while (true) {
-            await Awaitable.WaitForSecondsAsync(1f);
+            yield return new WaitForSeconds(1f);
             if (GlobalVariables.Instance.EnemyAmount == 0) {
                 break;
             }
