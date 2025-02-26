@@ -104,7 +104,7 @@ public class TransitionManager : MonoBehaviour
         while (t <= 1f) {
             if (obj == null || HasTransStopped(obj))
                 break;
-            t += Time.deltaTime / time;
+            t += Time.unscaledDeltaTime / time;
             objImage.color = Color.Lerp(originColor, destinyColor, QuadraticBezierCurve(t, bezierY1, bezierY2));
             await Awaitable.NextFrameAsync();
         }
@@ -120,7 +120,7 @@ public class TransitionManager : MonoBehaviour
         while (t <= 1f) {
             if (obj == null || HasTransStopped(obj))
                 break;
-            t += Time.deltaTime / time;
+            t += Time.unscaledDeltaTime / time;
             objTransform.anchoredPosition = Vector3.Lerp(originPosition, destinyPosition, QuadraticBezierCurve(t, bezierY1, bezierY2));
             await Awaitable.NextFrameAsync();
         }

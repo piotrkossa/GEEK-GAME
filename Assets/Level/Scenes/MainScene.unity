@@ -1838,6 +1838,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
+--- !u!114 &307934605 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 249970601671293921, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
+  m_PrefabInstance: {fileID: 307934604}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b300d12afa9da9a47b24ce07d756b619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &313356826
 GameObject:
   m_ObjectHideFlags: 0
@@ -7577,6 +7588,10 @@ PrefabInstance:
       propertyPath: _globalVariables
       value: 
       objectReference: {fileID: 1004929443}
+    - target: {fileID: 2664875064679552643, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
+      propertyPath: _sceneTransition
+      value: 
+      objectReference: {fileID: 307934605}
     - target: {fileID: 2991210155761623669, guid: 435f904cfddb1a04d9cb791cf16dc9bd, type: 3}
       propertyPath: m_SizeDelta.x
       value: 84.444

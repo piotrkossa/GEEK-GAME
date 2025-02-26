@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Threading.Tasks;
 
 public class FadeInTextMeshPro : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class FadeInTextMeshPro : MonoBehaviour
 
     private async void FadeIn()
     {
-        await Awaitable.WaitForSecondsAsync(1f);
+        await Task.Delay(1000);
         await TransitionManager.Instance.AnchoredPositionTransition(_title, _title.anchoredPosition, originPos, 0.8f, 1f, 1f);
     }
 }

@@ -47,9 +47,9 @@ public class SceneTransition : MonoBehaviour
 
         if (!startWithoutIcon) {
             audioManager.PlaySFX(audioManager.kittenMeow);
-            await Awaitable.WaitForSecondsAsync(1f);
+            await Task.Delay(1000);
             await TransitionManager.Instance.ImageColorTransition(_icon, iconStartingColor, iconEndingColor, 1.5f, 1f, 1f);
-            await Awaitable.WaitForSecondsAsync(0.7f);
+            await Task.Delay(700);
         }
 
         Task[] tasks = new Task [2];
@@ -70,7 +70,7 @@ public class SceneTransition : MonoBehaviour
 
         await Task.WhenAll(tasks);
 
-        await Awaitable.WaitForSecondsAsync(0.7f);
+        await Task.Delay(700);
 
         await TransitionManager.Instance.ImageColorTransition(_icon, iconEndingColor, iconStartingColor, 1.5f, 0f, 0f);
     }
