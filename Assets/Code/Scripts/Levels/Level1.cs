@@ -124,7 +124,7 @@ public class Level1 : MonoBehaviour
         while (true) {
             _enemySpawner.SpawnEnemy(enemiesPrefabs[enemyType]);
             yield return new WaitForSeconds(interval);
-            interval /= scaleRatio;
+            interval -= scaleRatio;
         }
     }
 
