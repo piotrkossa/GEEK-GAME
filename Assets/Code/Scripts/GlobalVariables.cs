@@ -22,7 +22,7 @@ public class GlobalVariables : MonoBehaviour
 
 
     private float timePlaying;
-
+    [SerializeField] private GameObject helpScreen;
     public int EnemyAmount {get; private set;}
     public bool isQuestioning = false;
 
@@ -62,6 +62,15 @@ public class GlobalVariables : MonoBehaviour
 
     private void Start() {
         Instance = this;
+        if (PlayerPrefs.GetInt("FirstTime", 1) == 1)
+        {
+
+            helpScreen.SetActive(true);
+            InputManager.Instance.BlockAllInput();
+            Time.timeScale = 0;
+            PlayerPrefs.SetInt("FirstTime", 0);
+            PlayerPrefs.Save();
+        }
     }
 
     private void Update()
