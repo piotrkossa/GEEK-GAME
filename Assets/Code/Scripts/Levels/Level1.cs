@@ -52,6 +52,7 @@ public class Level1 : MonoBehaviour
     private struct Phase {
         public int duration;
         public Enemy[] enemies;
+        public float scalingRatio;
     }
 
     private void Awake()
@@ -99,7 +100,7 @@ public class Level1 : MonoBehaviour
         float delay = 0f;
         List<Coroutine> coroutines = new List<Coroutine> {};
         foreach (Enemy enemy in phase.enemies) {
-            coroutines.Add(StartCoroutine(SpawnCoroutine(enemy.enemyType, delay, enemy.interval)));
+            coroutines.Add(StartCoroutine(SpawnCoroutine(enemy.enemyType, delay, enemy.interval, phase.scalingRatio)));
             delay += 0.3f;
         }
 
@@ -117,11 +118,13 @@ public class Level1 : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnCoroutine(EnemyTypes enemyType, float startDelay, float interval) {
+    private IEnumerator SpawnCoroutine(EnemyTypes enemyType, float startDelay, float interval, float scaleRatio) {
         yield return new WaitForSeconds(startDelay);
+        
         while (true) {
             _enemySpawner.SpawnEnemy(enemiesPrefabs[enemyType]);
             yield return new WaitForSeconds(interval);
+            interval /= scaleRatio;
         }
     }
 
