@@ -59,6 +59,8 @@ public class Questiontest : MonoBehaviour
             if (!answered)
             {
                 OnAnswerChosen(false);
+                StartCoroutine(FlashPanelFeedback(false));
+                gameObject.SetActive(false);
             }
 
             alreadyAsked++;
