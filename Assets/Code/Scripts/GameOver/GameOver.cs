@@ -9,6 +9,7 @@ public class GameOver : MonoBehaviour
     [SerializeField] TextMeshProUGUI GameplayTimer;
     [SerializeField] TextMeshProUGUI CorrectAnswers;
     [SerializeField] TextMeshProUGUI EnemyDefeated;
+    [SerializeField] TextMeshProUGUI InformationHeader;
     [SerializeField] TextMeshProUGUI Information;
     [SerializeField] List<Ciekawostki> ciekawostka;
 
@@ -16,8 +17,8 @@ public class GameOver : MonoBehaviour
     private void Start()
     {
         GameplayTimer.text = "Czas gry: " + PlayerPrefs.GetFloat("TimePlaying", 1f).ToString() + "s.";
-        CorrectAnswers.text = "Liczba poprawnych odpowiedzi: " + PlayerPrefs.GetInt("CorrectAnswers", 0).ToString();
-        EnemyDefeated.text = "Liczba pokonanych przeciwników: " + PlayerPrefs.GetInt("EnemyDefeated", 0).ToString();
+        CorrectAnswers.text = "Poprawne odpowiedzi: " + PlayerPrefs.GetInt("CorrectAnswers", 0).ToString();
+        EnemyDefeated.text = "Pokonani przeciwnicy: " + PlayerPrefs.GetInt("EnemyDefeated", 0).ToString();
 
         if (ciekawostka != null && ciekawostka.Count > 0)
         {
