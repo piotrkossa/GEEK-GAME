@@ -605,7 +605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}
   m_sharedMaterial: {fileID: -6618404824323204192, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}
@@ -770,6 +770,10 @@ PrefabInstance:
     - target: {fileID: 1763536576300699874, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
       propertyPath: m_Name
       value: SceneTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763536576300699874, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2113125916753373812, guid: a85d6f3bea1fe93459238d65260e1ca6, type: 3}
       propertyPath: m_Pivot.x

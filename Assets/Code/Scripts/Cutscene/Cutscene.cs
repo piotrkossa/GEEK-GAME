@@ -50,6 +50,7 @@ public class Cutscene : MonoBehaviour, IPointerClickHandler
         _image.sprite = _sceneSprites[slideCounter];
         await TransitionManager.Instance.ImageColorTransition(_image, Color.black, Color.white, 0.4f, 1f, 1f);
         isTrans = false;
+        timer = 0;
     }
 
     private async void GoToMainScene() {

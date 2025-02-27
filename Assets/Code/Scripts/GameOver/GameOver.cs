@@ -14,6 +14,11 @@ public class GameOver : MonoBehaviour
     [SerializeField] TextMeshProUGUI Information;
     [SerializeField] List<Ciekawostki> ciekawostka;
 
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -35,6 +40,7 @@ public class GameOver : MonoBehaviour
     {
         if (isRunning) return;
         isRunning = true;
+        audioManager.PlaySFX(audioManager.choice);
         
         await _sceneTransition.EndTransition();
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
