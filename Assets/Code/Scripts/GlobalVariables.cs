@@ -67,7 +67,6 @@ public class GlobalVariables : MonoBehaviour
         Instance = this;
         if (PlayerPrefs.GetInt("FirstTime", 1) == 1)
         {
-
             helpScreen.SetActive(true);
             InputManager.Instance.BlockAllInput();
             Time.timeScale = 0;

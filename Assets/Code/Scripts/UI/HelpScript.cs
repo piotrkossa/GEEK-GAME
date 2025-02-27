@@ -45,7 +45,6 @@ public class TutorialManager : MonoBehaviour
     {
         if (currentScreenIndex > 0)
         {
-
             currentScreenIndex--;
             audioManager.PlaySFX(audioManager.choice);
             ShowScreen(currentScreenIndex);
@@ -55,8 +54,8 @@ public class TutorialManager : MonoBehaviour
     public void Exit()
     {
         audioManager.PlaySFX(audioManager.choice);
-        gameObject.SetActive(false);
         InputManager.Instance.UnlockAllInput();
         Time.timeScale = 1;
+        gameObject.SetActive(false);
     }
 }

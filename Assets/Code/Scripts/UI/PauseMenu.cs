@@ -19,16 +19,16 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        this.gameObject.SetActive(false);
         InputManager.Instance.OnEscUnlocked.AddListener(CheckForEsc);
+        this.gameObject.SetActive(false);
     }
 
     public void Play()
     {
         audioManager.PlaySFX(audioManager.choice);
+        InputManager.Instance.UnlockAllInput();
         this.gameObject.SetActive(false);
         Time.timeScale = 1;
-        InputManager.Instance.UnlockAllInput();
     }
 
     public void Settings()
@@ -50,6 +50,7 @@ public class PauseMenu : MonoBehaviour
         audioManager.PlaySFX(audioManager.choice);
         
         await _sceneTransition.EndTransition();
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");;
     }
 
