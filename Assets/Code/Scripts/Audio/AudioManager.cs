@@ -23,7 +23,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip buyAccepted;
     public AudioClip buyDeclined;
     public AudioClip shoot;
-    public AudioClip dead;
     public AudioClip kittenMeow;
     public AudioClip placing;
     public AudioClip question;

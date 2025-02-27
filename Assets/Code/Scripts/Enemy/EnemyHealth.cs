@@ -28,7 +28,6 @@ public class EnemyHealth : MonoBehaviour
         if (hitPoints <= 0)
         {
             GlobalVariables.Instance.UpdateEnemyAmount(-1);
-            audioManager.PlaySFX(audioManager.dead);
             GlobalVariables.Instance.UpdateEnemyDefeated();
             Destroy(gameObject);
         }

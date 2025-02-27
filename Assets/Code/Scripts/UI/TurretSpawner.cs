@@ -67,7 +67,7 @@ public class TurretSpawner : MonoBehaviour
 
         _placementIndicator.transform.position = mouseWorldPos;
         Collider2D hit = Physics2D.OverlapBox(mouseWorldPos, boxSize, 0, _placementBlockMask);
-        _placementIndicator.color = (hit != null) ? Color.red : Color.green;
+        _placementIndicator.color = (hit == null && _globalVariables.CanPlaceTurret(_globalVariables.CurrentLevelView)) ? Color.green : Color.red;
     }
 
     private void Accept() {

@@ -66,7 +66,7 @@ public class Questiontest : MonoBehaviour
             alreadyAsked++;
             InputManager.Instance.UnlockAllInput();
             _globalVariables.isQuestioning = false;
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(7.5f);
         }
     }
 

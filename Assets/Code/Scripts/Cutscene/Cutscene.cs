@@ -11,10 +11,21 @@ public class Cutscene : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image _image;
     private int slideCounter = 0;
     AudioManager audioManager;
+    private float timer = 0;
+    private float timeToNextSlide = 10;
 
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timeToNextSlide <= timer)
+        {
+            ChangeSlide();
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)

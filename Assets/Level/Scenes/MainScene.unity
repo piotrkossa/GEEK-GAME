@@ -3250,11 +3250,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Aby umie\u015Bci\u0107 dzia\u0142ko na jednej z planszy musisz najecha\u0107
-    myszk\u0105 na fioletowe strza\u0142ki kt\xF3re pojawi\u0105 si\u0119 na dole
-    ekranu kiedy przybli\u017Cysz si\u0119 do jednego z monitor\xF3w, nast\u0119pnie
+  m_text: "Aby umie\u015Bci\u0107 dzia\u0142ko na jednej z plansz nale\u017Cy przysun\u0105\u0107
+    si\u0119 do jednego z ekran\xF3w a nast\u0119pnie najecha\u0107 myszk\u0105 na
+    fioletowe strza\u0142ki kt\xF3re pojawi\u0105 si\u0119 na dole ekranu, nast\u0119pnie
     klikasz i przeci\u0105gasz dane dzia\u0142ko na wybrane przez siebie miejsce.
-    Zwracaj jednak uwag\u0119 na prawy g\xF3rny r\xF3g g\u0142\xF3wnego ekranu gry! "
+    Rozk\u0142adaj dzia\u0142ka r\xF3wnomiernie i zwracaj uwag\u0119 na prawy g\xF3rny
+    r\xF3g g\u0142\xF3wnego ekranu!  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}
   m_sharedMaterial: {fileID: -6618404824323204192, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}
@@ -3390,7 +3391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Klikaj\u0105c w ikonk\u0119         po prawej stronie ekranu przenosimy
+  m_text: "Klikaj\u0105c w ikonk\u0119          po lewej stronie ekranu przenosimy
     si\u0119 do sklepu gdzie mo\u017Cemy kupi\u0107 dzia\u0142ka za zdobyte wcze\u015Bniej
     coiny.  Im wi\u0119ksza cena tym lepsze dzia\u0142ko wi\u0119c zastan\xF3w si\u0119
     dobrze co kupujesz! "
@@ -3420,7 +3421,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.6
+  m_fontSize: 24.9
   m_fontSizeBase: 86
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3458,7 +3459,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -289.1837, y: 0.8261719, z: -246.33936, w: 0}
+  m_margin: {x: -299.90506, y: 0.8261719, z: -246.33936, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3487,7 +3488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &398691308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6126,7 +6127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &646581154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6950,7 +6951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &730094257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7124,7 +7125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &759818225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13103,7 +13104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1449361224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14122,9 +14123,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gra opiera si\u0119 na przemieszczaniu si\u0119 mi\u0119dzy 3 monitorami,
-    do kt\xF3rych przenosisz si\u0119 poprzez klikni\u0119cie w dany ekran. Aby si\u0119
-    oddali\u0107 kliknij Escape!"
+  m_text: "W grze przemieszczamy si\u0119 mi\u0119dzy 3 monitorami, do kt\xF3rych
+    przenosisz si\u0119 poprzez klikni\u0119cie w dany ekran. Aby si\u0119 oddali\u0107
+    kliknij Escape!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}
   m_sharedMaterial: {fileID: -6618404824323204192, guid: b350acaaee2828a4a988e39c3afc6c0b, type: 2}
@@ -16536,7 +16537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2057985344
 RectTransform:
   m_ObjectHideFlags: 0
