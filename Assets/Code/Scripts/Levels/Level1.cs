@@ -119,7 +119,7 @@ public class Level1 : MonoBehaviour
 
         while (true) {
             yield return new WaitForSeconds(1f);
-            if (GlobalVariables.Instance.EnemyAmount == 0) {
+            if (GlobalVariables.Instance.EnemyAmount == 0 && GlobalVariables.Instance.isQuestioning == false) {
                 break;
             }
         }
