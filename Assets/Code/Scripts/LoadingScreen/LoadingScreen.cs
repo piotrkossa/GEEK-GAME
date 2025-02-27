@@ -13,6 +13,7 @@ public class LoadingScreen : MonoBehaviour
         _slider.value = 1f;
         _logo.localScale = Vector3.zero;
         LogoAnimation();
+        PlayerPrefs.SetInt("isAfterLoadingScreen", 1);
     }
 
     private async void LogoAnimation() {

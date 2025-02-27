@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    [SerializeField] private SceneTransition _sceneTransition;
     [SerializeField] Scene MaineMenuScene;
     [SerializeField] TextMeshProUGUI GameplayTimer;
     [SerializeField] TextMeshProUGUI CorrectAnswers;
@@ -28,9 +29,14 @@ public class GameOver : MonoBehaviour
     }
 
 
+    private bool isRunning = false;
 
-    public void Exit()
+    public async void Exit()
     {
+        if (isRunning) return;
+        isRunning = true;
+        
+        await _sceneTransition.EndTransition();
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 

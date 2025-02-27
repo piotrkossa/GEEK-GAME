@@ -36,6 +36,7 @@ public class Level1 : MonoBehaviour
 
 
     [Header("Phases")]
+    [SerializeField] private float scalePercentPer4Sec;
     [SerializeField] private Phase phase1;
     [SerializeField] private Phase phase2;
     [SerializeField] private Phase phase3;
@@ -52,7 +53,7 @@ public class Level1 : MonoBehaviour
     private struct Phase {
         public int duration;
         public Enemy[] enemies;
-        public float scalingRatio;
+        public bool isScaling;
     }
 
     private void Awake()
@@ -96,13 +97,19 @@ public class Level1 : MonoBehaviour
         yield return PerformPhase(phases[2]);
     }
 
+    private float phaseScale;
+
     private IEnumerator PerformPhase(Phase phase) {
         float delay = 0f;
+        phaseScale = 1f;
+
         List<Coroutine> coroutines = new List<Coroutine> {};
         foreach (Enemy enemy in phase.enemies) {
-            coroutines.Add(StartCoroutine(SpawnCoroutine(enemy.enemyType, delay, enemy.interval, phase.scalingRatio)));
-            delay += 0.3f;
+            coroutines.Add(StartCoroutine(SpawnCoroutine(enemy.enemyType, delay, enemy.interval)));
+            delay += 0.15f;
         }
+        if (phase.isScaling)
+            coroutines.Add(StartCoroutine(Scaler()));
 
         yield return new WaitForSeconds(phase.duration);
         
@@ -118,13 +125,19 @@ public class Level1 : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnCoroutine(EnemyTypes enemyType, float startDelay, float interval, float scaleRatio) {
+    private IEnumerator Scaler() {
+        while (true) {
+            yield return new WaitForSeconds(4f);
+            phaseScale += scalePercentPer4Sec;
+        }
+    }
+
+    private IEnumerator SpawnCoroutine(EnemyTypes enemyType, float startDelay, float interval) {
         yield return new WaitForSeconds(startDelay);
-        
+
         while (true) {
             _enemySpawner.SpawnEnemy(enemiesPrefabs[enemyType]);
-            yield return new WaitForSeconds(interval);
-            interval -= scaleRatio;
+            yield return new WaitForSeconds(interval * (1/phaseScale));
         }
     }
 

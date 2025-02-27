@@ -60,7 +60,7 @@ public class Questiontest : MonoBehaviour
             {
                 OnAnswerChosen(false);
                 StartCoroutine(FlashPanelFeedback(false));
-                gameObject.SetActive(false);
+                this.transform.GetChild(0).gameObject.SetActive(false);
             }
 
             alreadyAsked++;

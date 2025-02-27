@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,6 +26,8 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] private GameObject helpScreen;
     public int EnemyAmount {get; private set;}
     public bool isQuestioning = false;
+
+    [SerializeField] private SceneTransition _sceneTransition;
 
     public Dictionary<TurretTypes, int> TurretPrices {get; private set;} = new Dictionary<TurretTypes, int> {
         [TurretTypes.Blue] = 50,
@@ -82,11 +85,20 @@ public class GlobalVariables : MonoBehaviour
     public void UpdateHealth(int health) {
         if (Health + health < 0) {
             Health = 0;
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            LoadEndScreen();
         }
         else
             Health += health;
+
         onUiUpdated.Invoke();
+    }
+
+    private bool isRunning = false;
+    private async void LoadEndScreen() {
+        if (isRunning) return;
+        isRunning = true;
+        await _sceneTransition.EndTransition();
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
     public void UpdateEnemyAmount(int n) {

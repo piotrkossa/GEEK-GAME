@@ -14,6 +14,8 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private Vector3 goalPosition;
     AudioManager audioManager;
 
+    private bool started = false;
+
     private void Start()
     {
         thisButton = this.GetComponent<RectTransform>();
@@ -22,6 +24,14 @@ public class UIButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         goalPosition = originalPosition + new Vector3(moveDistance, 0, 0);
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        started = true;
+    }
+
+    private void OnEnable()
+    {
+        if (!started) return;
+        thisButton.anchoredPosition = originalPosition;
+        fade.SetActive(false);
     }
 
 

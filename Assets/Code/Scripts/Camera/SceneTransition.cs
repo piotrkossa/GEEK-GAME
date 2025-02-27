@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
@@ -8,8 +9,6 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private RectTransform _topRect;
     [SerializeField] private RectTransform _botRect;
     [SerializeField] private Image _icon;
-
-    [SerializeField] private bool startWithoutIcon;
 
     private Color iconStartingColor = Color.white;
     private Color iconEndingColor = new Color(1f, 1f, 1f, 0f);
@@ -21,6 +20,8 @@ public class SceneTransition : MonoBehaviour
     private Vector3 botRectGoal;
 
     AudioManager audioManager;
+
+    private bool startWithoutIcon = false;
 
     private void Awake()
     {
@@ -34,8 +35,10 @@ public class SceneTransition : MonoBehaviour
         topRectGoal = startingTopRectPos + new Vector3(0, 540, 0);
         botRectGoal = startingBotRectPos + new Vector3(0, -540, 0);
 
-        if (startWithoutIcon) {
+        if (SceneManager.GetActiveScene().name == "MainMenu" && PlayerPrefs.GetInt("isAfterLoadingScreen") == 1) {
             _icon.color = iconEndingColor;
+            startWithoutIcon = true;
+            PlayerPrefs.SetInt("isAfterLoadingScreen", 0);
         }
 
         StartTransition();
