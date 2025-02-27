@@ -58,15 +58,16 @@ public class piercingTurretScript : MonoBehaviour
     private void FindTarget()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, targetingRange, enemyMask);
-        float closestDistance = Mathf.Infinity;
+        int highestIndex = -1;
         target = null;
 
         foreach (Collider2D hit in hits)
         {
-            float distanceToTarget = Vector2.Distance(transform.position, hit.transform.position);
-            if (distanceToTarget < closestDistance)
+            int hierarchyIndex = hit.transform.GetSiblingIndex();
+
+            if (hierarchyIndex > highestIndex)
             {
-                closestDistance = distanceToTarget;
+                highestIndex = hierarchyIndex;
                 target = hit.transform;
             }
         }
