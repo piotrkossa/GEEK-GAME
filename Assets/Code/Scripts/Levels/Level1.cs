@@ -87,7 +87,11 @@ public class Level1 : MonoBehaviour
 
         yield return PerformPhase(phases[1]);
 
+        Debug.Log("czekam");
+
         yield return new WaitForSeconds(3f);
+
+        Debug.Log("nie czekam");
 
         task = _waveInfo.ShowWaveInfo(2);
         yield return new WaitUntil(() => task.IsCompleted);

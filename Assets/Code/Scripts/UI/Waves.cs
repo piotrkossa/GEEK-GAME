@@ -26,9 +26,10 @@ public class Waves : MonoBehaviour
         Task task = TransitionManager.Instance.ScaleTransition(_waves[wave].transform, Vector3.zero, Vector3.one, 0.6f, 1f, 1f);
         _waves[wave].gameObject.SetActive(true);
         while (true) {
-            await Awaitable.NextFrameAsync();
             if (!this.gameObject.activeSelf)
                 break;
+                
+            await Awaitable.NextFrameAsync();
         }
         
         InputManager.Instance.UnlockAllInput();
