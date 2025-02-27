@@ -49,7 +49,7 @@ public class Questiontest : MonoBehaviour
                 () => { answered = true; OnAnswerChosen(q.isCorrectC); }
             );
 
-            float remainingTime = 7.5f;
+            float remainingTime = 15f;
             while (remainingTime > 0f && !answered)
             {
                 remainingTime -= Time.deltaTime;
@@ -66,7 +66,7 @@ public class Questiontest : MonoBehaviour
             alreadyAsked++;
             InputManager.Instance.UnlockAllInput();
             _globalVariables.isQuestioning = false;
-            yield return new WaitForSeconds(7.5f);
+            yield return new WaitForSeconds(10f);
         }
     }
 

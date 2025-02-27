@@ -11605,7 +11605,7 @@ PrefabInstance:
       objectReference: {fileID: 1004929443}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.size
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].answerA
@@ -11992,6 +11992,136 @@ PrefabInstance:
       value: "Nie sprawdza\u0107 nic, bo ka\u017Cda strona jest bezpieczna"
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[30].answerA
+      value: 'Ignorujesz to, bo "to tylko gra". '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[30].answerB
+      value: "Szybko uruchamiasz program antywirusowy i sprawdzasz, co si\u0119 dzieje. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[30].answerC
+      value: "Zmieniasz has\u0142a do wszystkich kont, bo nigdy nie wiadomo, kto
+        Ci\u0119 \u015Bledzi.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[31].answerA
+      value: "Klikasz na link, przecie\u017C oferta brzmi \u015Bwietnie. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[31].answerB
+      value: "Zgadzasz si\u0119, \u017Ce to podejrzane, ale i tak klikniesz \u2013
+        mo\u017Ce nie b\u0119dzie a\u017C tak \u017Ale. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[31].answerC
+      value: "Ignorujesz e-mail i sprawdzasz firm\u0119 w Internecie, zanim podejmiesz
+        jak\u0105kolwiek decyzj\u0119.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[32].answerA
+      value: "Przestajesz korzysta\u0107 z internetu, po prostu poczekasz. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[32].answerB
+      value: "Zmieniasz has\u0142o do swojego konta bankowego na wszelki wypadek. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[32].answerC
+      value: "Pod\u0142\u0105czasz VPN, aby upewni\u0107 si\u0119, \u017Ce Twoje
+        dane s\u0105 bezpieczne.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[33].answerA
+      value: "Usuwam j\u0105, bo to mo\u017Ce by\u0107 wirus. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[33].answerB
+      value: "Pozostawiam, bo pewnie to jaka\u015B gra, kt\xF3r\u0105 instalowa\u0142em
+        wcze\u015Bniej. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[33].answerC
+      value: "Otwieram, by sprawdzi\u0107, co to takiego \u2013 nigdy nie wiadomo.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[34].answerA
+      value: "Przechodz\u0119 do innej strony \u2013 zdrowy rozs\u0105dek nigdy nie
+        zaszkodzi. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[34].answerB
+      value: "Klikam dalej \u2013 przecie\u017C to tylko drobna liter\xF3wka. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[34].answerC
+      value: "Przeprowadzam szybki test na bezpiecze\u0144stwo strony.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[35].answerA
+      value: "Klikam od razu \u2013 przecie\u017C bank nigdy nie oszuka. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[35].answerB
+      value: "Ignoruj\u0119 wiadomo\u015B\u0107 i dzwoni\u0119 bezpo\u015Brednio
+        do banku, by potwierdzi\u0107. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[35].answerC
+      value: "Odpowiadam na SMS-a, \u017Ceby dowiedzie\u0107 si\u0119 wi\u0119cej.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[36].answerA
+      value: 'Pozostawiam to administratorowi strony, to nie moja sprawa. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[36].answerB
+      value: "Instaluj\u0119 dodatkowe zabezpieczenia, \u017Ceby zwi\u0119kszy\u0107
+        odporno\u015B\u0107. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[36].answerC
+      value: "Czekam, a\u017C sytuacja si\u0119 rozwi\u0105\u017Ce sama.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[37].answerA
+      value: "Po ka\u017Cdej wizycie na stronie internetowej. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[37].answerB
+      value: "Regularnie, co 3-6 miesi\u0119cy, a tak\u017Ce po ewentualnym ataku. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[37].answerC
+      value: 'Tylko wtedy, gdy system tego wymaga.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[38].answerA
+      value: "Typ ataku, kt\xF3ry polega na manipulacji w wynikach wyszukiwania w
+        Internecie. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[38].answerB
+      value: "Przej\u0119cie strony internetowej i jej przekierowanie na fa\u0142szyw\u0105
+        stron\u0119 w celu kradzie\u017Cy danych. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[38].answerC
+      value: "Atak na urz\u0105dzenia mobilne w celu zmiany danych osobowych.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[39].answerA
+      value: 'Nazwisko i adres zamieszkania. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[39].answerB
+      value: "Wszystkie dane osobowe u\u017Cytkownika.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[39].answerC
+      value: 'Przypisanie do konkretnej sieci i orientacyjna lokalizacja geograficzna. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].isCorrectA
       value: 0
       objectReference: {fileID: 0}
@@ -12176,6 +12306,98 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[30].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[30].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[31].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[31].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[31].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[32].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[32].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[32].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[33].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[33].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[34].isCorrectA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[34].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[35].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[35].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[36].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[36].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[37].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[37].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[38].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[38].isCorrectB
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[39].isCorrectA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[39].isCorrectB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[39].isCorrectC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[0].questionText
       value: "Twoja baza zosta\u0142a zaatakowana przez haker\xF3w. Co powiniene\u015B
         zrobi\u0107 jako pierwszy? "
@@ -12303,13 +12525,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[28].questionText
-      value: "Jakie zabezpieczenie jest najskuteczniejsze w przypadku publicznych
-        komputer\xF3w? "
+      value: "W grze kto\u015B wykrad\u0142 ci dane. Jakie zabezpieczenia wdra\u017Casz?  "
       objectReference: {fileID: 0}
     - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: question.Array.data[29].questionText
       value: "Jakie informacje nale\u017Cy sprawdza\u0107 przy ocenie wiarygodno\u015Bci
         strony internetowej? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[30].questionText
+      value: "Zaczynasz sesj\u0119 w grze, ale Tw\xF3j komputer wy\u015Bwietla komunikat
+        o podejrzanej aktywno\u015Bci w systemie. Co robisz? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[31].questionText
+      value: "Otrzymujesz e-mail z \"ofert\u0105\" pracy w wielkiej firmie, ale link
+        w wiadomo\u015Bci prowadzi do dziwnej strony. Co robisz? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[32].questionText
+      value: "Podczas korzystania z Wi-Fi publicznego zauwa\u017Casz, \u017Ce internet
+        dzia\u0142a dziwnie. Co robisz? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[33].questionText
+      value: "Znajdujesz nieznan\u0105 aplikacj\u0119 na swoim telefonie, kt\xF3rej
+        nie pami\u0119tasz, \u017Ce pobiera\u0142e\u015B. Co robisz? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[34].questionText
+      value: "Jeste\u015B na stronie zakupowej i zauwa\u017Casz, \u017Ce adres URL
+        nie zaczyna si\u0119 od \"https\". Co robisz? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[35].questionText
+      value: "Otrzymujesz SMS-a od swojego \"banku\", w kt\xF3rym jest link do weryfikacji
+        danych. Co robisz? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[36].questionText
+      value: 'Twoja strona internetowa jest atakowana przez boty. Co robisz? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[37].questionText
+      value: "Kiedy najlepszy czas na zmian\u0119 hase\u0142 do wa\u017Cnych kont? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[38].questionText
+      value: 'Co to jest "pharming"? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133397480334145518, guid: 874ce298f20142c46b55360b822907ce, type: 3}
+      propertyPath: question.Array.data[39].questionText
+      value: "Jakie informacje mo\u017Cna wyci\u0105gn\u0105\u0107 z adresu IP u\u017Cytkownika? "
       objectReference: {fileID: 0}
     - target: {fileID: 4616669415124144551, guid: 874ce298f20142c46b55360b822907ce, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
