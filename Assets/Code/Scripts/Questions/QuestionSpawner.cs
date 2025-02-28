@@ -28,7 +28,7 @@ public class Questiontest : MonoBehaviour
         while (alreadyAsked < question.Count)
         {
             yield return new WaitForSeconds(5f);
-            if (_globalVariables.EnemyAmount == 0) continue;
+            if (GameObject.FindWithTag("Enemy") == null) continue;
 
             _globalVariables.isQuestioning = true;
 

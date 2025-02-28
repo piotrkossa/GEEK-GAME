@@ -27,7 +27,6 @@ public class EnemyHealth : MonoBehaviour
 
         if (hitPoints <= 0)
         {
-            GlobalVariables.Instance.UpdateEnemyAmount(-1);
             GlobalVariables.Instance.UpdateEnemyDefeated();
             Destroy(gameObject);
         }

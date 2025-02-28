@@ -24,7 +24,6 @@ public class GlobalVariables : MonoBehaviour
 
     private float timePlaying;
     [SerializeField] private GameObject helpScreen;
-    public int EnemyAmount {get; private set;}
     public bool isQuestioning = false;
 
     [SerializeField] private SceneTransition _sceneTransition;
@@ -60,7 +59,6 @@ public class GlobalVariables : MonoBehaviour
         Health = 100;
         Money = 300;
         CurrentLevelView = 0;
-        EnemyAmount = 0;
     }
 
     private void Start() {
@@ -100,9 +98,6 @@ public class GlobalVariables : MonoBehaviour
         SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
-    public void UpdateEnemyAmount(int n) {
-        EnemyAmount += n;
-    }
 
     public bool UpdateMoney(int money) {
         if (Money + money < 0) {

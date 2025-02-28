@@ -14,8 +14,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start() {
         _enemySpawner = this.transform.parent.gameObject.GetComponent<EnemySpawner>();
-
-        GlobalVariables.Instance.UpdateEnemyAmount(1);
         
         pathPoints = _enemySpawner.GetPath();
         this.transform.position = pathPoints[0];
@@ -27,7 +25,6 @@ public class EnemyMovement : MonoBehaviour
             currentGoal += 1;
             if (currentGoal == pointsCount) {
                 _enemySpawner.PathCompleted(this.gameObject);
-                GlobalVariables.Instance.UpdateEnemyAmount(-1);
                 Destroy(this.gameObject);
                 return;
             }

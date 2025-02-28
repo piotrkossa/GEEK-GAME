@@ -69,19 +69,21 @@ public class Level1 : MonoBehaviour
 
     private IEnumerator ManagePhases() {
         InputManager.Instance.BlockAllInput();
-        yield return new WaitForSeconds(5f);
+        if (PlayerPrefs.GetInt("FirstTime", 1) == 1)
+            yield return new WaitForSeconds(1f);
+        else
+            yield return new WaitForSeconds(5f);
+        
         InputManager.Instance.UnlockAllInput();
         
-        Task task = _waveInfo.ShowWaveInfo(0);
-        yield return new WaitUntil(() => task.IsCompleted);
+        yield return StartCoroutine(_waveInfo.ShowWaveInfo(0));
         yield return new WaitForSeconds(2f);
 
         yield return PerformPhase(phases[0]);
 
         yield return new WaitForSeconds(3f);
 
-        task = _waveInfo.ShowWaveInfo(1);
-        yield return new WaitUntil(() => task.IsCompleted);
+        yield return StartCoroutine(_waveInfo.ShowWaveInfo(1));
         audioManager.PlayWaveMusic(1);
         yield return new WaitForSeconds(3f);
 
@@ -93,8 +95,7 @@ public class Level1 : MonoBehaviour
 
         Debug.Log("nie czekam");
 
-        task = _waveInfo.ShowWaveInfo(2);
-        yield return new WaitUntil(() => task.IsCompleted);
+        yield return StartCoroutine(_waveInfo.ShowWaveInfo(2));
         audioManager.PlayWaveMusic(2);
         yield return new WaitForSeconds(3f);
 
@@ -123,7 +124,7 @@ public class Level1 : MonoBehaviour
 
         while (true) {
             yield return new WaitForSeconds(1f);
-            if (GlobalVariables.Instance.EnemyAmount == 0 && GlobalVariables.Instance.isQuestioning == false) {
+            if (GameObject.FindWithTag("Enemy") == null && GlobalVariables.Instance.isQuestioning == false) {
                 break;
             }
         }

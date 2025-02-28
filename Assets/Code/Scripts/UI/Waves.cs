@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using System.Collections;
 
 public class Waves : MonoBehaviour
 {
@@ -16,20 +17,19 @@ public class Waves : MonoBehaviour
             audioManager.PlaySFX(audioManager.choice);
             image.gameObject.SetActive(false);
         }
-        this.gameObject.SetActive(false);
     }
 
-    public async Task ShowWaveInfo(int wave) {
+    public IEnumerator ShowWaveInfo(int wave) {
         InputManager.Instance.BlockAllInput();
 
         this.gameObject.SetActive(true);
         Task task = TransitionManager.Instance.ScaleTransition(_waves[wave].transform, Vector3.zero, Vector3.one, 0.6f, 1f, 1f);
         _waves[wave].gameObject.SetActive(true);
+
         while (true) {
-            if (!this.gameObject.activeSelf)
+            if (!_waves[wave].gameObject.activeSelf)
                 break;
-                
-            await Awaitable.NextFrameAsync();
+            yield return null;
         }
         
         InputManager.Instance.UnlockAllInput();
