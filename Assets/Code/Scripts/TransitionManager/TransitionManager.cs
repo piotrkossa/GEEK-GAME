@@ -40,7 +40,7 @@ public class TransitionManager : MonoBehaviour
         while (t <= 1f) {
             if (obj == null || HasTransStopped(obj))
                 break;
-            t += Time.deltaTime / time;
+            t += Time.unscaledDeltaTime / time;
             objTransform.localScale = Vector3.Lerp(originScale, destinyScale, QuadraticBezierCurve(t, bezierY1, bezierY2));
             await Awaitable.NextFrameAsync();
         }

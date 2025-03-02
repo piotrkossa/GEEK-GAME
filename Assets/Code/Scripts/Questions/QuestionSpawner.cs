@@ -31,7 +31,7 @@ public class Questiontest : MonoBehaviour
             if (GameObject.FindWithTag("Enemy") == null) continue;
 
             _globalVariables.isQuestioning = true;
-
+            Time.timeScale = 0.5f;
             int randomIndex = UnityEngine.Random.Range(0, question.Count);
             var q = question[randomIndex];
             question.RemoveAt(randomIndex);
@@ -52,7 +52,7 @@ public class Questiontest : MonoBehaviour
             float remainingTime = 15f;
             while (remainingTime > 0f && !answered)
             {
-                remainingTime -= Time.deltaTime;
+                remainingTime -= Time.unscaledDeltaTime;
                 yield return null;
             }
 
@@ -66,7 +66,8 @@ public class Questiontest : MonoBehaviour
             alreadyAsked++;
             InputManager.Instance.UnlockAllInput();
             _globalVariables.isQuestioning = false;
-            yield return new WaitForSeconds(7.5f);
+            Time.timeScale = 1f;
+            yield return new WaitForSeconds(10f);
         }
     }
 

@@ -43,6 +43,7 @@ public class QuestionScript : MonoBehaviour
         oneText.text = asnwerOne;
         twoText.text = asnwerTwo;
         threeText.text = asnwerThree;
+        Time.timeScale = 0.5f;
         AnswerOneBtn.onClick.AddListener(() =>
         {
             Hide();
@@ -62,6 +63,7 @@ public class QuestionScript : MonoBehaviour
 
     private void Hide()
     {
+        Time.timeScale = 1f;
         gameObject.SetActive(false);
     }
 }

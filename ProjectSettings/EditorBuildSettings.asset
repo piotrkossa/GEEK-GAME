@@ -9,18 +9,16 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/LoadingScreen.unity
     guid: 8d0efc4824d6fd249a4f74c24adf4c4c
   - enabled: 1
-    path: Assets/Level/Scenes/Cutscene.unity
-    guid: c1da13502cfd5284a8a9a5f1d502690e
-  - enabled: 1
     path: Assets/Level/Scenes/MainMenu.unity
     guid: ab49f5a5b5bfdd74da217dd874a81cc9
+  - enabled: 1
+    path: Assets/Level/Scenes/Cutscene.unity
+    guid: c1da13502cfd5284a8a9a5f1d502690e
   - enabled: 1
     path: Assets/Level/Scenes/MainScene.unity
     guid: a74ec338f687ba548876309b7c5deba9
   - enabled: 1
     path: Assets/Level/Scenes/GameOver.unity
     guid: a2b2d676ee0132b4685a388b025b86e8
-  m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: e4d949d71ca00524caa47f5f53a06834, type: 2}
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 43517b6ef049cdc4e90148f5a33b11a7, type: 3}
+  m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
